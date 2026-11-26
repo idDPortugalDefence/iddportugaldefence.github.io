@@ -5,9 +5,11 @@
   if (!mount || mount.getAttribute('data-init')) return;
   mount.setAttribute('data-init', '1');
   var BASE = mount.getAttribute('data-base') || 'https://iddportugaldefence.github.io/dados/';
+  var ASSETS = mount.getAttribute('data-assets') || BASE.replace(/dados\/$/, 'assets/');
   var POR_PAG = 24;
 
   /* ---------- utilitários ---------- */
+  var MES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
   var M = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
   var eur = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -105,6 +107,13 @@
   /* ---------- estado ---------- */
   var S = { tab: 'nacionais', dados: {}, gerado: {}, f: {} };
   ORDEM.forEach(function (k) { S.f[k] = { ent: '', q: '', sort: FONTES[k].ordens[0][0], n: POR_PAG }; S.dados[k] = null; });
+  var SK = 'idd-oportunidades-selecao', SEL = {};
+  try { (JSON.parse(localStorage.getItem(SK) || '[]') || []).forEach(function (x) { SEL[x] = 1; }); } catch (e) {}
+  function guardaSel() { try { localStorage.setItem(SK, JSON.stringify(Object.keys(SEL))); } catch (e) {} }
+  function chave(k, o) { return k + '|' + o.id; }
+  function selN() { var n = { total: 0 }; ORDEM.forEach(function (k) { n[k] = (S.dados[k] || []).filter(function (o) { return SEL[chave(k, o)]; }).length; n.total += n[k]; }); return n; }
+  function selLista(k) { return (S.dados[k] || []).filter(function (o) { return SEL[chave(k, o)]; }); }
+  S.soSel = false;
   var h0 = (location.hash || '').replace('#', '');
   if (FONTES[h0]) S.tab = h0;
 
@@ -112,16 +121,18 @@
   mount.innerHTML =
     '<div class="pdx-tabs" role="tablist">' + ORDEM.map(function (k) { var F = FONTES[k]; return '<button type="button" role="tab" class="pdx-tab" data-tab="' + k + '" style="--c:' + F.cor + '"><b>' + F.nome + '</b><small>' + F.sub + '</small><i data-cnt="' + k + '">…</i></button>'; }).join('') + '</div>' +
     '<div class="pdx-bar"><div class="pdx-chips" data-chips></div><div class="pdx-tools"><label class="pdx-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" placeholder="Pesquisar por palavra, referência, CPV…" data-q aria-label="Pesquisar"></label><select data-sort aria-label="Ordenar"></select></div></div>' +
-    '<div class="pdx-info"><span data-res></span><span data-upd></span></div>' +
+    '<div class="pdx-info"><span><span data-res></span><button type="button" class="pdx-lnk" data-pickall></button></span><span data-upd></span></div>' +
     '<div class="pdx-list" data-list></div>' +
     '<div class="pdx-more"><button type="button" class="pdx-btn pdx-btn-o" data-more hidden>Mostrar mais</button></div>' +
+    '<div class="pdx-selbar" data-selbar hidden><div class="pdx-selbar-t"><b data-seltot></b><small data-selsub></small></div><div class="pdx-selbar-a"><button type="button" class="pdx-sb-l" data-selview></button><button type="button" class="pdx-sb-l" data-selclear>Limpar seleção</button><button type="button" class="pdx-sb-p" data-pdf>Catálogo PDF</button></div></div>' +
     '<div class="pdx-dlg" data-dlg hidden><div class="pdx-dlg-bg" data-close></div><div class="pdx-dlg-in" role="dialog" aria-modal="true"><button type="button" class="pdx-x" data-close aria-label="Fechar">×</button><div data-body></div></div></div>';
   var $ = function (s) { return mount.querySelector(s); };
 
   /* ---------- desenho ---------- */
   function cartao(k, o, i) {
     var c = FONTES[k].cartao(o);
-    return '<article class="pdx-op" style="--c:' + FONTES[k].cor + '"><button type="button" class="pdx-op-b" data-open="' + i + '">' +
+    var on = SEL[chave(k, o)];
+    return '<article class="pdx-op' + (on ? ' pdx-picked' : '') + '" style="--c:' + FONTES[k].cor + '"><button type="button" class="pdx-pick' + (on ? ' pdx-on' : '') + '" data-pick="' + i + '" aria-pressed="' + !!on + '">' + (on ? '✓ Selecionada' : '+ Selecionar') + '</button><button type="button" class="pdx-op-b" data-open="' + i + '">' +
       '<span class="pdx-top"><span class="pdx-tag">' + esc(c.tag) + '</span>' + (c.extra ? '<span class="pdx-new">' + esc(c.extra) + '</span>' : '') + '<span class="pdx-ref">' + esc(c.ref) + '</span></span>' +
       '<span class="pdx-t">' + esc(c.titulo) + '</span>' +
       '<span class="pdx-meta">' + c.meta.filter(Boolean).map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('') + '</span>' +
@@ -130,7 +141,7 @@
   var ATUAL = [];
   function lista(k) {
     var F = FONTES[k], f = S.f[k], todos = (S.dados[k] || []).filter(aberta);
-    return todos.filter(function (o) { return (!f.ent || F.ent(o) === f.ent) && match(f.q, F.pesquisa(o)); });
+    return todos.filter(function (o) { return (!S.soSel || SEL[chave(k, o)]) && (!f.ent || F.ent(o) === f.ent) && match(f.q, F.pesquisa(o)); });
   }
   function render() {
     var k = S.tab, F = FONTES[k], f = S.f[k];
@@ -152,6 +163,18 @@
     $('[data-list]').innerHTML = L.length ? L.slice(0, f.n).map(function (o, i) { return cartao(k, o, i); }).join('') :
       '<div class="pdx-empty"><b>Sem oportunidades em aberto com estes critérios.</b><span>' + (k === 'ue' && f.ent === 'FED' ? 'Os concursos do FED abrem uma vez por ano, quando é aprovado o programa de trabalho.' : 'Experimente limpar os filtros ou a pesquisa.') + '</span></div>';
     $('[data-more]').hidden = L.length <= f.n;
+    var faltam = L.filter(function (o) { return !SEL[chave(k, o)]; }).length, pa = $('[data-pickall]');
+    pa.hidden = !L.length || S.soSel; pa.textContent = faltam ? '+ Selecionar todas (' + L.length + ')' : '✓ Todas selecionadas';
+    pa.disabled = !faltam;
+    barra();
+  }
+  function barra() {
+    var n = selN(), b = $('[data-selbar]');
+    b.hidden = !n.total && !S.soSel;
+    $('[data-seltot]').textContent = 'A minha seleção · ' + n.total + (n.total === 1 ? ' oportunidade' : ' oportunidades');
+    $('[data-selsub]').textContent = ORDEM.filter(function (k) { return n[k]; }).map(function (k) { return FONTES[k].nome + ' ' + n[k]; }).join(' · ');
+    $('[data-selview]').textContent = S.soSel ? 'Ver todas' : 'Ver só a seleção';
+    $('[data-pdf]').textContent = 'Catálogo PDF (' + n.total + ')'; $('[data-pdf]').disabled = !n.total;
   }
   function abrir(i) {
     var k = S.tab, o = ATUAL[i]; if (!o) return; var D = FONTES[k].detalhe(o);
@@ -159,17 +182,24 @@
       '<div class="pdx-dg"><div><small>' + esc(D.valL) + '</small><b>' + esc(D.val) + '</b></div><div>' + prazoHtml(o) + '</div></div>' +
       (D.obj ? '<div class="pdx-obj"><span>Objetivo (texto original)</span><p>' + esc(D.obj) + '</p></div>' : '') +
       '<div class="pdx-kvs">' + D.linhas + '</div>' +
-      '<div class="pdx-acts"><a class="pdx-btn" href="' + esc(o.link) + '" target="_blank" rel="noopener">' + esc(D.botao) + ' ↗</a></div>' +
+      '<div class="pdx-acts"><a class="pdx-btn" href="' + esc(o.link) + '" target="_blank" rel="noopener">' + esc(D.botao) + ' ↗</a><button type="button" class="pdx-btn pdx-btn-o" data-dpick="' + i + '">' + (SEL[chave(k, o)] ? '✓ Selecionada' : '+ Selecionar') + '</button></div>' +
       (D.nota ? '<p class="pdx-nota">' + esc(D.nota) + '</p>' : '');
     $('[data-dlg]').hidden = false; document.documentElement.classList.add('pdx-lock');
     var x = $('.pdx-x'); if (x) x.focus();
   }
+  function alterna(o) { if (!o) return; var c = chave(S.tab, o); if (SEL[c]) delete SEL[c]; else SEL[c] = 1; guardaSel(); }
   function fechar() { $('[data-dlg]').hidden = true; document.documentElement.classList.remove('pdx-lock'); }
 
   /* ---------- eventos ---------- */
   mount.addEventListener('click', function (e) {
     var t = e.target.closest('[data-tab]'); if (t) { S.tab = t.getAttribute('data-tab'); if (history.replaceState) history.replaceState(null, '', '#' + S.tab); render(); return; }
     var c = e.target.closest('[data-ent]'); if (c) { var f = S.f[S.tab]; f.ent = c.getAttribute('data-ent'); f.n = POR_PAG; render(); return; }
+    var pk = e.target.closest('[data-pick]'); if (pk) { alterna(ATUAL[+pk.getAttribute('data-pick')]); render(); return; }
+    var dp = e.target.closest('[data-dpick]'); if (dp) { var oo = ATUAL[+dp.getAttribute('data-dpick')]; alterna(oo); dp.textContent = SEL[chave(S.tab, oo)] ? '✓ Selecionada' : '+ Selecionar'; render(); return; }
+    if (e.target.closest('[data-pickall]')) { ATUAL.forEach(function (x) { SEL[chave(S.tab, x)] = 1; }); guardaSel(); render(); return; }
+    if (e.target.closest('[data-selclear]')) { SEL = {}; S.soSel = false; guardaSel(); render(); return; }
+    if (e.target.closest('[data-selview]')) { S.soSel = !S.soSel; render(); return; }
+    if (e.target.closest('[data-pdf]')) { catalogo(); return; }
     var o = e.target.closest('[data-open]'); if (o) { abrir(+o.getAttribute('data-open')); return; }
     if (e.target.closest('[data-more]')) { S.f[S.tab].n += POR_PAG; render(); return; }
     if (e.target.closest('[data-close]')) fechar();
@@ -178,6 +208,59 @@
   $('[data-sort]').addEventListener('change', function (e) { S.f[S.tab].sort = e.target.value; render(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('[data-dlg]').hidden) fechar(); });
   window.addEventListener('hashchange', function () { var h = location.hash.replace('#', ''); if (FONTES[h]) { S.tab = h; render(); mount.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
+
+  /* ---------- catálogo PDF ---------- */
+  var RODAPE = null;
+  function carregaRodape() {
+    if (RODAPE) return Promise.resolve(RODAPE);
+    return fetch(ASSETS + 'logo-idd-rodape.svg').then(function (r) { return r.text(); }).then(function (t) { RODAPE = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(t))); return RODAPE; }).catch(function () { return ''; });
+  }
+  function hojeExt() { var d = new Date(); return d.getDate() + ' de ' + MES[d.getMonth()] + ' de ' + d.getFullYear(); }
+  function catalogo() {
+    var n = selN(); if (!n.total) return;
+    var grupos = ORDEM.filter(function (k) { return n[k]; }).map(function (k) { var L = selLista(k).slice(); L.sort(function (a, b) { return String(a.prazo || '9').localeCompare(String(b.prazo || '9')); }); return { k: k, F: FONTES[k], L: L }; });
+    var num = 0, idx = '', fichas = '';
+    grupos.forEach(function (g) {
+      idx += '<div class="pdc-ig" style="--c:' + g.F.cor + '"><h3>' + esc(g.F.nome) + ' <small>' + esc(g.F.sub) + ' · ' + g.L.length + '</small></h3>';
+      fichas += '<section class="pdc-src" style="--c:' + g.F.cor + '"><span>' + esc(g.F.sub) + '</span><h2>' + esc(g.F.nome) + '</h2><b>' + g.L.length + (g.L.length === 1 ? ' oportunidade' : ' oportunidades') + '</b></section>';
+      g.L.forEach(function (o) {
+        num++; var id = 'pdc-' + num, c = g.F.cartao(o), D = g.F.detalhe(o), host = (String(o.link).match(/^https?:\/\/([^/]+)/) || [])[1] || 'fonte oficial';
+        idx += '<a class="pdc-ir" href="#' + id + '"><i>' + ('0' + num).slice(-2) + '</i><span><b>' + esc(c.titulo) + '</b><small>' + esc(c.tag) + ' · ' + esc(c.ref) + '</small></span><em>' + (o.prazo ? esc(dfmt(o.prazo)) : '') + '</em></a>';
+        fichas += '<article class="pdc-f" id="' + id + '" style="--c:' + g.F.cor + '"><div class="pdc-ft"><span class="pdc-n">' + ('0' + num).slice(-2) + '</span><span class="pdc-tag">' + esc(D.tag) + '</span></div><h3>' + esc(D.titulo) + '</h3>' + (D.texto ? '<p class="pdc-tx">' + esc(D.texto) + '</p>' : '') +
+          '<div class="pdc-dg"><div><small>' + esc(D.valL) + '</small><b>' + esc(D.val) + '</b></div><div>' + (o.prazo ? prazoHtml(o) : '') + '</div></div>' +
+          (D.obj ? '<p class="pdc-obj">' + esc(D.obj.length > 420 ? D.obj.slice(0, 420).replace(/\s+\S*$/, '') + '…' : D.obj) + '</p>' : '') +
+          '<div class="pdc-kvs">' + D.linhas + '</div><a class="pdc-go" href="' + esc(o.link) + '">' + esc(D.botao) + ' · ' + esc(host) + ' ↗</a></article>';
+      });
+      idx += '</div>';
+    });
+    var stats = ORDEM.map(function (k) { return '<div style="--c:' + FONTES[k].cor + '"><b>' + (n[k] || 0) + '</b><span>' + FONTES[k].nome + '</span><small>' + FONTES[k].sub + '</small></div>'; }).join('');
+    var chips = [];
+    ORDEM.forEach(function (k) { if (!n[k]) return; var ents = {}; selLista(k).forEach(function (o) { var e = FONTES[k].ent(o); ents[e] = (ents[e] || 0) + 1; }); Object.keys(ents).forEach(function (e) { chips.push('<span>' + esc(e) + ' · ' + ents[e] + '</span>'); }); });
+    var html =
+      '<section class="pdc-cv"><div class="pdc-cv-in"><img class="pdc-logo" src="' + ASSETS + 'logo-idd-white.png" alt="idD Portugal Defence">' +
+      '<div class="pdc-cv-mid"><span class="pdc-eb">Catálogo de oportunidades · ' + new Date().getFullYear() + '</span><h1>Oportunidades na <b>Defesa</b></h1>' +
+      '<div class="pdc-sel"><b>' + n.total + (n.total === 1 ? ' oportunidade selecionada' : ' oportunidades selecionadas') + '</b><div class="pdc-chips">' + chips.join('') + '</div></div></div>' +
+      '<div class="pdc-cv-ft"><div class="pdc-stats">' + stats + '</div><div class="pdc-cv-bt"><span>' + hojeExt() + '</span><span>www.iddportugal.pt</span></div></div></div></section>' +
+      '<section class="pdc-idx"><span class="pdc-eb2">Índice</span><h2>Oportunidades <b>selecionadas</b></h2><p class="pdc-aviso">Informação extraída a ' + hojeExt() + ', às ' + tfmt(new Date()) + '. Os prazos e as condições podem mudar: consulte sempre a fonte oficial, indicada em cada oportunidade.</p>' + idx + '</section>' +
+      fichas +
+      '<section class="pdc-cb"><div class="pdc-cb-in"><img class="pdc-logo" src="' + ASSETS + 'logo-idd-white.png" alt="idD Portugal Defence"><span class="pdc-eb">idD Portugal Defence</span><h2>Ao serviço da <b>indústria de Defesa Nacional</b></h2>' +
+      '<p>A idD acompanha as oportunidades das Forças Armadas, da NATO e da UE e apoia as empresas portuguesas no acesso a estes mercados.</p>' +
+      '<div class="pdc-cb-l"><a href="https://www.iddportugal.pt/">www.iddportugal.pt</a><a href="mailto:geral@iddportugal.pt">geral@iddportugal.pt</a></div><small>Catálogo gerado a ' + hojeExt() + '.</small></div></section>';
+    var box = document.getElementById('pdx-print'); if (!box) { box = document.createElement('div'); box.id = 'pdx-print'; document.body.appendChild(box); }
+    box.innerHTML = html;
+    var imgs = Array.prototype.slice.call(box.querySelectorAll('img'));
+    Promise.all([carregaRodape()].concat(imgs.map(function (im) { return im.complete ? 1 : new Promise(function (r) { im.onload = im.onerror = r; }); }))).then(function (res) {
+      var logo = res[0], st = document.getElementById('pdx-print-st');
+      if (!st) { st = document.createElement('style'); st.id = 'pdx-print-st'; document.head.appendChild(st); }
+      st.textContent = '@page{size:A4;margin:16mm 15mm 18mm;' + (logo ? '@bottom-left{content:url("' + logo + '");vertical-align:middle}' : '') + '@bottom-right{content:counter(page);font:600 8pt Montserrat,Arial,sans-serif;color:#5d6b61;vertical-align:middle}}@page pdxcv{margin:0;@bottom-left{content:none}@bottom-right{content:none}}';
+      if (logo) { var pre = new Image(); pre.className = 'pdc-pre'; pre.src = logo; box.insertBefore(pre, box.firstChild); }
+      document.body.classList.add('pdx-printing');
+      var doc = document.title; document.title = 'Oportunidades na Defesa · idD · ' + new Date().toISOString().slice(0, 10);
+      var fim = function () { document.body.classList.remove('pdx-printing'); document.title = doc; window.removeEventListener('afterprint', fim); };
+      window.addEventListener('afterprint', fim);
+      setTimeout(function () { window.print(); }, 250);
+    });
+  }
 
   /* ---------- dados ---------- */
   render();
