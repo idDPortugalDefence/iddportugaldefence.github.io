@@ -1,13 +1,13 @@
-// Recolha diária das oportunidades (Diário da República e NATO) para a Plataforma Defesa da idD.
+// Recolha das oportunidades (Diário da República, NATO e UE) para o site da idD.
 // Uso: node recolha/recolher.mjs   (Node 18 ou superior; grava em dados/)
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const raiz = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const core = require(path.join(raiz, 'oportunidades-core.js'));
+const core = require(path.join(raiz, 'recolha', 'oportunidades-core.js'));
 globalThis.window = {};
-require(path.join(raiz, 'config.js'));
+require(path.join(raiz, 'recolha', 'config.js'));
 const CFG = globalThis.window.PLATAFORMA_CONFIG;
 const saida = path.join(raiz, 'dados');
 fs.mkdirSync(saida, { recursive: true });
