@@ -21,19 +21,34 @@
   function n(x) { return x === 1 ? '1 entidade' : x + ' entidades'; }
   function pct(v) { return String(v).replace('.', ',') + '%'; }
 
-  var S = { lista: [], dom: [], dist: null, q: '' };
+  var S = { lista: [], dom: [], dist: null, q: '', soSel: false };
+  var SK = 'idd-entidades-selecao', OK = 'idd-entidades-catalogo', SEL = {}, OPT = { num: true, grp: true, idx: true };
+  try { (JSON.parse(localStorage.getItem(SK) || '[]') || []).forEach(function (x) { SEL[x] = 1; }); } catch (e) {}
+  try { var oo = JSON.parse(localStorage.getItem(OK) || 'null'); if (oo) OPT = oo; } catch (e) {}
+  function guarda() { try { localStorage.setItem(SK, JSON.stringify(Object.keys(SEL))); } catch (e) {} }
+  var MES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  function hoje() { var d = new Date(); return d.getDate() + ' de ' + MES[d.getMonth()] + ' de ' + d.getFullYear(); }
+  function dnomes(e) { return e.dominios.map(function (d) { var x = DOMS.filter(function (y) { return y.id === d; })[0]; return x ? x.nome : ''; }).filter(Boolean); }
 
   mount.innerHTML =
     '<div class="pde-doms" data-doms></div>' +
-    '<div class="pde-map-wrap"><div class="pde-map" data-map></div><div class="pde-panel" data-panel></div></div>' +
-    '<div class="pde-bar"><label class="pde-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" placeholder="Pesquisar por nome, setor ou concelho" data-q aria-label="Pesquisar entidades"></label><div class="pde-act" data-act></div><span class="pde-res" data-res></span></div>' +
+    '<div class="pde-bar"><label class="pde-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" placeholder="Pesquisar por nome, setor ou concelho" data-q aria-label="Pesquisar entidades"></label><div class="pde-act" data-act></div><span class="pde-res"><span data-res></span><button type="button" class="pde-lnk" data-pickall></button></span></div>' +
     '<div class="pde-grid" data-grid><div class="pde-sk"></div><div class="pde-sk"></div><div class="pde-sk"></div></div>' +
+    '<div class="pde-map-wrap"><div class="pde-map" data-map></div><div class="pde-panel" data-panel></div></div>' +
+    '<div class="pde-selbar" data-selbar hidden><div><b data-seltot></b><small data-selsub></small></div><div class="pde-selbar-a"><button type="button" class="pde-sb-l" data-selview></button><button type="button" class="pde-sb-l" data-selclear>Limpar seleção</button><button type="button" class="pde-sb-p" data-pdf>Catálogo PDF</button></div></div>' +
+    '<div class="pde-dlg" data-opts hidden><div class="pde-dlg-bg" data-oclose></div><div class="pde-dlg-in pde-op-in" role="dialog" aria-modal="true"><button type="button" class="pde-x pde-x-d" data-oclose aria-label="Fechar">×</button>' +
+      '<div class="pde-op"><span class="pde-eb">Catálogo PDF</span><h3>O que quer incluir?</h3><p data-optxt></p>' +
+      '<label class="pde-ck"><input type="checkbox" data-o="num"><span><b>Números da indústria de Defesa</b><small>Entidades, volume de negócios, exportações e trabalhadores</small></span></label>' +
+      '<label class="pde-ck"><input type="checkbox" data-o="grp"><span><b>Grupo idD</b><small>Números do grupo e empresas participadas</small></span></label>' +
+      '<label class="pde-ck"><input type="checkbox" data-o="idx"><span><b>Índice</b><small>Lista das entidades com ligação para cada ficha</small></span></label>' +
+      '<p class="pde-op-n">O catálogo inclui sempre a capa, as fichas das entidades selecionadas e a contracapa. Na janela de impressão escolha "Guardar como PDF" e ative "Gráficos de fundo".</p>' +
+      '<button type="button" class="pde-btn pde-btn-w" data-go>Gerar catálogo PDF</button></div></div></div>' +
     '<div class="pde-dlg" data-dlg hidden><div class="pde-dlg-bg" data-close></div><div class="pde-dlg-in" role="dialog" aria-modal="true"><button type="button" class="pde-x" data-close aria-label="Fechar">×</button><div data-body></div></div></div>';
   var $ = function (s) { return mount.querySelector(s); };
 
   function filtradas(semDist) {
     return S.lista.filter(function (e) {
-      return (!S.dom.length || S.dom.some(function (d) { return e.dominios.indexOf(d) > -1; })) &&
+      return (!S.soSel || SEL[e.id]) && (!S.dom.length || S.dom.some(function (d) { return e.dominios.indexOf(d) > -1; })) &&
         (semDist || !S.dist || e.distrito === S.dist) &&
         (!S.q || norm([e.nome, e.curto, e.tag, e.setores.join(' '), e.concelho, e.distrito, e.resumo].join(' ')).indexOf(norm(S.q)) > -1);
     });
@@ -91,9 +106,10 @@
   /* ---------- lista ---------- */
   function cartao(e) {
     var dn = e.dominios.map(function (d) { var x = DOMS.filter(function (y) { return y.id === d; })[0]; return x ? x.nome : ''; }).filter(Boolean);
-    return '<button type="button" class="pde-c" data-ent="' + e.id + '"><span class="pde-ph"' + (e.foto ? ' style="background-image:url(\'' + BASE + 'assets/' + esc(e.foto) + '\')"' : '') + '><span class="pde-gr">Grupo idD · ' + pct(e.pctIdD) + '</span></span>' +
+    var on = SEL[e.id];
+    return '<div class="pde-cw' + (on ? ' pde-picked' : '') + '"><button type="button" class="pde-pick' + (on ? ' pde-on' : '') + '" data-pick="' + e.id + '" aria-pressed="' + !!on + '">' + (on ? '✓ Selecionada' : '+ Selecionar') + '</button><button type="button" class="pde-c" data-ent="' + e.id + '"><span class="pde-ph"' + (e.foto ? ' style="background-image:url(\'' + BASE + 'assets/' + esc(e.foto) + '\')"' : '') + '><span class="pde-gr">Grupo idD · ' + pct(e.pctIdD) + '</span></span>' +
       '<span class="pde-cb">' + logoBox(e) + '<span class="pde-tg">' + esc(e.tag) + '</span><b>' + esc(e.curto) + '</b><small>' + esc(e.resumo) + '</small>' +
-      '<span class="pde-meta"><span>' + esc(e.concelho) + ', ' + esc(e.distrito) + '</span>' + (dn.length ? '<span>' + esc(dn.join(' · ')) + '</span>' : '') + '</span></span></button>';
+      '<span class="pde-meta"><span>' + esc(e.concelho) + ', ' + esc(e.distrito) + '</span>' + (dn.length ? '<span>' + esc(dn.join(' · ')) + '</span>' : '') + '</span></span></button></div>';
   }
   function render() {
     renderDoms(); renderMap(); renderPanel();
@@ -104,6 +120,15 @@
     if (S.dist) act.push('<button type="button" class="pde-fc" data-dist="">' + esc(S.dist) + ' ×</button>');
     if (act.length > 1) act.push('<button type="button" class="pde-clr" data-clear>Limpar filtros</button>');
     $('[data-act]').innerHTML = act.join('');
+    var falta = L.filter(function (e) { return !SEL[e.id]; }).length, pa = $('[data-pickall]');
+    pa.hidden = !L.length || S.soSel; pa.disabled = !falta; pa.textContent = falta ? '+ Selecionar todas (' + L.length + ')' : '✓ Todas selecionadas';
+    var ns = S.lista.filter(function (e) { return SEL[e.id]; });
+    $('[data-selbar]').hidden = !ns.length && !S.soSel;
+    $('[data-seltot]').textContent = 'A minha seleção · ' + n(ns.length);
+    var dc = {}; ns.forEach(function (e) { dnomes(e).forEach(function (d) { dc[d] = (dc[d] || 0) + 1; }); });
+    $('[data-selsub]').textContent = Object.keys(dc).map(function (d) { return d + ' ' + dc[d]; }).join(' · ');
+    $('[data-selview]').textContent = S.soSel ? 'Ver todas' : 'Ver só a seleção';
+    $('[data-pdf]').textContent = 'Catálogo PDF (' + ns.length + ')'; $('[data-pdf]').disabled = !ns.length;
     $('[data-grid]').innerHTML = L.length ? L.map(cartao).join('') : '<div class="pde-empty"><b>Sem entidades com estes critérios.</b><span>Experimente limpar os filtros ou a pesquisa.</span></div>';
   }
   function abrir(id) {
@@ -119,6 +144,74 @@
       (e.url ? '<a class="pde-btn" href="' + esc(e.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>' : '') + '</div>';
     $('[data-dlg]').hidden = false; document.documentElement.classList.add('pde-lock'); var x = $('.pde-x'); if (x) x.focus();
   }
+  function abreOpcoes() {
+    var k = S.lista.filter(function (e) { return SEL[e.id]; }).length; if (!k) return;
+    $('[data-optxt]').textContent = n(k) + (k === 1 ? ' selecionada.' : ' selecionadas.');
+    Array.prototype.forEach.call(mount.querySelectorAll('[data-o]'), function (c) { c.checked = OPT[c.getAttribute('data-o')] !== false; });
+    $('[data-opts]').hidden = false; document.documentElement.classList.add('pde-lock');
+  }
+
+  /* ---------- catálogo PDF ---------- */
+  var RODAPE = null;
+  function rodape() {
+    if (RODAPE) return Promise.resolve(RODAPE);
+    return fetch(BASE + 'assets/logo-idd-rodape.svg').then(function (r) { return r.text(); }).then(function (t) { RODAPE = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(t))); return RODAPE; }).catch(function () { return ''; });
+  }
+  var NUM = [['444', '', 'Entidades', 'Empresas e instituições de I&D e ensino, em 47 setores de atividade'], ['10,97', 'mil M€', 'Volume de negócios', 'Vendas somadas das empresas, das quais 4,39 mil M€ para a Defesa'], ['3,31', 'mil M€', 'Exportações', 'Cerca de 30% do volume de negócios; mais do que duplicaram desde 2012'], ['54.184', '', 'Trabalhadores', 'Mão de obra qualificada, com forte base em engenharia']];
+  var GRP = [['8', '', 'Empresas'], ['440', 'M€', 'Volume de negócios'], ['3.000', '', 'Colaboradores'], ['350', 'M€', 'Exportações']];
+  function catalogo() {
+    var L = S.lista.filter(function (e) { return SEL[e.id]; }).sort(function (a, b) { return a.curto.localeCompare(b.curto, 'pt'); }); if (!L.length) return;
+    var IMG = function (p) { return BASE + 'assets/' + p; }, logo = function (e) { return e.logo ? '<img src="' + IMG(e.logo) + '" alt="">' : '<i>' + esc(e.curto.slice(0, 2)) + '</i>'; };
+    var dc = {}, dist = {}; L.forEach(function (e) { dnomes(e).forEach(function (d) { dc[d] = (dc[d] || 0) + 1; }); dist[e.distrito] = 1; });
+    var filtros = S.dom.map(function (d) { return DOMS.filter(function (y) { return y.id === d; })[0].nome; }).concat(S.dist ? [S.dist] : []);
+    var h = '<section class="pec-cv"><div class="pec-in"><img class="pec-logo" src="' + IMG('logo-idd-white.png') + '" alt="idD Portugal Defence">' +
+      '<div class="pec-mid"><span class="pec-eb">Catálogo · ' + new Date().getFullYear() + '</span><h1>Indústria de Defesa <b>portuguesa</b></h1>' +
+      '<div class="pec-sel"><b>' + (L.length === 1 ? '1 entidade selecionada' : L.length + ' entidades selecionadas') + '</b>' + (filtros.length ? '<small>Filtros: ' + esc(filtros.join(' · ')) + '</small>' : '') +
+      '<div class="pec-chips">' + Object.keys(dc).map(function (d) { return '<span>' + esc(d) + ' · ' + dc[d] + '</span>'; }).join('') + '</div></div></div>' +
+      '<div class="pec-ft"><div class="pec-st"><div><b>' + L.length + '</b><span>Entidades</span></div><div><b>' + Object.keys(dc).length + '</b><span>Domínios</span></div><div><b>' + Object.keys(dist).length + '</b><span>Distritos</span></div></div>' +
+      '<div class="pec-bt"><span>' + hoje() + '</span><span>www.iddportugal.pt</span></div></div></div></section>';
+    if (OPT.num) h += '<section class="pec-dk"><div class="pec-in"><span class="pec-eb">Indústria de Defesa portuguesa</span><h2>Os números da <b>indústria de Defesa</b></h2>' +
+      '<p class="pec-lead">Empresas, universidades e centros de I&amp;D que intervêm em todo o ciclo de vida dos sistemas de defesa, da conceção ao apoio, integrados em cadeias de abastecimento globais.</p>' +
+      '<div class="pec-kp">' + NUM.map(function (k) { return '<div><b>' + k[0] + (k[1] ? '<small> ' + k[1] + '</small>' : '') + '</b><h3>' + k[2] + '</h3><p>' + k[3] + '</p></div>'; }).join('') + '</div>' +
+      '<div class="pec-dm">' + DOMS.map(function (d) { return '<span>' + svg(d.ic) + d.nome + '</span>'; }).join('') + '</div>' +
+      '<p class="pec-src">Dados atualizados em março de 2026 · Fontes: idD, INFORMA, IES, INE e Banco de Portugal</p></div></section>';
+    if (OPT.grp) {
+      var P = S.lista.slice().sort(function (a, b) { return b.pctIdD - a.pctIdD; });
+      h += '<section class="pec-gp"><span class="pec-eb2">Grupo idD Portugal</span><h2>O grupo <b>em números</b></h2><p class="pec-lead2">Dados de 2025 do grupo idD Portugal Defence.</p>' +
+        '<div class="pec-gn">' + GRP.map(function (k) { return '<div><b>' + k[0] + (k[1] ? '<small> ' + k[1] + '</small>' : '') + '</b><span>' + k[2] + '</span></div>'; }).join('') + '</div>' +
+        '<h3 class="pec-gh">Empresas <b>participadas</b></h3><div class="pec-gc">' + P.map(function (e) {
+          return '<div class="pec-pc"><span class="pec-ph"' + (e.foto ? ' style="background-image:url(\'' + IMG(e.foto) + '\')"' : '') + '></span><div class="pec-pb"><span class="pec-tg">' + esc(e.tag) + '</span><b>' + esc(e.curto) + '</b><small>' + esc(e.resumo) + '</small>' +
+            '<span class="pec-bar"><i><em style="width:' + e.pctIdD + '%"></em></i>' + pct(e.pctIdD) + '</span>' + (e.outros ? '<span class="pec-ot">' + esc(e.outros) + '</span>' : '') + '</div></div>'; }).join('') + '</div></section>';
+    }
+    if (OPT.idx) h += '<section class="pec-ix"><span class="pec-eb2">Índice</span><h2>Entidades <b>selecionadas</b></h2><div class="pec-ih"><span>N.º</span><span>Entidade</span><span>Localização</span></div>' +
+      L.map(function (e, i) { return '<a class="pec-ir" href="#pec-' + e.id + '"><i>' + ('0' + (i + 1)).slice(-2) + '</i><span><b>' + esc(e.nome) + '</b><small>' + esc(dnomes(e).join(' · ') || e.tag) + '</small></span><em>' + esc(e.concelho) + '</em></a>'; }).join('') + '</section>';
+    h += '<section class="pec-ls">' + L.map(function (e, i) {
+      var kv = function (l, v) { return v ? '<dt>' + l + '</dt><dd>' + v + '</dd>' : ''; };
+      return '<article class="pec-f" id="pec-' + e.id + '">' + (e.foto ? '<div class="pec-fp" style="background-image:url(\'' + IMG(e.foto) + '\')"></div>' : '') +
+        '<div class="pec-fb"><aside><span class="pec-lg">' + logo(e) + '</span><dl>' + kv('Localização', esc(e.concelho + ', ' + e.distrito)) + kv('Website', e.url ? '<a href="' + esc(e.url) + '">' + esc(host(e.url)) + '</a>' : '') +
+        kv('E-mail', e.email ? '<a href="mailto:' + esc(e.email) + '">' + esc(e.email) + '</a>' : '') + kv('Participação da idD', pct(e.pctIdD) + (e.outros ? '<small>' + esc(e.outros) + '</small>' : '')) + '</dl></aside>' +
+        '<div class="pec-fm"><span class="pec-n">' + ('0' + (i + 1)).slice(-2) + '</span><div class="pec-tags">' + dnomes(e).map(function (d) { return '<span class="pec-d">' + esc(d) + '</span>'; }).join('') + e.setores.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>' +
+        '<h3>' + esc(e.nome) + '</h3><p>' + esc(e.descricao || e.resumo) + '</p></div></div></article>'; }).join('') + '</section>';
+    h += '<section class="pec-cb"><div class="pec-in pec-in-b"><img class="pec-logo" src="' + IMG('logo-idd-white.png') + '" alt="idD Portugal Defence"><span class="pec-eb">idD Portugal Defence</span><h2>Ao serviço da <b>indústria de Defesa Nacional</b></h2>' +
+      '<p>A idD promove a indústria de Defesa portuguesa, aproxima as empresas das Forças Armadas, da NATO e da UE e apoia a sua internacionalização.</p>' +
+      '<div class="pec-cl"><a href="https://www.iddportugal.pt/">www.iddportugal.pt</a><a href="mailto:geral@iddportugal.pt">geral@iddportugal.pt</a></div><small>Catálogo gerado a ' + hoje() + '.</small></div></section>';
+    var box = document.getElementById('pde-print'); if (!box) { box = document.createElement('div'); box.id = 'pde-print'; document.body.appendChild(box); }
+    box.innerHTML = h;
+    var imgs = Array.prototype.slice.call(box.querySelectorAll('img')), bgs = [];
+    Array.prototype.forEach.call(box.querySelectorAll('[style*="background-image"]'), function (el) { var m = el.getAttribute('style').match(/url\('([^']+)'\)/); if (m) bgs.push(m[1]); });
+    var espera = imgs.map(function (im) { return im.complete ? 1 : new Promise(function (r) { im.onload = im.onerror = r; }); }).concat(bgs.map(function (u) { return new Promise(function (r) { var i2 = new Image(); i2.onload = i2.onerror = r; i2.src = u; }); }));
+    Promise.all([rodape()].concat(espera)).then(function (res) {
+      var lg = res[0], st = document.getElementById('pde-print-st');
+      if (!st) { st = document.createElement('style'); st.id = 'pde-print-st'; document.head.appendChild(st); }
+      st.textContent = '@page{size:A4;margin:16mm 15mm 18mm;' + (lg ? '@bottom-left{content:url("' + lg + '");vertical-align:middle}' : '') + '@bottom-center{content:"Indústria de Defesa portuguesa · catálogo idD · ' + hoje() + '";font:500 6.5pt Montserrat,Arial,sans-serif;color:#8a978d;vertical-align:middle}@bottom-right{content:counter(page);font:600 8pt Montserrat,Arial,sans-serif;color:#5d6b61;vertical-align:middle}}@page pecdk{margin:0;@bottom-left{content:none}@bottom-center{content:none}@bottom-right{content:none}}';
+      if (lg) { var pre = new Image(); pre.className = 'pec-pre'; pre.src = lg; box.insertBefore(pre, box.firstChild); }
+      document.body.classList.add('pde-printing');
+      var tit = document.title; document.title = 'Indústria de Defesa · catálogo idD · ' + new Date().toISOString().slice(0, 10);
+      var fim = function () { document.body.classList.remove('pde-printing'); document.title = tit; window.removeEventListener('afterprint', fim); };
+      window.addEventListener('afterprint', fim);
+      setTimeout(function () { window.print(); }, 250);
+    });
+  }
   function fechar() { $('[data-dlg]').hidden = true; document.documentElement.classList.remove('pde-lock'); }
 
   mount.addEventListener('click', function (ev) {
@@ -127,11 +220,18 @@
     var u = t.closest('[data-undom]'); if (u) { S.dom = S.dom.filter(function (x) { return x !== u.getAttribute('data-undom'); }); render(); return; }
     var di = t.closest('[data-dist]'); if (di) { var k = di.getAttribute('data-dist'); S.dist = k && S.dist !== k ? k : null; render(); return; }
     if (t.closest('[data-clear]')) { S.dom = []; S.dist = null; S.q = ''; $('[data-q]').value = ''; render(); return; }
+    var pk = t.closest('[data-pick]'); if (pk) { var pid = pk.getAttribute('data-pick'); if (SEL[pid]) delete SEL[pid]; else SEL[pid] = 1; guarda(); render(); return; }
+    if (t.closest('[data-pickall]')) { filtradas().forEach(function (x) { SEL[x.id] = 1; }); guarda(); render(); return; }
+    if (t.closest('[data-selclear]')) { SEL = {}; S.soSel = false; guarda(); render(); return; }
+    if (t.closest('[data-selview]')) { S.soSel = !S.soSel; render(); return; }
+    if (t.closest('[data-pdf]')) { abreOpcoes(); return; }
+    if (t.closest('[data-oclose]')) { $('[data-opts]').hidden = true; document.documentElement.classList.remove('pde-lock'); return; }
+    if (t.closest('[data-go]')) { Array.prototype.forEach.call(mount.querySelectorAll('[data-o]'), function (c) { OPT[c.getAttribute('data-o')] = c.checked; }); try { localStorage.setItem(OK, JSON.stringify(OPT)); } catch (er) {} $('[data-opts]').hidden = true; document.documentElement.classList.remove('pde-lock'); catalogo(); return; }
     var e = t.closest('[data-ent]'); if (e) { abrir(e.getAttribute('data-ent')); return; }
     if (t.closest('[data-close]')) fechar();
   });
   mount.addEventListener('keydown', function (ev) { if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.closest('.pde-pin')) { ev.preventDefault(); ev.target.closest('.pde-pin').dispatchEvent(new MouseEvent('click', { bubbles: true })); } });
-  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !$('[data-dlg]').hidden) fechar(); });
+  document.addEventListener('keydown', function (ev) { if (ev.key !== 'Escape') return; if (!$('[data-dlg]').hidden) fechar(); if (!$('[data-opts]').hidden) { $('[data-opts]').hidden = true; document.documentElement.classList.remove('pde-lock'); } });
   var tq; $('[data-q]').addEventListener('input', function (ev) { clearTimeout(tq); var v = ev.target.value; tq = setTimeout(function () { S.q = v; render(); }, 160); });
 
   var dq = new URLSearchParams(location.search).get('dominio');
