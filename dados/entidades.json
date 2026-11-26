@@ -1,0 +1,169 @@
+{
+ "gerado": "2026-11-26",
+ "nota": "Fase de testes: apenas as empresas participadas do Grupo idD",
+ "lista": [
+  {
+   "id": 55,
+   "nome": "Arsenal do Alfeite",
+   "curto": "Arsenal do Alfeite",
+   "setores": [
+    "Naval"
+   ],
+   "dominios": [
+    "mar"
+   ],
+   "url": "https://www.arsenal-alfeite.pt",
+   "descricao": "O Arsenal do Alfeite, S.A. é um grande estaleiro, com mais de 80 anos de experiência, dedicado à manutenção dos submarinos U-209 PN e das fragatas Meko 200 PN e M. É o parceiro de referência na manutenção e modernização dos meios navais da Marinha Portuguesa (mais de 90%) e de outras Marinhas amigas. DIVISÃO DE MANOBRAS E DOCAS: manobras marítimas, docagem, manobras em terra e movimentação de cargas. DIVISÃO DE CONSTRUÇÃO NAVAL (reparação e transformação): oficinas de estruturas metálicas (aço e alumínio), carpintaria e compósitos, soldadura, serralharia civil e tratamento de superfícies. DIVISÃO MECÂNICA: oficinas de mecânica, tubagens, máquinas, refrigeração e ar condicionado. DIVISÃO DE ARMAS E SENSORES: oficinas de eletrónica e automação, sensores e armas, acústica, eletricidade, torpedos, minas e mísseis. DIVISÃO DE CONTROLO DA QUALIDADE (laboratórios acreditados ISO 17025): ensaios e calibração, ensaios não destrutivos, vibrações, ruído e extensometria, controlo de revestimentos de proteção, ensaios mecânicos e metrologia elétrica, eletrónica, dimensional e mecânica.",
+   "resumo": "Construção, manutenção e reparação de navios e sistemas de armas para a Marinha Portuguesa e Marinhas da NATO.",
+   "tag": "Naval",
+   "concelho": "Almada",
+   "distrito": "Setúbal",
+   "logo": "entidades/company-20-0.webp",
+   "foto": "entidades/holding-7.webp",
+   "pctIdD": 100,
+   "outros": "",
+   "email": ""
+  },
+  {
+   "id": 170,
+   "nome": "ETI",
+   "curto": "ETI",
+   "setores": [
+    "C4i",
+    "Robótica & Automatização & Eletrónica",
+    "Software"
+   ],
+   "dominios": [
+    "cib"
+   ],
+   "url": "https://www.eti.pt",
+   "descricao": "A ETI fornece soluções de formação para a indústria da defesa e da aviação, com o objetivo de conceber e integrar soluções de formação personalizadas, avançadas e rentáveis, para satisfazer as necessidades de formação específicas dos clientes, impulsionando e melhorando o percurso formativo dos formandos. A empresa fornece soluções de formação para o pessoal de voo e de manutenção através de uma gama de dispositivos de formação, desde a formação baseada em computador e a formação em procedimentos até à formação operacional.",
+   "resumo": "Sistemas de formação, simulação e apoio à manutenção para a aeronáutica, segurança e defesa.",
+   "tag": "Simulação e treino",
+   "concelho": "Almada",
+   "distrito": "Setúbal",
+   "logo": "entidades/company-27-2.webp",
+   "foto": "entidades/holding-9.webp",
+   "pctIdD": 100,
+   "outros": "",
+   "email": ""
+  },
+  {
+   "id": 320,
+   "nome": "NAVALROCHA S.A.",
+   "curto": "Navalrocha",
+   "setores": [
+    "Naval"
+   ],
+   "dominios": [
+    "mar"
+   ],
+   "url": "https://navalrocha.pt",
+   "descricao": "O Estaleiro Navalrocha, situado em Lisboa, é uma unidade de reparação naval com uma longa experiência no setor da defesa. Localizado estrategicamente na margem norte do rio Tejo, presta serviços especializados a navios da Marinha, incluindo fragatas, navios-patrulha e unidades de apoio logístico. Com várias docas secos e um cais flutuante, está equipado para realizar intervenções complexas nas áreas da mecânica, eletricidade e estruturas. A Navalrocha tem colaborado com a Marinha Portuguesa e forças navais estrangeiras, garantindo trabalhos de manutenção, modernização e requalificação com elevados padrões de qualidade. A sua localização privilegiada e a equipa técnica qualificada fazem deste estaleiro um parceiro de referência no setor da defesa.",
+   "resumo": "Reparação naval em Lisboa, com três docas secas e um cais.",
+   "tag": "Naval",
+   "concelho": "Lisboa",
+   "distrito": "Lisboa",
+   "logo": "entidades/company-20-1.webp",
+   "foto": "entidades/holding-8.webp",
+   "pctIdD": 45,
+   "outros": "Navalset e Grupo ETE: 55%",
+   "email": ""
+  },
+  {
+   "id": 336,
+   "nome": "OGMA",
+   "curto": "OGMA",
+   "setores": [
+    "Aeronáutica"
+   ],
+   "dominios": [
+    "aer"
+   ],
+   "url": "https://www.ogma.pt",
+   "descricao": "A OGMA - Indústria Aeronáutica de Portugal é uma referência mundial na manutenção e reparação de aeronaves e no fabrico de aeroestruturas. É Centro de Manutenção Autorizado de alguns dos maiores fabricantes mundiais, como a EMBRAER, a Lockheed Martin, a Rolls-Royce e a Pratt & Whitney.",
+   "resumo": "Manutenção e reparação de aeronaves e fabrico de aeroestruturas.",
+   "tag": "Aeronáutica",
+   "concelho": "Vila Franca de Xira",
+   "distrito": "Lisboa",
+   "logo": "entidades/company-22-0.webp",
+   "foto": "entidades/holding-6.webp",
+   "pctIdD": 35,
+   "outros": "Embraer: 65%",
+   "email": ""
+  },
+  {
+   "id": 154,
+   "nome": "EID - Empresa de Investigação e Desenvolvimento de Electrónica S.A",
+   "curto": "EID",
+   "setores": [
+    "C4i"
+   ],
+   "dominios": [
+    "cib"
+   ],
+   "url": "https://www.eid.pt",
+   "descricao": "A EID, S.A., fundada em 1983, é uma empresa privada portuguesa de alta tecnologia, especializada no desenvolvimento de soluções avançadas de comunicações C4I, com forte foco no setor da defesa. Com vasta experiência em eletrónica, software e comunicações, a EID projeta, fabrica e apoia sistemas de elevado desempenho adaptados às necessidades operacionais dos seus clientes. Os seus principais domínios de especialização incluem comunicações navais, comunicações táticas, mensagens militares e engenharia de sistemas. A inovação contínua e a elevada qualificação técnica da equipa têm sustentado o crescimento da empresa e a sua capacidade de exportação, com soluções em operação em mais de 35 países. A EID integra a Cohort plc como acionista maioritário, em parceria com a idD - Portugal Defence e o IAPMEI.",
+   "resumo": "Comunicações navais, táticas e militares e integração de sistemas.",
+   "tag": "Comunicações",
+   "concelho": "Almada",
+   "distrito": "Setúbal",
+   "logo": "entidades/company-27-1.webp",
+   "foto": "entidades/holding-10.webp",
+   "pctIdD": 18,
+   "outros": "Cohort plc: 80%; IAPMEI: 2%",
+   "email": ""
+  },
+  {
+   "id": 438,
+   "nome": "Thales Edisoft Portugal",
+   "curto": "Thales Portugal",
+   "setores": [
+    "Aeronáutica",
+    "Armamento",
+    "C4i",
+    "Ciber",
+    "Naval"
+   ],
+   "dominios": [
+    "mar",
+    "ter",
+    "aer",
+    "cib"
+   ],
+   "url": "https://www.thalesgroup.com/en/countries/europe/thales-portugal",
+   "descricao": "A Thales Portugal, com mais de 37 anos de presença no país, desempenha um papel fundamental para as operações globais do Grupo Thales. Opera dois principais centros de competências: um dedicado à Engenharia Naval e outro em soluções de Mobilidade Aérea. Com a confiança de mais de 60 hubs internacionais, os sistemas desenvolvidos pela Thales otimizam trajetórias de voo, reduzindo o consumo de combustível e minimizando o impacto ambiental das viagens aéreas. A empresa está focada no desenvolvimento de software de gestão de tráfego aéreo e sistemas de comunicação, contribuindo para a melhoria contínua da segurança e eficiência operacional no setor da aviação. A Thales emprega mais de 400 pessoas em Portugal, apoiando ativamente os setores de defesa, aeroespacial e cibersegurança, desempenhando um papel significativo no avanço da infraestrutura tecnológica do país.",
+   "resumo": "Software e integração de sistemas críticos para Defesa, Mobilidade Aérea, Espaço e Cibersegurança.",
+   "tag": "Sistemas críticos",
+   "concelho": "Oeiras",
+   "distrito": "Lisboa",
+   "logo": "entidades/company-27-3.webp",
+   "foto": "entidades/holding-11.webp",
+   "pctIdD": 17.5,
+   "outros": "Thales e NAV: 82,5%",
+   "email": ""
+  },
+  {
+   "id": 180,
+   "nome": "Extra – Explosivos da Trafaria, S.A.",
+   "curto": "Extra",
+   "setores": [
+    "Materiais energéticos"
+   ],
+   "dominios": [
+    "ter"
+   ],
+   "url": "",
+   "descricao": "Empresa de eliminação de materiais energéticos, participada pela idD Portugal Defence.",
+   "resumo": "Eliminação de materiais energéticos.",
+   "tag": "Materiais energéticos",
+   "concelho": "Almada",
+   "distrito": "Setúbal",
+   "logo": "",
+   "foto": "",
+   "pctIdD": 59.8,
+   "outros": "MAXAM: 40,2%",
+   "email": ""
+  }
+ ]
+}
