@@ -114,6 +114,24 @@
   function selN() { var n = { total: 0 }; ORDEM.forEach(function (k) { n[k] = (S.dados[k] || []).filter(function (o) { return SEL[chave(k, o)]; }).length; n.total += n[k]; }); return n; }
   function selLista(k) { return (S.dados[k] || []).filter(function (o) { return SEL[chave(k, o)]; }); }
   S.soSel = false;
+  var NK = 'idd-oportunidades-notas', NOTAS = {};
+  try { NOTAS = JSON.parse(localStorage.getItem(NK) || '{}') || {}; } catch (e) {}
+  function guardaNotas() { try { localStorage.setItem(NK, JSON.stringify(NOTAS)); } catch (e) {} }
+  var COMO = {
+    nacionais: ['Os procedimentos decorrem na plataforma eletrónica indicada em cada anúncio (por exemplo ACIN ou Vortal). É necessário registo da empresa na plataforma e certificado de assinatura digital qualificada.',
+      'As peças do procedimento (programa e caderno de encargos) estão na plataforma. Os pedidos de esclarecimento têm prazo próprio, mais curto do que o das propostas.',
+      'Antes de concorrer, tenha em dia os documentos de habilitação: declarações de não dívida às Finanças e à Segurança Social, registo criminal e certidão permanente.',
+      'Alguns contratos exigem credenciação de segurança (Gabinete Nacional de Segurança) ou licenciamento para bens e tecnologias militares.'],
+    nato: ['Registo obrigatório no portal de cada entidade: eProcurement da NSPA, Neo eProcurement da NCIA, portal de fornecedores do ACO e portal da NATO HQ. O ACT recebe propostas por e-mail ou correio.',
+      'Muitos concursos, por exemplo na NSPA, exigem uma Declaração de Elegibilidade (DoE), emitida pelo Ministério da Defesa Nacional a pedido da empresa.',
+      'Para a DoE, a empresa deve ter credenciação de segurança (Gabinete Nacional de Segurança) e licenciamento para bens e tecnologias militares.',
+      'O registo na idD como entidade da indústria de Defesa é um dos passos do processo. A idD esclarece dúvidas e apoia as candidaturas.'],
+    ue: ['As candidaturas são submetidas no portal Funding & Tenders da Comissão Europeia, com registo prévio da entidade (código PIC).',
+      'No Fundo Europeu de Defesa, a candidatura é feita em consórcio: em regra, pelo menos 3 entidades independentes de 3 Estados-Membros da UE ou países associados. Nos concursos de tecnologias disruptivas podem bastar 2.',
+      'Os beneficiários e subcontratados têm de estar estabelecidos na UE ou em país associado, com a gestão executiva aí sediada. Há regras próprias para entidades controladas por países terceiros.',
+      'Cada concurso tem condições próprias, incluindo os do EDIP: confirme sempre o documento do concurso. A idD pode ajudar a encontrar parceiros portugueses.']
+  };
+  var GUIA_NATO = 'https://www.iddportugal.pt/wp-content/uploads/2023/07/Guia-Aquisicao-NATO-2023.pdf';
   var h0 = (location.hash || '').replace('#', '');
   if (FONTES[h0]) S.tab = h0;
 
@@ -133,7 +151,7 @@
     var c = FONTES[k].cartao(o);
     var on = SEL[chave(k, o)];
     return '<article class="pdx-op' + (on ? ' pdx-picked' : '') + '" style="--c:' + FONTES[k].cor + '"><button type="button" class="pdx-pick' + (on ? ' pdx-on' : '') + '" data-pick="' + i + '" aria-pressed="' + !!on + '">' + (on ? '✓ Selecionada' : '+ Selecionar') + '</button><button type="button" class="pdx-op-b" data-open="' + i + '">' +
-      '<span class="pdx-top"><span class="pdx-tag">' + esc(c.tag) + '</span>' + (c.extra ? '<span class="pdx-new">' + esc(c.extra) + '</span>' : '') + '<span class="pdx-ref">' + esc(c.ref) + '</span></span>' +
+      '<span class="pdx-top"><span class="pdx-tag">' + esc(c.tag) + '</span>' + (c.extra ? '<span class="pdx-new">' + esc(c.extra) + '</span>' : '') + (NOTAS[chave(k, o)] ? '<span class="pdx-nt">Nota</span>' : '') + '<span class="pdx-ref">' + esc(c.ref) + '</span></span>' +
       '<span class="pdx-t">' + esc(c.titulo) + '</span>' +
       '<span class="pdx-meta">' + c.meta.filter(Boolean).map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('') + '</span>' +
       '<span class="pdx-foot"><span class="pdx-val"><small>' + esc(c.valL) + '</small><b>' + esc(c.val) + '</b></span>' + prazoHtml(o) + '</span></button></article>';
@@ -183,6 +201,7 @@
       (D.obj ? '<div class="pdx-obj"><span>Objetivo (texto original)</span><p>' + esc(D.obj) + '</p></div>' : '') +
       '<div class="pdx-kvs">' + D.linhas + '</div>' +
       '<div class="pdx-acts"><a class="pdx-btn" href="' + esc(o.link) + '" target="_blank" rel="noopener">' + esc(D.botao) + ' ↗</a><button type="button" class="pdx-btn pdx-btn-o" data-dpick="' + i + '">' + (SEL[chave(k, o)] ? '✓ Selecionada' : '+ Selecionar') + '</button></div>' +
+      '<div class="pdx-nf"><label for="pdx-nota-t">Nota interna <small>Aparece no catálogo PDF. Fica guardada só neste browser.</small></label><textarea id="pdx-nota-t" data-nota="' + i + '" rows="3" placeholder="Ex.: Responsável: Ana · decidir até 5 dez · pedir DoE">' + esc(NOTAS[chave(k, o)] || '') + '</textarea></div>' +
       (D.nota ? '<p class="pdx-nota">' + esc(D.nota) + '</p>' : '');
     $('[data-dlg]').hidden = false; document.documentElement.classList.add('pdx-lock');
     var x = $('.pdx-x'); if (x) x.focus();
@@ -205,6 +224,12 @@
     if (e.target.closest('[data-close]')) fechar();
   });
   var tq; $('[data-q]').addEventListener('input', function (e) { clearTimeout(tq); var v = e.target.value; tq = setTimeout(function () { var f = S.f[S.tab]; f.q = v; f.n = POR_PAG; render(); }, 180); });
+  mount.addEventListener('input', function (e) {
+    var t = e.target.closest('[data-nota]'); if (!t) return;
+    var o = ATUAL[+t.getAttribute('data-nota')]; if (!o) return; var c = chave(S.tab, o), v = t.value.trim();
+    if (v) NOTAS[c] = t.value; else delete NOTAS[c]; guardaNotas();
+  });
+  mount.addEventListener('change', function (e) { if (e.target.closest('[data-nota]')) render(); });
   $('[data-sort]').addEventListener('change', function (e) { S.f[S.tab].sort = e.target.value; render(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('[data-dlg]').hidden) fechar(); });
   window.addEventListener('hashchange', function () { var h = location.hash.replace('#', ''); if (FONTES[h]) { S.tab = h; render(); mount.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
@@ -219,20 +244,33 @@
   function catalogo() {
     var n = selN(); if (!n.total) return;
     var grupos = ORDEM.filter(function (k) { return n[k]; }).map(function (k) { var L = selLista(k).slice(); L.sort(function (a, b) { return String(a.prazo || '9').localeCompare(String(b.prazo || '9')); }); return { k: k, F: FONTES[k], L: L }; });
-    var num = 0, idx = '', fichas = '';
+    var num = 0, idx = '', fichas = '', cal = [];
     grupos.forEach(function (g) {
-      idx += '<div class="pdc-ig" style="--c:' + g.F.cor + '"><h3>' + esc(g.F.nome) + ' <small>' + esc(g.F.sub) + ' · ' + g.L.length + '</small></h3>';
-      fichas += '<section class="pdc-src" style="--c:' + g.F.cor + '"><span>' + esc(g.F.sub) + '</span><h2>' + esc(g.F.nome) + '</h2><b>' + g.L.length + (g.L.length === 1 ? ' oportunidade' : ' oportunidades') + '</b></section>';
+      idx += '<div class="pdc-ig" style="--c:' + g.F.cor + '"><h3>' + esc(g.F.nome) + ' <small>' + esc(g.F.sub) + ' · ' + g.L.length + '</small></h3><div class="pdc-ih"><span>N.º</span><span>Oportunidade</span><span>Prazo</span></div>';
+      fichas += '<section class="pdc-src" style="--c:' + g.F.cor + '"><span>' + esc(g.F.sub) + '</span><h2>' + esc(g.F.nome) + '</h2><b>' + g.L.length + (g.L.length === 1 ? ' oportunidade' : ' oportunidades') + '</b></section>' +
+        '<div class="pdc-como" style="--c:' + g.F.cor + '"><h4>Como participar</h4><ol>' + COMO[g.k].map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ol>' +
+        (g.k === 'nato' ? '<a href="' + GUIA_NATO + '">Guia da idD de participação em concursos NATO ↗</a>' : '') + '</div>';
       g.L.forEach(function (o) {
         num++; var id = 'pdc-' + num, c = g.F.cartao(o), D = g.F.detalhe(o), host = (String(o.link).match(/^https?:\/\/([^/]+)/) || [])[1] || 'fonte oficial';
+        cal.push({ o: o, k: g.k, F: g.F, id: id, num: num, t: c.titulo, tag: c.tag });
         idx += '<a class="pdc-ir" href="#' + id + '"><i>' + ('0' + num).slice(-2) + '</i><span><b>' + esc(c.titulo) + '</b><small>' + esc(c.tag) + ' · ' + esc(c.ref) + '</small></span><em>' + (o.prazo ? esc(dfmt(o.prazo)) : '') + '</em></a>';
-        fichas += '<article class="pdc-f" id="' + id + '" style="--c:' + g.F.cor + '"><div class="pdc-ft"><span class="pdc-n">' + ('0' + num).slice(-2) + '</span><span class="pdc-tag">' + esc(D.tag) + '</span></div><h3>' + esc(D.titulo) + '</h3>' + (D.texto ? '<p class="pdc-tx">' + esc(D.texto) + '</p>' : '') +
-          '<div class="pdc-dg"><div><small>' + esc(D.valL) + '</small><b>' + esc(D.val) + '</b></div><div>' + (o.prazo ? prazoHtml(o) : '') + '</div></div>' +
-          (D.obj ? '<p class="pdc-obj">' + esc(D.obj.length > 420 ? D.obj.slice(0, 420).replace(/\s+\S*$/, '') + '…' : D.obj) + '</p>' : '') +
-          '<div class="pdc-kvs">' + D.linhas + '</div><a class="pdc-go" href="' + esc(o.link) + '">' + esc(D.botao) + ' · ' + esc(host) + ' ↗</a></article>';
+        var nd = dias(o.prazo), pcls = nd <= 3 ? ' pdc-hot' : nd <= 7 ? ' pdc-warm' : '';
+        fichas += '<article class="pdc-f" id="' + id + '" style="--c:' + g.F.cor + '"><div class="pdc-ft"><span class="pdc-n">' + ('0' + num).slice(-2) + '</span><span class="pdc-tag">' + esc(D.tag) + '</span>' +
+          (o.prazo ? '<span class="pdc-pz' + pcls + '"><small>Prazo</small> ' + esc(quando(o.prazo)) + ' · <b>' + (nd <= 0 ? 'termina hoje' : nd === 1 ? 'termina amanhã' : 'faltam ' + nd + ' dias') + '</b></span>' : '') + '</div>' +
+          '<h3>' + esc(D.titulo) + '</h3>' + (D.texto ? '<p class="pdc-tx">' + esc(D.texto) + '</p>' : '') +
+          (D.obj ? '<p class="pdc-obj">' + esc(D.obj.length > 260 ? D.obj.slice(0, 260).replace(/\s+\S*$/, '') + '…' : D.obj) + '</p>' : '') +
+          (NOTAS[chave(g.k, o)] ? '<div class="pdc-nota"><span>Nota interna</span>' + esc(NOTAS[chave(g.k, o)]) + '</div>' : '') +
+          '<div class="pdc-kvs"><div class="pdx-kv pdc-val"><span>' + esc(D.valL) + '</span><b>' + esc(D.val) + '</b></div>' + D.linhas + '</div><a class="pdc-go" href="' + esc(o.link) + '">' + esc(D.botao) + ' · ' + esc(host) + ' ↗</a></article>';
       });
       idx += '</div>';
     });
+    var bk = [['Terminam nos próximos 7 dias', 0, 7, 'pdc-hot'], ['Terminam entre 8 e 30 dias', 8, 30, 'pdc-warm'], ['Terminam daqui a mais de 30 dias', 31, 1e9, '']];
+    cal.sort(function (a, b) { return String(a.o.prazo).localeCompare(String(b.o.prazo)); });
+    var calHtml = '<section class="pdc-cal"><span class="pdc-eb2">Calendário</span><h2>Prazos <b>por ordem</b></h2>' + bk.map(function (b) {
+      var L = cal.filter(function (x) { var d = dias(x.o.prazo); return d >= b[1] && d <= b[2]; }); if (!L.length) return '';
+      return '<div class="pdc-cb2 ' + b[3] + '"><h3>' + b[0] + ' <small>' + L.length + '</small></h3>' + L.map(function (x) { var d = dias(x.o.prazo);
+        return '<a class="pdc-cr" href="#' + x.id + '" style="--c:' + x.F.cor + '"><span class="pdc-cd"><b>' + new Date(x.o.prazo).getDate() + '</b><small>' + M[new Date(x.o.prazo).getMonth()] + '</small></span><span class="pdc-ct"><b>' + esc(x.t) + '</b><small><i></i>' + esc(x.F.nome) + ' · ' + esc(x.tag) + ' · ficha ' + ('0' + x.num).slice(-2) + '</small></span><em>' + (d <= 0 ? 'hoje' : d === 1 ? 'amanhã' : d + ' dias') + '</em></a>'; }).join('') + '</div>';
+    }).join('') + '</section>';
     var stats = ORDEM.map(function (k) { return '<div style="--c:' + FONTES[k].cor + '"><b>' + (n[k] || 0) + '</b><span>' + FONTES[k].nome + '</span><small>' + FONTES[k].sub + '</small></div>'; }).join('');
     var chips = [];
     ORDEM.forEach(function (k) { if (!n[k]) return; var ents = {}; selLista(k).forEach(function (o) { var e = FONTES[k].ent(o); ents[e] = (ents[e] || 0) + 1; }); Object.keys(ents).forEach(function (e) { chips.push('<span>' + esc(e) + ' · ' + ents[e] + '</span>'); }); });
@@ -240,9 +278,9 @@
       '<section class="pdc-cv"><div class="pdc-cv-in"><img class="pdc-logo" src="' + ASSETS + 'logo-idd-white.png" alt="idD Portugal Defence">' +
       '<div class="pdc-cv-mid"><span class="pdc-eb">Catálogo de oportunidades · ' + new Date().getFullYear() + '</span><h1>Oportunidades na <b>Defesa</b></h1>' +
       '<div class="pdc-sel"><b>' + n.total + (n.total === 1 ? ' oportunidade selecionada' : ' oportunidades selecionadas') + '</b><div class="pdc-chips">' + chips.join('') + '</div></div></div>' +
-      '<div class="pdc-cv-ft"><div class="pdc-stats">' + stats + '</div><div class="pdc-cv-bt"><span>' + hojeExt() + '</span><span>www.iddportugal.pt</span></div></div></div></section>' +
+      '<div class="pdc-cv-ft"><div class="pdc-stats">' + stats + '</div><p class="pdc-cv-av">Informação extraída a ' + hojeExt() + '. Os prazos e as condições podem mudar: consulte sempre a fonte oficial, indicada em cada oportunidade.</p><div class="pdc-cv-bt"><span>' + hojeExt() + '</span><span>www.iddportugal.pt</span></div></div></div></section>' +
       '<section class="pdc-idx"><span class="pdc-eb2">Índice</span><h2>Oportunidades <b>selecionadas</b></h2><p class="pdc-aviso">Informação extraída a ' + hojeExt() + ', às ' + tfmt(new Date()) + '. Os prazos e as condições podem mudar: consulte sempre a fonte oficial, indicada em cada oportunidade.</p>' + idx + '</section>' +
-      fichas +
+      calHtml + fichas +
       '<section class="pdc-cb"><div class="pdc-cb-in"><img class="pdc-logo" src="' + ASSETS + 'logo-idd-white.png" alt="idD Portugal Defence"><span class="pdc-eb">idD Portugal Defence</span><h2>Ao serviço da <b>indústria de Defesa Nacional</b></h2>' +
       '<p>A idD acompanha as oportunidades das Forças Armadas, da NATO e da UE e apoia as empresas portuguesas no acesso a estes mercados.</p>' +
       '<div class="pdc-cb-l"><a href="https://www.iddportugal.pt/">www.iddportugal.pt</a><a href="mailto:geral@iddportugal.pt">geral@iddportugal.pt</a></div><small>Catálogo gerado a ' + hojeExt() + '.</small></div></section>';
@@ -252,7 +290,7 @@
     Promise.all([carregaRodape()].concat(imgs.map(function (im) { return im.complete ? 1 : new Promise(function (r) { im.onload = im.onerror = r; }); }))).then(function (res) {
       var logo = res[0], st = document.getElementById('pdx-print-st');
       if (!st) { st = document.createElement('style'); st.id = 'pdx-print-st'; document.head.appendChild(st); }
-      st.textContent = '@page{size:A4;margin:16mm 15mm 18mm;' + (logo ? '@bottom-left{content:url("' + logo + '");vertical-align:middle}' : '') + '@bottom-right{content:counter(page);font:600 8pt Montserrat,Arial,sans-serif;color:#5d6b61;vertical-align:middle}}@page pdxcv{margin:0;@bottom-left{content:none}@bottom-right{content:none}}';
+      st.textContent = '@page{size:A4;margin:16mm 15mm 18mm;' + (logo ? '@bottom-left{content:url("' + logo + '");vertical-align:middle}' : '') + '@bottom-center{content:"Extraído a ' + hojeExt() + ' · confirme sempre na fonte oficial";font:500 6.5pt Montserrat,Arial,sans-serif;color:#8a978d;vertical-align:middle}@bottom-right{content:counter(page);font:600 8pt Montserrat,Arial,sans-serif;color:#5d6b61;vertical-align:middle}}@page pdxcv{margin:0;@bottom-left{content:none}@bottom-center{content:none}@bottom-right{content:none}}';
       if (logo) { var pre = new Image(); pre.className = 'pdc-pre'; pre.src = logo; box.insertBefore(pre, box.firstChild); }
       document.body.classList.add('pdx-printing');
       var doc = document.title; document.title = 'Oportunidades na Defesa · idD · ' + new Date().toISOString().slice(0, 10);
