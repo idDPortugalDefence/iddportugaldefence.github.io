@@ -1,0 +1,22 @@
+name: Recolha de oportunidades (12 em 12 horas)
+on:
+  schedule:
+    - cron: "17 8,20 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recolha:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: node recolha/recolher.mjs
+      - run: |
+          git config user.name "recolha-automatica"
+          git config user.email "recolha@users.noreply.github.com"
+          git add dados
+          git diff --cached --quiet || git commit -m "Oportunidades atualizadas $(date -u +%F)"
+          git push
