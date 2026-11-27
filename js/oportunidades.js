@@ -138,9 +138,11 @@
   /* ---------- estrutura ---------- */
   mount.innerHTML =
     '<div class="pdx-tabs" role="tablist">' + ORDEM.map(function (k) { var F = FONTES[k]; return '<button type="button" role="tab" class="pdx-tab" data-tab="' + k + '" style="--c:' + F.cor + '"><b>' + F.nome + '</b><small>' + F.sub + '</small><i data-cnt="' + k + '">…</i></button>'; }).join('') + '</div>' +
+    '<div class="pdx-como" data-como></div>' +
     '<div class="pdx-bar"><div class="pdx-chips" data-chips></div><div class="pdx-tools"><label class="pdx-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" placeholder="Pesquisar por palavra, referência, CPV…" data-q aria-label="Pesquisar"></label><select data-sort aria-label="Ordenar"></select></div></div>' +
     '<div class="pdx-info"><span><span data-res></span><button type="button" class="pdx-lnk" data-pickall></button></span><span data-upd></span></div>' +
     '<div class="pdx-list" data-list></div>' +
+    '<p class="pdx-aviso"><b>Nota:</b> as oportunidades apresentadas nesta página são recolhidas de forma automática das plataformas oficiais de cada entidade (Diário da República, agências da NATO e Comissão Europeia). O conteúdo, os prazos e as condições são da responsabilidade das entidades que os publicam. A idD divulga esta informação para facilitar o acesso da indústria de Defesa portuguesa, mas não garante a sua exatidão nem a sua atualização. Consulte sempre a fonte oficial antes de apresentar uma candidatura.</p>' +
     '<div class="pdx-more"><button type="button" class="pdx-btn pdx-btn-o" data-more hidden>Mostrar mais</button></div>' +
     '<div class="pdx-selbar" data-selbar hidden><div class="pdx-selbar-t"><b data-seltot></b><small data-selsub></small></div><div class="pdx-selbar-a"><button type="button" class="pdx-sb-l" data-selview></button><button type="button" class="pdx-sb-l" data-selclear>Limpar seleção</button><button type="button" class="pdx-sb-p" data-pdf>Catálogo PDF</button></div></div>' +
     '<div class="pdx-dlg" data-dlg hidden><div class="pdx-dlg-bg" data-close></div><div class="pdx-dlg-in" role="dialog" aria-modal="true"><button type="button" class="pdx-x" data-close aria-label="Fechar">×</button><div data-body></div></div></div>';
@@ -161,7 +163,16 @@
     var F = FONTES[k], f = S.f[k], todos = (S.dados[k] || []).filter(aberta);
     return todos.filter(function (o) { return (!S.soSel || SEL[chave(k, o)]) && (!f.ent || F.ent(o) === f.ent) && match(f.q, F.pesquisa(o)); });
   }
+  var CK = 'idd-oportunidades-como-fechado', COMOF = false;
+  try { COMOF = localStorage.getItem(CK) === '1'; } catch (e) {}
+  function renderComo() {
+    var k = S.tab, F = FONTES[k];
+    $('[data-como]').innerHTML = '<button type="button" class="pdx-como-h" data-comot aria-expanded="' + !COMOF + '"><span><b>Como participar</b><small>' + esc(F.nome) + ' · ' + esc(F.sub) + '</small></span><i>' + (COMOF ? 'Mostrar' : 'Esconder') + '</i></button>' +
+      (COMOF ? '' : '<ol class="pdx-como-l">' + COMO[k].map(function (t, i) { return '<li><span>' + (i + 1) + '</span>' + esc(t) + '</li>'; }).join('') + '</ol>' +
+        (k === 'nato' ? '<a class="pdx-como-a" href="' + GUIA_NATO + '" target="_blank" rel="noopener">Guia da idD de participação em concursos NATO ↗</a>' : ''));
+  }
   function render() {
+    renderComo();
     var k = S.tab, F = FONTES[k], f = S.f[k];
     mount.style.setProperty('--c', F.cor);
     Array.prototype.forEach.call(mount.querySelectorAll('[data-tab]'), function (b) { var on = b.getAttribute('data-tab') === k; b.classList.toggle('pdx-on', on); b.setAttribute('aria-selected', on); });
@@ -211,6 +222,7 @@
 
   /* ---------- eventos ---------- */
   mount.addEventListener('click', function (e) {
+    if (e.target.closest('[data-comot]')) { COMOF = !COMOF; try { localStorage.setItem(CK, COMOF ? '1' : '0'); } catch (er) {} renderComo(); return; }
     var t = e.target.closest('[data-tab]'); if (t) { S.tab = t.getAttribute('data-tab'); if (history.replaceState) history.replaceState(null, '', '#' + S.tab); render(); return; }
     var c = e.target.closest('[data-ent]'); if (c) { var f = S.f[S.tab]; f.ent = c.getAttribute('data-ent'); f.n = POR_PAG; render(); return; }
     var pk = e.target.closest('[data-pick]'); if (pk) { alterna(ATUAL[+pk.getAttribute('data-pick')]); render(); return; }
