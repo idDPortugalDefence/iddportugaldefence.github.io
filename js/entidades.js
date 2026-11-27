@@ -141,7 +141,8 @@
       row('Participação da idD', '<span class="pde-pc"><i><em style="width:' + e.pctIdD + '%"></em></i>' + pct(e.pctIdD) + '</span>' + (e.outros ? '<small>' + esc(e.outros) + '</small>' : '')) +
       row('Website', e.url ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(host(e.url)) + ' ↗</a>' : '') +
       row('E-mail', e.email ? '<a href="mailto:' + esc(e.email) + '">' + esc(e.email) + '</a>' : '') + '</div>' +
-      (e.url ? '<a class="pde-btn" href="' + esc(e.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>' : '') + '</div>';
+      (e.url ? '<a class="pde-btn" href="' + esc(e.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>' : '') +
+      '<a class="pde-upd" href="' + location.pathname.replace(/\/?$/, '/') + 'registo/?entidade=' + encodeURIComponent(e.nome) + '#atualizar" target="_blank" rel="noopener">É a sua entidade? <b>Atualizar dados →</b></a></div>';
     $('[data-dlg]').hidden = false; document.documentElement.classList.add('pde-lock'); var x = $('.pde-x'); if (x) x.focus();
   }
   function abreOpcoes() {
