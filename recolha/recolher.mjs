@@ -22,6 +22,41 @@ async function dr() {
   return lista.length;
 }
 
+// Leitura direta do Diário da República (RSS + detalhe). Por agora só grava uma amostra para análise.
+async function drDireto() {
+  const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
+  const base = 'https://diariodarepublica.pt';
+  const r = await fetch('https://files.diariodarepublica.pt/rss/serie2&parte=l-html.xml', { headers: { 'User-Agent': UA } });
+  if (!r.ok) throw new Error('RSS ' + r.status);
+  const rss = await r.text();
+  const nomes = CFG.emitentes.map(e => e.nome);
+  const itens = [...rss.matchAll(/<item>[\s\S]*?<title>([\s\S]*?)<\/title>[\s\S]*?<!\[CDATA\[([\s\S]*?)\]\]>[\s\S]*?<link><!\[CDATA\[([\s\S]*?)\]\]><\/link>/g)]
+    .map(m => ({ titulo: m[1].trim(), descricao: m[2].trim(), link: m[3].trim() }));
+  const nossos = itens.filter(i => nomes.some(n => i.descricao.startsWith(n)));
+  let tok = 'T6C+9iB49TLra4jEsMeSckDMNhQ=', cookie = '';
+  try {
+    const h = await fetch(base + '/dr/home', { headers: { 'User-Agent': UA } });
+    const sc = (h.headers.getSetCookie ? h.headers.getSetCookie() : [h.headers.get('set-cookie') || '']);
+    cookie = sc.map(c => c.split(';')[0]).join('; ');
+    const nr = sc.find(c => c.startsWith('nr2Users='));
+    if (nr) { const m = decodeURIComponent(nr.split(';')[0].slice(9)).match(/crf=([^;]+)/); if (m) tok = m[1]; }
+  } catch (e) {}
+  const detalhes = [];
+  for (const it of nossos.slice(0, 4)) {
+    const key = (it.link.match(/\/([^/]+)$/) || [])[1] || '';
+    const corpo = { versionInfo: { moduleVersion: 'AFPBEWM7W0l5DYC7iaLqbw', apiVersion: 'B3l5BYZxaLmWUxGR3tmKGw' }, viewName: 'Legislacao_Conteudos.Conteudo_Detalhe',
+      screenData: { variables: { ParteIdAux: '0', Pesquisa: '', Comes: '', Tipo: 'anuncio-procedimento', _tipoInDataFetchStatus: 1, Key: key, _keyInDataFetchStatus: 1, ParteId: '', _parteIdInDataFetchStatus: 1 } }, clientVariables: {} };
+    try {
+      const d = await fetch(base + '/dr/screenservices/dr/Legislacao_Conteudos/Conteudo_Detalhe/DataActionGetAllConteudoDetalheData', {
+        method: 'POST', headers: { 'User-Agent': UA, 'Content-Type': 'application/json; charset=UTF-8', Accept: 'application/json', 'x-csrftoken': tok, 'outsystems-locale': 'pt-PT', Cookie: cookie }, body: JSON.stringify(corpo) });
+      const t = await d.text();
+      detalhes.push({ key, estado: d.status, resposta: t.slice(0, 60000) });
+    } catch (e) { detalhes.push({ key, erro: String(e) }); }
+  }
+  grava('dr-direto-amostra.json', { gerado: agora, totalRss: itens.length, defesa: nossos.length, itens: nossos, detalhes, primeirosRss: itens.slice(0, 3) });
+  return nossos.length;
+}
+
 async function nato() {
   if (process.env.NATO_FIXTURE) {
     const j = JSON.parse(fs.readFileSync(process.env.NATO_FIXTURE, 'utf8'));
@@ -65,8 +100,8 @@ async function ue() {
 }
 
 let erros = 0;
-for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', ue]]) {
+for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', ue], ['DR direto (amostra)', drDireto]]) {
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
-process.exit(erros === 3 ? 1 : 0);
+process.exit(erros >= 4 ? 1 : 0);
