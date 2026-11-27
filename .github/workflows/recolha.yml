@@ -1,7 +1,7 @@
-name: Recolha de oportunidades (12 em 12 horas)
+name: Recolha de oportunidades (de hora a hora)
 on:
   schedule:
-    - cron: "17 8,20 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
