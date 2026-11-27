@@ -15,14 +15,30 @@ const grava = (nome, obj) => fs.writeFileSync(path.join(saida, nome), JSON.strin
 const agora = new Date().toISOString();
 
 async function dr() {
-  const r = await fetch(process.env.FONTE_DR || CFG.fonteOportunidades);
-  if (!r.ok) throw new Error('DR ' + r.status);
-  const lista = core.build(await r.json(), CFG.emitentes);
-  grava('oportunidades.json', { gerado: agora, lista });
-  return lista.length;
+  // 1) dataset diário (damiaocode) + 2) leitura direta do DR (RSS + detalhe) + 3) recolha anterior ainda em prazo
+  const fontes = [], erros = [];
+  try {
+    const r = await fetch(process.env.FONTE_DR || CFG.fonteOportunidades);
+    if (!r.ok) throw new Error('dataset ' + r.status);
+    fontes.push(...(await r.json()));
+  } catch (e) { erros.push(e.message); }
+  let diretos = [];
+  try { diretos = await drDireto(); } catch (e) { erros.push('direto: ' + e.message); }
+  if (!fontes.length && !diretos.length) throw new Error(erros.join('; '));
+  const substituidos = new Set();
+  diretos.forEach(p => { const m = String(p.detalhes_completos).match(/Altera[çc][ãa]o do An[úu]ncio de procedimento n\.?º?\s*(\d+\/\d{4})/i); if (m) substituidos.add(m[1]); });
+  const novos = core.build(diretos.concat(fontes), CFG.emitentes);
+  let anteriores = [];
+  try { anteriores = JSON.parse(fs.readFileSync(path.join(saida, 'oportunidades.json'), 'utf8')).lista || []; } catch (e) {}
+  const vistos = new Set(novos.map(o => String(o.id))), agoraIso = new Date().toISOString().slice(0, 16);
+  anteriores.forEach(o => { if (!vistos.has(String(o.id)) && o.prazo && o.prazo >= agoraIso) { novos.push(o); vistos.add(String(o.id)); } });
+  const lista = novos.filter(o => !substituidos.has(String(o.id)))
+    .sort((a, b) => (b.enviado || '').localeCompare(a.enviado || '') || String(b.id).localeCompare(String(a.id)));
+  grava('oportunidades.json', { gerado: agora, direto: diretos.length, lista });
+  return lista.length + ' (' + diretos.length + ' lidas diretamente do DR' + (erros.length ? '; avisos: ' + erros.join('; ') : '') + ')';
 }
 
-// Leitura direta do Diário da República (RSS + detalhe). Por agora só grava uma amostra para análise.
+// Leitura direta do Diário da República: RSS da 2.ª série (contratos públicos) + detalhe de cada anúncio da Defesa.
 async function drDireto() {
   const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
   const base = 'https://diariodarepublica.pt';
@@ -31,30 +47,32 @@ async function drDireto() {
   const rss = await r.text();
   const nomes = CFG.emitentes.map(e => e.nome);
   const itens = [...rss.matchAll(/<item>[\s\S]*?<title>([\s\S]*?)<\/title>[\s\S]*?<!\[CDATA\[([\s\S]*?)\]\]>[\s\S]*?<link><!\[CDATA\[([\s\S]*?)\]\]><\/link>/g)]
-    .map(m => ({ titulo: m[1].trim(), descricao: m[2].trim(), link: m[3].trim() }));
-  const nossos = itens.filter(i => nomes.some(n => i.descricao.startsWith(n)));
+    .map(m => ({ titulo: m[1].trim(), descricao: m[2].trim(), link: m[3].trim() }))
+    .filter(i => nomes.some(n => i.descricao.startsWith(n)));
+  if (!itens.length) return [];
   let tok = 'T6C+9iB49TLra4jEsMeSckDMNhQ=', cookie = '';
   try {
     const h = await fetch(base + '/dr/home', { headers: { 'User-Agent': UA } });
-    const sc = (h.headers.getSetCookie ? h.headers.getSetCookie() : [h.headers.get('set-cookie') || '']);
+    const sc = h.headers.getSetCookie ? h.headers.getSetCookie() : [h.headers.get('set-cookie') || ''];
     cookie = sc.map(c => c.split(';')[0]).join('; ');
     const nr = sc.find(c => c.startsWith('nr2Users='));
     if (nr) { const m = decodeURIComponent(nr.split(';')[0].slice(9)).match(/crf=([^;]+)/); if (m) tok = m[1]; }
   } catch (e) {}
-  const detalhes = [];
-  for (const it of nossos.slice(0, 4)) {
+  const out = [];
+  for (const it of itens) {
     const key = (it.link.match(/\/([^/]+)$/) || [])[1] || '';
     const corpo = { versionInfo: { moduleVersion: 'AFPBEWM7W0l5DYC7iaLqbw', apiVersion: 'B3l5BYZxaLmWUxGR3tmKGw' }, viewName: 'Legislacao_Conteudos.Conteudo_Detalhe',
       screenData: { variables: { ParteIdAux: '0', Pesquisa: '', Comes: '', Tipo: 'anuncio-procedimento', _tipoInDataFetchStatus: 1, Key: key, _keyInDataFetchStatus: 1, ParteId: '', _parteIdInDataFetchStatus: 1 } }, clientVariables: {} };
     try {
       const d = await fetch(base + '/dr/screenservices/dr/Legislacao_Conteudos/Conteudo_Detalhe/DataActionGetAllConteudoDetalheData', {
         method: 'POST', headers: { 'User-Agent': UA, 'Content-Type': 'application/json; charset=UTF-8', Accept: 'application/json', 'x-csrftoken': tok, 'outsystems-locale': 'pt-PT', Cookie: cookie }, body: JSON.stringify(corpo) });
-      const t = await d.text();
-      detalhes.push({ key, estado: d.status, resposta: t.slice(0, 60000) });
-    } catch (e) { detalhes.push({ key, erro: String(e) }); }
+      if (!d.ok) continue;
+      const c = ((await d.json()).data || {}).DetalheConteudo || {};
+      if (!c.Texto) continue;
+      out.push({ link: it.link, entidade: c.Emissor || '', designacao_contrato: c.Sumario || '', detalhes_completos: c.Texto, pdf: c.URL_PDF || '' });
+    } catch (e) {}
   }
-  grava('dr-direto-amostra.json', { gerado: agora, totalRss: itens.length, defesa: nossos.length, itens: nossos, detalhes, primeirosRss: itens.slice(0, 3) });
-  return nossos.length;
+  return out;
 }
 
 async function nato() {
@@ -100,8 +118,8 @@ async function ue() {
 }
 
 let erros = 0;
-for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', ue], ['DR direto (amostra)', drDireto]]) {
+for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', ue]]) {
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
-process.exit(erros >= 4 ? 1 : 0);
+process.exit(erros >= 3 ? 1 : 0);
