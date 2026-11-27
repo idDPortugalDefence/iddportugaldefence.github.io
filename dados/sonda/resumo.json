@@ -1,25 +1,25 @@
 {
- "quando": "2026-11-27T12:05:26.723Z",
+ "quando": "2026-11-27T12:32:55.624Z",
  "resumo": [
   {
    "nome": "nspa-p1",
    "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList",
    "estado": 200,
-   "tamanho": 84779,
+   "tamanho": 84781,
    "linhas": 10
   },
   {
    "nome": "nspa-feed-200",
    "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList/OpportunitiesList?DisplayMode=Default&QueryMode=AvailableForActionOnly&NavigationContext=None&CurrentPageIndex=1&SkippedPages=0&PageSize=200&FilterKeywords=Contracts.DTO.Common.ValueTypeDTO%5B%5D&ColumnsToGet=%2A&IsFavorite=False&IsImportant=False&IsTodo=False&IsDone=False&UseDelegation=False&IsDelegationFilterVisible=True&isFlagFilterVisible=True&IsContractPointOfContactFilterVisible=True&IsAssignToMeFilterVisible=False",
    "estado": 200,
-   "tamanho": 801143,
+   "tamanho": 801136,
    "linhas": 200
   },
   {
    "nome": "nspa-feed-200-fbo",
    "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList/OpportunitiesList?DisplayMode=Default&QueryMode=AvailableForActionOnly&NavigationContext=None&CurrentPageIndex=1&SkippedPages=0&PageSize=200&FilterKeywords=Contracts.DTO.Common.ValueTypeDTO%5B%5D&ColumnsToGet=%2A&PreFilter=FBO&IsFavorite=False&IsImportant=False&IsTodo=False&IsDone=False&UseDelegation=False&IsDelegationFilterVisible=True&isFlagFilterVisible=True&IsContractPointOfContactFilterVisible=True&IsAssignToMeFilterVisible=False",
    "estado": 200,
-   "tamanho": 801143,
+   "tamanho": 801136,
    "linhas": 200
   },
   {
@@ -33,7 +33,7 @@
    "nome": "nspa-p2",
    "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList?CurrentPageIndex=2",
    "estado": 200,
-   "tamanho": 84783,
+   "tamanho": 84784,
    "linhas": 10
   },
   {
