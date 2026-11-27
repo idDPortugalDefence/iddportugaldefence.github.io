@@ -1,0 +1,45 @@
+{
+ "quando": "2026-11-27T11:34:00.588Z",
+ "resumo": [
+  {
+   "nome": "ncia",
+   "url": "https://www.ncia.nato.int/business/procurement/current-opportunities",
+   "estado": 403,
+   "final": "https://www.ncia.nato.int/business/procurement/current-opportunities",
+   "tamanho": 4904,
+   "bloqueado": true
+  },
+  {
+   "nome": "ncia-html",
+   "url": "https://www.ncia.nato.int/business/current-opportunities.html",
+   "estado": 403,
+   "final": "https://www.ncia.nato.int/business/current-opportunities.html",
+   "tamanho": 4904,
+   "bloqueado": true
+  },
+  {
+   "nome": "nspa-fbo",
+   "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList?PreFilter=FBO",
+   "estado": 200,
+   "final": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList?PreFilter=FBO",
+   "tamanho": 88527,
+   "bloqueado": false
+  },
+  {
+   "nome": "nspa",
+   "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList",
+   "estado": 200,
+   "final": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities/OpportunitiesList",
+   "tamanho": 84788,
+   "bloqueado": false
+  },
+  {
+   "nome": "nspa-raiz",
+   "url": "https://eportal.nspa.nato.int/eProcurement5G/Opportunities",
+   "estado": 200,
+   "final": "https://eportal.nspa.nato.int/eProcurement5G/Error/Error/NotFound?aspxerrorpath=/eProcurement5G/Opportunities",
+   "tamanho": 12006,
+   "bloqueado": false
+  }
+ ]
+}

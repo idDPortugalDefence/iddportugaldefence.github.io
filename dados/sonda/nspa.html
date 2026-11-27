@@ -1,0 +1,1184 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>eProcurement / List</title>
+
+    
+    
+    <script type="text/javascript" src="/eProcurement5G/ruxitagentjs_ICANVfqru_10315250519065025.js" data-dtconfig="rid=RID_1451642323|rpid=-1025969977|domain=nato.int|reportUrl=/eProcurement5G/rb_7b935e71-4c5e-4015-ab75-ec26b6146edc|app=d00b250f87175b20|cuc=093kpwxl|mel=100000|featureHash=ICANVfqru|dpvc=1|lastModification=1795671654814|tp=500,50,0|rdnt=0|uxrgce=1|agentUri=/eProcurement5G/ruxitagentjs_ICANVfqru_10315250519065025.js"></script><link rel="shortcut icon" href="#">
+    
+
+    
+    <link href="/eProcurement5G/Content/css?v=DCprJUJDwgE89VU0yNW6flxv5gv9eTM9vDj8KbMKHVc1" rel="stylesheet"/>
+
+    <link href="/eProcurement5G/Content/fontawesome.min.css" rel="stylesheet" />
+
+    
+</head>
+
+<body lang="en"  component global >
+    <input name="__RequestVerificationToken" type="hidden" value="UDw4JL0hJ9tkKrAMn8yrbNddMnw-vIhqyqT6VlvApcP1FPvITZIRypwA4RiJ-kDCsh3BPviHhG_MMZUrBqRlbK5UdTdHRwU-JAeN_VclkJI1" />
+    
+    <div id="LoadingOverlay" class="loading">
+    <div class="loading-bg"></div>
+    <table class="loading-body">
+        <tbody>
+            <tr>
+                <td>
+                    <i class="fa fa-spinner"></i>
+                    <strong>Loading</strong>
+                    <span>Please wait while we process your request...</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    
+    
+
+<form id="GenericForm" action="" method="post"  component generic-form="{&quot;PresenterIdentifier&quot;:&quot;GenericFormPresenter&quot;}" >
+    
+    <div class="AntiForgeryTokenArea">
+
+    </div>
+    <div class="GenericFormInputsArea hidden">
+        <div class="SelectedRowsData hidden">
+            <!-- ko foreach: $data -->
+            <input type="hidden" data-bind="value: RowIDEncrypted, attr: {name: 'SelectedRows[' + $index() + '].RowIDEncrypted'}" />
+            <input type="hidden" data-bind="value: RowParentIDEncrypted, attr: {name: 'SelectedRows[' + $index() + '].RowParentIDEncrypted'}" />
+            <input type="hidden" data-bind="value: Timestamp, attr: {name: 'SelectedRows[' + $index() + '].Timestamp'}" />
+            <input type="hidden" data-bind="value: AdditionalDataJSON, attr: {name: 'SelectedRows[' + $index() + '].AdditionalData'}" />
+            <input type="hidden" data-bind="value: IsSelected, attr: {name: 'SelectedRows[' + $index() + '].IsSelected'}" />
+            <!-- /ko -->
+        </div>
+    </div>
+</form>
+
+
+    
+    <div id="ModalRootContainer">
+        <div id="ModalDetailContainer" class="modal modal-root" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-container">
+        <div id="global-modal-container" class="loading-area global-modal-container"  component loading="{&quot;DisplayLoadingOnInitialization&quot;:false,&quot;PresenterIdentifier&quot;:&quot;global-modal-container&quot;}" >
+    <div class="loading-area-bg"></div>
+    <table class="loading-area-body">
+        <tbody>
+            <tr>
+                <td>
+                    <i class="fa fa-spinner "></i>
+                        <strong>Loading</strong>
+                        <span>Please wait while we process your request...</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <div id="ModalDetailContainerInternal" class="modal-internal-container"></div>
+    </div>
+</div>
+        <div id="ModalContainer" class="modal modal-root" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-container">
+        <div id="global-modal-container" class="loading-area global-modal-container"  component loading="{&quot;DisplayLoadingOnInitialization&quot;:false,&quot;PresenterIdentifier&quot;:&quot;global-modal-container&quot;}" >
+    <div class="loading-area-bg"></div>
+    <table class="loading-area-body">
+        <tbody>
+            <tr>
+                <td>
+                    <i class="fa fa-spinner "></i>
+                        <strong>Loading</strong>
+                        <span>Please wait while we process your request...</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <div id="ModalContainerInternal" class="modal-internal-container"></div>
+    </div>
+</div>
+    </div>
+    
+    
+<nav id="navMenu" class="menu grad grad-menu hdn">
+
+    <a href="#" title="eProcurement" class="submenu-link" data-target="submenu-eProcurement">
+        <span class="menuicon far fa-globe"></span>
+        eProcurement 
+        <i class="expand fa fa-caret-down"></i>
+    </a>
+    <nav id="submenu-eProcurement" class="sub-menu ">
+            <a href="/eProcurement5G/Opportunities/OpportunitiesList" title="Opportunities">
+                <span class="menuicon fas fa-hand-holding-usd"></span>
+                Opportunities 
+            </a>
+            <a href="/eProcurement5G/ExternalRedirection/RedirectToSupplierOpportunitiesList" title="Access to eProcurement">
+                <span class="menuicon "></span>
+                Access to eProcurement 
+            </a>
+            <a href="/eProcurement5G/ExternalRedirection/RedirectToNSPVendorPage?languageCode=EN" title="Supplier self registration">
+                <span class="menuicon "></span>
+                Supplier self registration 
+            </a>
+            <a href="/eProcurement5G/ExternalRedirection/RedirectToNSPAWebsite" title="NSPA Website">
+                <span class="menuicon "></span>
+                NSPA Website 
+            </a>
+    </nav>
+</nav>
+    
+    
+
+
+
+    <img src="/eProcurement5G/Content/images/logos/header-nspa.png" alt="nato header" class="d-none d-print-block banner" />
+<header class="grad grad-header d-print-none">
+    
+    <div class="header-left">
+        <a id="hlinkMenu" href="#menu" title="Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <span class="sep"></span>
+        <a href="/eProcurement5G/" title="Home">
+            <i class="fa fa-home"></i>
+        </a>
+        <a href="/eProcurement5G/" class="logo grad grad-header-logo logo-nspa" title="eProcurement">
+            <img src="/eProcurement5G/Content/images/logos/logo-nspa-en.png" alt="eProcurement" title="eProcurement" />
+        </a>
+        <h5>eProcurement</h5>
+
+    </div>
+    
+    <div class="header-right"  component header="{&quot;basketSubHeader&quot;:{&quot;SubHeaderSelector&quot;:&quot;#subheaderShoppingCart&quot;}}" >
+
+        <span class="sep"></span>
+
+    </div>
+
+
+
+
+</header>
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+    <div id="MainContainer"  component input-mask >
+        
+
+
+
+<div class="container-fluid content">
+
+
+    <div class="page-header">
+        <h2>
+            <span class="fas fa-handshake"></span>
+            Your Opportunity(ies)<small> </small>
+        </h2>
+    </div>
+
+    <div class="panel panel-expandable">
+
+        <div class="panel-body"  component multiple-selection="{&quot;ActionBarUrl&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/ActionBarMultiple&quot;,&quot;IsMultipleSelectionAllowed&quot;:false,&quot;PresenterIdentifier&quot;:&quot;multiple-selection&quot;}" >
+            <div  component grid="{&quot;FilterKeywords&quot;:[{&quot;Column&quot;:&quot;Status&quot;,&quot;Value&quot;:&quot;PB&quot;,&quot;ValueFormatted&quot;:null,&quot;Count&quot;:null,&quot;Type&quot;:null,&quot;Label&quot;:&quot;Published&quot;,&quot;IsFullTextColumn&quot;:false,&quot;SourceSuffix&quot;:null,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;OptionalValueFormatted&quot;:null,&quot;DataType&quot;:null,&quot;ComplementarySearch&quot;:false}],&quot;DataFeedUrl&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/OpportunitiesList?DisplayMode=Default&amp;QueryMode=AvailableForActionOnly&amp;NavigationContext=None&amp;CurrentPageIndex=1&amp;SkippedPages=0&amp;PageSize=10&amp;FilterKeywords=Contracts.DTO.Common.ValueTypeDTO%5B%5D&amp;ColumnsToGet=%2A&amp;IsFavorite=False&amp;IsImportant=False&amp;IsTodo=False&amp;IsDone=False&amp;UseDelegation=False&amp;IsDelegationFilterVisible=True&amp;isFlagFilterVisible=True&amp;IsContractPointOfContactFilterVisible=True&amp;IsAssignToMeFilterVisible=False&quot;,&quot;ListActionName&quot;:&quot;OpportunitiesList&quot;,&quot;DataFeedCountUrl&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/OpportunitiesListPager?DisplayMode=Default&amp;QueryMode=AvailableForActionOnly&amp;NavigationContext=None&amp;CurrentPageIndex=1&amp;SkippedPages=0&amp;PageSize=10&amp;FilterKeywords=Contracts.DTO.Common.ValueTypeDTO%5B%5D&amp;ColumnsToGet=%2A&amp;IsFavorite=False&amp;IsImportant=False&amp;IsTodo=False&amp;IsDone=False&amp;UseDelegation=False&amp;IsDelegationFilterVisible=True&amp;isFlagFilterVisible=True&amp;IsContractPointOfContactFilterVisible=True&amp;IsAssignToMeFilterVisible=False&quot;,&quot;DataFeedActionNamePager&quot;:null,&quot;ElementToUpdateSelector&quot;:null,&quot;AdditionalParameters&quot;:null,&quot;ParentID&quot;:null,&quot;ParentIDs&quot;:null,&quot;PreFilter&quot;:null,&quot;Value&quot;:null,&quot;Column&quot;:null,&quot;CurrentPageIndex&quot;:1,&quot;PageSize&quot;:10,&quot;DisplayMode&quot;:0,&quot;PagerMode&quot;:1,&quot;DataFeedSummaryUrl&quot;:null,&quot;DataFeedActionNameSummary&quot;:null,&quot;ConfigurationName&quot;:null,&quot;IsDownloadAsync&quot;:false,&quot;SortColumn&quot;:null,&quot;EnableStatePersistence&quot;:true,&quot;PresenterIdentifier&quot;:&quot;OpportunitiesList&quot;}" >
+
+
+<div class="table-wrapper white row">
+    
+        <div class="search-grid grad grad-search-grid col-lg-4 d-print-none">
+            <div class="search-textbox">
+                
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for... and wait for the results" id="gridSearchSPM68" />
+                    <button class="btn btn-secondary" disabled="disabled" type="button"  command  search="{&quot;inputId&quot;:&quot;#gridSearchSPM68&quot;}" >
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                
+
+<div class=" ">
+    <div id="AutocompleteResultDropDown_OpportunitiesList" class="search-dropdown grad grad-search-dropdown hdn"  component autocomplete-box="{&quot;Id&quot;:&quot;OpportunitiesList&quot;,&quot;TriggerElement&quot;:&quot;#gridSearchSPM68&quot;,&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/Autocomplete?Value=&quot;,&quot;ShowCount&quot;:false,&quot;HasPlugin&quot;:true,&quot;IsGridSearch&quot;:true,&quot;PresenterToCall&quot;:null,&quot;DisplayLoading&quot;:false,&quot;DisplayAllResultsByDefault&quot;:false}" >
+            <div class="search-close">
+                <button type="button" class="btn-close"  command  close-autocomplete-area ></button>
+            </div>
+        <div id="suggestionArea_OpportunitiesList">
+            <div id="AutocompleteLoader" class="flex horizontal-align-center padding-5">
+                <i class="text-settings font-size-16 autoCompleteLoader fas fa-spinner fa-spin"></i>
+            </div>
+            <div class="results">
+                <h6 class="results-header hdn" style="font-style:italic">Top results per column:</h6>
+                <small class="results-header hdn">*Please use the all results option if the top results do not retrieve your criteria</small>
+            </div>
+            <div class="noresults hdn">
+                No result found.
+            </div>
+        </div>
+                <div class="advancedFilterArea">
+                    
+
+
+<script type="text/html" id="AdvancedFilterContainer">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="dropdown inline-block mr-3">
+                <a title="Select column" class="" id="dropdownCommentVisibility" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span data-bind="text:SelectedColumn().Label"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownCommentVisibility" data-bind="template: {foreach:Columns}">
+                    <li role="presentation"><a tabindex="-1" class="dropdown-item" role="menuitem" data-bind="click: $parent.SelectColumn.bind($parent, $data)"><span data-bind="text:Label"></span></a></li>
+                </ul>
+            </div>
+            <!-- ko if: IsColumnSelected, descendantsComplete: AfterRender -->
+                <div class="dropdown inline-block">
+                    <a title="Select operator" class="" id="dropdownCommentVisibility" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span data-bind="text:SelectedOperator().Label"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownCommentVisibility" data-bind="template: {foreach:Operators}">
+                        <li role="presentation"><a tabindex="-1" class="dropdown-item" role="menuitem" data-bind="click: $parent.SelectOperator.bind($parent, $data)"><span data-bind="text:Label"></span></a></li>
+                    </ul>
+                </div>
+                <div class="form-inline margin-top-2">
+                    <!-- ko if:IsOperatorSelected , completeOn: "render", childrenComplete: AfterRender -->
+                    <!-- ko template:{ name: Template } -->
+                    <!-- /ko -->
+                    <br />
+                    <a href="#CancelFilter" data-bind="click: ResetFilter" class="mr-2">Reset</a>
+                    <a href="#ApplyFilter" data-bind="click: ApplyFilter.bind($data, $parent)">Apply</a>
+                    <!-- /ko -->
+                </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</script>
+
+
+<script type="text/html" id="AdvancedDateFilter">
+    <input class="form-control tb-datepicker" type="text" tb-min-date="null" tb-alt-field="#filterValueDateNonFormatted" tb-alt-format="yy-mm-dd" data-bind="value: ValueFormatted" template="date" />
+    <input class="form-control" id="filterValueDateNonFormatted" type="hidden" data-bind="value: Value" />
+    <!-- ko if: SelectedOperator().Value === ComparisonOperatorsExposer.Between, childrenComplete: AfterRender -->
+    and
+    <input class="form-control tb-datepicker" type="text" tb-min-date="null" tb-alt-field="#filterOptionalValueDateNonFormatted" tb-alt-format="yy-mm-dd" data-bind="value: OptionalValueFormatted" template="date" />
+    <input class="form-control" id="filterOptionalValueDateNonFormatted" type="hidden" data-bind="value: OptionalValue" />
+    <!-- /ko -->    
+</script>
+<script type="text/html" id="AdvancedStringFilter">
+    <input class="form-control" type="text" data-bind="value: Value, valueUpdate: 'afterkeydown', event: {keypress:  ApplyFilterOnEnter.bind($data, $parent, event.which) }" maxlength="50" />
+</script>
+    <h5>Filter by Column</h5>
+    <div class="search-info margin-left-10"  component advanced-filters="{&quot;AvailableAdvancedFilter&quot;:3,&quot;Filters&quot;:[{&quot;AdvancedFilter&quot;:1,&quot;DataType&quot;:&quot;Date&quot;,&quot;Title&quot;:&quot;Date Filter&quot;,&quot;Order&quot;:1,&quot;Columns&quot;:[{&quot;Label&quot;:&quot;Modified on&quot;,&quot;Value&quot;:&quot;LastModifiedDate&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Label&quot;:&quot;Publication Date&quot;,&quot;Value&quot;:&quot;PublicationDate&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Label&quot;:&quot;Closing Date&quot;,&quot;Value&quot;:&quot;ClosingDate&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Label&quot;:&quot;Tentative RFP Date&quot;,&quot;Value&quot;:&quot;TentativeRFPDate&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null}],&quot;Operators&quot;:[{&quot;Type&quot;:1,&quot;Label&quot;:&quot;Date Range&quot;,&quot;Value&quot;:&quot;Between&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:1,&quot;Label&quot;:&quot;All dates after&quot;,&quot;Value&quot;:&quot;GreaterThan&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:1,&quot;Label&quot;:&quot;All dates before&quot;,&quot;Value&quot;:&quot;LessThan&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:1,&quot;Label&quot;:&quot;Specific Date&quot;,&quot;Value&quot;:&quot;EqualsTo&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null}]},{&quot;AdvancedFilter&quot;:2,&quot;DataType&quot;:&quot;String&quot;,&quot;Title&quot;:&quot;Free Text Filter&quot;,&quot;Order&quot;:2,&quot;Columns&quot;:[{&quot;Label&quot;:&quot;Reference&quot;,&quot;Value&quot;:&quot;Reference&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Label&quot;:&quot;Title&quot;,&quot;Value&quot;:&quot;Title&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Label&quot;:&quot;Purchasing Organization Name&quot;,&quot;Value&quot;:&quot;PurchasingOrganisation&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null}],&quot;Operators&quot;:[{&quot;Type&quot;:2,&quot;Label&quot;:&quot;Begins With&quot;,&quot;Value&quot;:&quot;BeginsWith&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:2,&quot;Label&quot;:&quot;Contains&quot;,&quot;Value&quot;:&quot;Contains&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:6,&quot;Label&quot;:&quot;Equals To&quot;,&quot;Value&quot;:&quot;EqualsTo&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null},{&quot;Type&quot;:6,&quot;Label&quot;:&quot;Not Equals To&quot;,&quot;Value&quot;:&quot;NotEqualsTo&quot;,&quot;ReplacePreviousFilterForThisColumn&quot;:false,&quot;AllowedOperators&quot;:null}]}],&quot;GridId&quot;:&quot;OpportunitiesList&quot;}" >
+        <!-- ko foreach: Filters -->
+        <div class="search-info-title">
+            <strong><!-- ko text: Title --><!-- /ko --></strong>
+        </div>
+        <div class="search-info-details margin-bottom-10">
+            <!-- ko template: $parent.ContainerTemplate -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+
+
+
+                </div>
+                <div class="prefilterArea">
+                    
+    <h5>Pre Filters</h5>
+    <div class="search-info margin-left-10">
+        <div class="search-info-title">
+            <strong>
+                <a href="#"  command  add-filter="{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}" >Future Business Opportunity</a>
+            </strong>
+        </div>
+        <div class="search-info-details">
+            
+            <div class="search-info-details">
+                <div class="row">
+                    <div class="col-lg-4">
+                        - Type:
+                    </div>
+                    <div class="col-lg-8">
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Type&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;SE&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Service&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Service</a> /
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Type&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;SU&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Supply&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Supply</a>
+
+                            / <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;NOI&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;NPO&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" > NPO </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-info-details">
+                <div class="row">
+                    <div class="col-lg-4">
+                        - Status:
+                    </div>
+                    <div class="col-lg-8">
+                            <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Status&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;PB&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Published&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Published</a> /
+                            <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Status&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;CL&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Closed&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Closed</a> /
+                            <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;FBO&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Future Business Opportunity&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Status&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RC&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;FBO Cancelled&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >FBO Cancelled</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-info margin-left-10 margin-top-15">
+        <div class="search-info-title">
+            <strong>
+                <a href="#"  command  add-filter="{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}" >Request For Proposal</a>
+            </strong>
+        </div>
+
+        <div class="search-info-details">
+            <div class="search-info-details">
+                <div class="row">
+                    <div class="col-lg-4">
+                        - Type:
+                    </div>
+                    <div class="col-lg-8">
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Type&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;SE&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Service&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Service</a> /
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Type&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;SU&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Supply&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Supply</a>
+                    </div>
+                </div>
+            </div>
+            <div class="search-info-details">
+                <div class="row">
+                    <div class="col-lg-4">
+                        - Status:
+                    </div>
+                    <div class="col-lg-8">
+                            <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Status&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;PB&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Published&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Published</a> /
+                            <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;Status&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;CL&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Closed&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Closed</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-info-details ">
+                <div class="row">
+                    <div class="col-lg-4">
+                        - Level Distribution:
+                    </div>
+                    <div class="col-lg-8">
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;LevelDistribution&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;PU&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Public&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Public</a> /
+                        <a href="#"  command  add-multiple-filter="[{&quot;Column&quot;:&quot;OpportunityType&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;RFP&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Request For Proposal&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false},{&quot;Column&quot;:&quot;LevelDistribution&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;LI&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Limited&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}]" >Limited</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="search-info margin-left-10   margin-top-15">
+        <div class="search-info-title">
+            <strong>Other</strong>
+        </div>
+
+        <div class="search-info-details ">
+            <div class="row">
+                <div class="col-lg-4">
+                    - Closing Date:
+                </div>
+                <div class="col-lg-8">
+                    <a href="#"  command  add-filter="{&quot;Column&quot;:&quot;IsClosingInLessThan24H&quot;,&quot;Type&quot;:null,&quot;Value&quot;:&quot;1&quot;,&quot;Count&quot;:null,&quot;Label&quot;:&quot;Closing in less than 24h&quot;,&quot;IsFullTextColumn&quot;:false,&quot;Operator&quot;:null,&quot;OperatorLabel&quot;:null,&quot;OptionalValue&quot;:null,&quot;DataType&quot;:null,&quot;ReplacePreviousFilterForThisColumn&quot;:false}" >Less than 24h</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                </div>
+
+    </div>
+</div>
+
+
+            </div>
+        </div>
+        <div class="col-lg-8 d-print-none">
+        </div>
+        <div class="filtering col-lg-12 d-print-none">
+            <div class="filter-selection filterListTemplate">
+    <div class="row flex" style="display:none;" data-bind="visible:FilterItems().length > 0">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-12"  data-bind="visible:AllowClearAll()">
+            <div id="selectedFilter1">
+                <a href="clear" class="clear-filters btn btn-default btn-sm" title="Clear" data-bind="click: RemoveAllFilters"><span>Clear All</span><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-12 vertical-align">
+            <div class="filter-selected" data-bind="foreach: FilterItems">
+                <!-- ko ifnot:IsAdvancedType -->
+                <a href="#selected-filter" title="" data-bind="text: $data.Label !== undefined && $data.Label !== null  ? $data.Label : $data.GetValue"></a>&nbsp;<a href="#remove-selected-filter" title="Remove" data-bind="click: $parent.RemoveFilter.bind($parent, $data)"><i class="fa fa-times"></i></a>
+                <!-- /ko -->
+                <!-- ko if:IsAdvancedType -->
+                <!-- ko if: OptionalValue -->
+                <a href="#selected-filter" title="filter"><!-- ko text: Label + " " + OperatorLabel + " " + GetValue --><!-- /ko --> and <!-- ko text: GetOptionalValue --><!-- /ko --></a>&nbsp;<a href="#remove-selected-filter" title="Remove" data-bind="click: $parent.RemoveFilter.bind($parent, $data)"><i class="fa fa-times"></i></a>
+                <!-- /ko -->
+                <!-- ko ifnot: OptionalValue -->
+                <a href="#selected-filter" title="filter"><!-- ko text: Label + " " + OperatorLabel + " " + GetValue --><!-- /ko --></a>&nbsp;<a href="#remove-selected-filter" title="Remove" data-bind="click: $parent.RemoveFilter.bind($parent, $data)"><i class="fa fa-times"></i></a>
+                <!-- /ko -->
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div class="table-responsive col-lg-12">
+            <table class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>
+                            <a href='#' data-sort-column-name='Reference'  command  sort-column="{&quot;columnName&quot;:&quot;Reference&quot;}" >Reference <i class='sortButton fa fa-sort pointer' ></i></a> /
+                            <a href='#' data-sort-column-name='Title'  command  sort-column="{&quot;columnName&quot;:&quot;Title&quot;}" >Title <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th>
+                            <a href='#' data-sort-column-name='OpportunityType'  command  sort-column="{&quot;columnName&quot;:&quot;OpportunityType&quot;}" >Opportunity Type <i class='sortButton fa fa-sort pointer' ></i></a> /
+                            <a href='#' data-sort-column-name='Type'  command  sort-column="{&quot;columnName&quot;:&quot;Type&quot;}" >Type <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th>
+                            <a href='#' data-sort-column-name='PurchasingOrganisation'  command  sort-column="{&quot;columnName&quot;:&quot;PurchasingOrganisation&quot;}" >Purchasing Organisation <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th>
+                            <a href='#' data-sort-column-name='StatusDescription'  command  sort-column="{&quot;columnName&quot;:&quot;StatusDescription&quot;}" >Status <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th>
+                            <a href='#' data-sort-column-name='PublicationDate'  command  sort-column="{&quot;columnName&quot;:&quot;PublicationDate&quot;}" >Publication Date <i class='sortButton fa fa-sort pointer' ></i></a> /
+                            <a href='#' data-sort-column-name='LastModifiedDate'  command  sort-column="{&quot;columnName&quot;:&quot;LastModifiedDate&quot;}" >Last Modification Date <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th>
+                            <a href='#' data-sort-column-name='TentativeRFPDate'  command  sort-column="{&quot;columnName&quot;:&quot;TentativeRFPDate&quot;}" >Tentative RFP Date <i class='sortButton fa fa-sort pointer' ></i></a> /
+                            <a href='#' data-sort-column-name='ClosingDate'  command  sort-column="{&quot;columnName&quot;:&quot;ClosingDate&quot;}" >Closing Date (CET) <i class='sortButton fa fa-sort pointer' ></i></a>
+                        </th>
+                        <th class="options options-2">
+                            
+
+                            
+
+        <div class="btn-group dropleft">
+            <a class="btn btn-xs btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-download" title="Download"></i></a>
+
+
+            <div class="dropdown-menu dropdown-menu-left export-menu" style="min-width:240px !important;">
+                                    <a class="dropdown-item" name="downloadGridButton"  command  download-grid ><i class="fa fa-download" title="Export CSV"></i> Export CSV</a>
+                                            </div>
+        </div>
+
+
+                        </th>
+                        <th class="options options-1"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr style="" row-id="C-ambFH1s1cAX24_IamLRQ" row-index="0" row-timestamp="0x000000003870d27c" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=C-ambFH1s1cAX24_IamLRQ&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:0}}" >TOE26003  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=C-ambFH1s1cAX24_IamLRQ&amp;reference=TOE26003%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                Provision of FORTRA licenses
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LD  <br />
+                                <small class="default text-muted">Communications, Air and Missile Defense Programme</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 27 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 27 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 07 Dec 2026 12:00:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=C-ambFH1s1cAX24_IamLRQ&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d27c&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/C-ambFH1s1cAX24_IamLRQ" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="wODbhy1KS8J2I7nPZ_g-xQ" row-index="1" row-timestamp="0x000000003870d285" row-available-actions="18"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=wODbhy1KS8J2I7nPZ_g-xQ&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:1}}" >26LMS096</a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=wODbhy1KS8J2I7nPZ_g-xQ&amp;reference=26LMS096" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                Spare Parts required for MRAV BOXER Vehicle
+                            </td>
+                            <td>
+                                FBO <br />
+                                Supply
+                            </td>
+                            <td>
+                                LM  <br />
+                                <small class="default text-muted">Rockets and Missiles</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>FBO Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 27 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 27 Nov 2026
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Tentative RFP Date</small> 11 Dec 2026                                                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=wODbhy1KS8J2I7nPZ_g-xQ&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d285&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=18&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+    <a href="#InterestedInRFP" class="btn btn-xs btn-primary"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/InterestedByRFP/wODbhy1KS8J2I7nPZ_g-xQ&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-heart" title="Interested in RFP"></i>
+    </a>
+
+
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="7LUMMBYU2pXBLP55IIhuTQ" row-index="2" row-timestamp="0x000000003870d215" row-available-actions="18"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=7LUMMBYU2pXBLP55IIhuTQ&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:2}}" >26LMS095</a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=7LUMMBYU2pXBLP55IIhuTQ&amp;reference=26LMS095" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                Provision of various spares for BOXER
+                            </td>
+                            <td>
+                                FBO <br />
+                                Supply
+                            </td>
+                            <td>
+                                LM  <br />
+                                <small class="default text-muted">Rockets and Missiles</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>FBO Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Tentative RFP Date</small> 21 Dec 2026                                                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=7LUMMBYU2pXBLP55IIhuTQ&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d215&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=18&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+    <a href="#InterestedInRFP" class="btn btn-xs btn-primary"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/InterestedByRFP/7LUMMBYU2pXBLP55IIhuTQ&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-heart" title="Interested in RFP"></i>
+    </a>
+
+
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="Ae27oCb869gppb3axTYy6g" row-index="3" row-timestamp="0x000000003870d20d" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=Ae27oCb869gppb3axTYy6g&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:3}}" >SSH26020A </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=Ae27oCb869gppb3axTYy6g&amp;reference=SSH26020A%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                Spare Parts (5 items) for NASAMS System
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LD  <br />
+                                <small class="default text-muted">Communications, Air and Missile Defense Programme</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 21 Dec 2026 11:59:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=Ae27oCb869gppb3axTYy6g&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d20d&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/Ae27oCb869gppb3axTYy6g" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="3KS0qoq0HeeKAYS9OL9QIA" row-index="4" row-timestamp="0x000000003870d1fd" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=3KS0qoq0HeeKAYS9OL9QIA&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:4}}" >VAL26002  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=3KS0qoq0HeeKAYS9OL9QIA&amp;reference=VAL26002%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                AERIAL TARGET EXERCISE AND SUPPORT SERVICE 
+                            </td>
+                            <td>
+                                RFP <br />
+                                Service
+                            </td>
+                            <td>
+                                LQ  <br />
+                                <small class="default text-muted">Alliance Ground Surveillance (AGS) and Unmanned Aerial Systems (UAS) Programme</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 29 Jan 2027 12:00:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=3KS0qoq0HeeKAYS9OL9QIA&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d1fd&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/3KS0qoq0HeeKAYS9OL9QIA" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="IZ2GuM3oKBTBz4N-cZefhw" row-index="5" row-timestamp="0x000000003870d1bf" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=IZ2GuM3oKBTBz4N-cZefhw&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:5}}" >JMR26199  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=IZ2GuM3oKBTBz4N-cZefhw&amp;reference=JMR26199%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                TOOLING, SCREWDRIVER,MANOMETER,MANDREL
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LW  <br />
+                                <small class="default text-muted">AWACS</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 09 Dec 2026 12:00:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=IZ2GuM3oKBTBz4N-cZefhw&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d1bf&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/IZ2GuM3oKBTBz4N-cZefhw" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="QEdDx2Y-LEDKD8anZf-Zaw" row-index="6" row-timestamp="0x000000003870d1bc" row-available-actions="18"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=QEdDx2Y-LEDKD8anZf-Zaw&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:6}}" >26PAS005</a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=QEdDx2Y-LEDKD8anZf-Zaw&amp;reference=26PAS005" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                <span>Digital signage and meeting room booking system for Strategic Infrastructure <a title="Digital signage and meeting room booking system for Strategic Infrastructure Program (SIP)." onclick='$(this).parent().html("Digital signage and meeting room booking system for Strategic Infrastructure Program (SIP).")'>...</a></span>
+                            </td>
+                            <td>
+                                FBO <br />
+                                Supply
+                            </td>
+                            <td>
+                                PA  <br />
+                                <small class="default text-muted">Central Procurement</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>FBO Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Tentative RFP Date</small> 10 Dec 2026                                                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=QEdDx2Y-LEDKD8anZf-Zaw&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d1bc&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=18&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+    <a href="#InterestedInRFP" class="btn btn-xs btn-primary"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/InterestedByRFP/QEdDx2Y-LEDKD8anZf-Zaw&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-heart" title="Interested in RFP"></i>
+    </a>
+
+
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="N2l8kjMRHMaJ1YyKP3xg2g" row-index="7" row-timestamp="0x000000003870d178" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=N2l8kjMRHMaJ1YyKP3xg2g&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:7}}" >JMR26191  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=N2l8kjMRHMaJ1YyKP3xg2g&amp;reference=JMR26191%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                BATTERY, STORAGE
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LW  <br />
+                                <small class="default text-muted">AWACS</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 10 Dec 2026 12:00:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=N2l8kjMRHMaJ1YyKP3xg2g&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d178&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/N2l8kjMRHMaJ1YyKP3xg2g" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="" row-id="GUP7lUCWsI4x7mFx2rYx9w" row-index="8" row-timestamp="0x000000003870d170" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=GUP7lUCWsI4x7mFx2rYx9w&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:8}}" >TOE26002  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=GUP7lUCWsI4x7mFx2rYx9w&amp;reference=TOE26002%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                Provision of ESET licenses
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LD  <br />
+                                <small class="default text-muted">Communications, Air and Missile Defense Programme</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 03 Dec 2026 12:00:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=GUP7lUCWsI4x7mFx2rYx9w&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d170&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/GUP7lUCWsI4x7mFx2rYx9w" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                        <tr style="page-break-after:always;" row-id="QquznjMlsxQZMfhn55ljyA" row-index="9" row-timestamp="0x000000003870d161" row-available-actions="67174434"  command  select-row2   class="selectable">
+                            <td>
+                                    <a  command  manage-url-according-to-source="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=QquznjMlsxQZMfhn55ljyA&quot;,&quot;ContainerId&quot;:&quot;#ModalDetailContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:&quot;OpportunitiesList&quot;,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:{&quot;ActionBarSource&quot;:1,&quot;Index&quot;:9}}" >APH26012  </a>
+    <a href="/eProcurement5G/Opportunities/Opportunities/DetailsOpportunity?RowIDEncrypted=QquznjMlsxQZMfhn55ljyA&amp;reference=APH26012%20%20" target="_blank" title="Open in a new tab."><i class="far fa-external-link-alt" style="font-size:12px;"></i></a>
+
+                                    <br />
+                                PROVISION OF DINGO PRV WEAPON STATION SPARE PART
+                            </td>
+                            <td>
+                                RFP <br />
+                                Supply
+                            </td>
+                            <td>
+                                LM  <br />
+                                <small class="default text-muted">Rockets and Missiles</small>
+                            </td>
+                            <td>
+                                
+
+<div class="status-description">
+        <span class="status-label offer-rejected">
+            <i class="fas fa-bullhorn" style="color:#FF8F24"></i>
+        </span><br />
+    <span>Published</span>
+</div>
+                            </td>
+                            <td>
+                                    <small class="default text-muted">Publication Date</small> 26 Nov 2026<br />
+                                <small class="default text-muted">Modified on</small> 26 Nov 2026
+                            </td>
+                            <td>
+                                                                    <small class="default text-muted">Closing Date</small> 09 Dec 2026 23:59:00<br />
+                            </td>
+                            <td class="options options-3">
+
+
+
+
+
+
+
+    <a href="#SubscribeToNotificationFor" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}"   command  load-modal="{&quot;Url&quot;:&quot;/eProcurement5G/Opportunities/OpportunitiesList/SubscribeToNotification?RowIDEncrypted=QquznjMlsxQZMfhn55ljyA&amp;ParentIDEncrypted=&amp;Timestamp=0x000000003870d161&amp;ActionBarSource=List&amp;DisplayMode=Subset&amp;AvailableActions=67174434&amp;IsMultiple=False&amp;ApplyOnAllRows=False&amp;Index=&quot;,&quot;ContainerId&quot;:&quot;#ModalContainer&quot;,&quot;Value&quot;:null,&quot;UseMultipleSelection&quot;:false,&quot;ShowLoading&quot;:false,&quot;PostGridSelection&quot;:false,&quot;MultipleSelectionPresenterIdentifier&quot;:&quot;multiple-selection&quot;,&quot;ScrollBodyToTop&quot;:true,&quot;GridID&quot;:null,&quot;CanNavigate&quot;:true,&quot;AdditionalParameters&quot;:null}" >
+        <i class="fas fa-bell" title="Subscribe To Notification"></i>
+    </a>
+
+
+
+
+    <a href="/eProcurement5G/Opportunities/Opportunities/DownloadCalendarInvitation/QquznjMlsxQZMfhn55ljyA" target="_blank" class="btn btn-xs btn-success"  command  select-row-single="{&quot;HideActionBar&quot;:true}" >
+        <i class="fas fa-calendar-plus" title="Add to Calendar"></i>
+    </a>
+
+
+
+
+                            </td>
+                            <td class="options options-1">
+
+                            </td>
+                        </tr>
+                </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="100%" class="border-bottom-none">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="grid-pager-area">
+    <input id="GridPagerTotalRowCount" name="GridPagerTotalRowCount" type="hidden" value="0" />
+    <nav class="padding-bottom-10">
+        <ul class='pagination d-inline-flex'><li class='page-item disabled'><a class='page-link' >&laquo;</a></li><li class='page-item active'><a class='page-link' >1</a></li><li class='page-item '><a class='page-link' command load-page='{"pageIndex": 2}'>2</a></li><li class='page-item '><a class='page-link' command load-page='{"pageIndex": 2}'>&raquo;</a></li></ul>
+        &nbsp; &nbsp;
+        <ul class='pagination d-inline-flex' style='margin-right:25px;'><li class='page-item active'><a class='page-link' href='#PageSize' command select-page-size='{"pageSize":10}'>10</a></li><li class='page-item '><a class='page-link' href='#PageSize' command select-page-size='{"pageSize":25}'>25</a></li><li class='page-item '><a class='page-link' href='#PageSize' command select-page-size='{"pageSize":50}'>50</a></li><li class='page-item '><a class='page-link' href='#PageSize' command select-page-size='{"pageSize":100}'>100</a></li></ul>
+    </nav>
+</div>
+  
+                                        </div>
+                                        <div class="col-lg-6 grid-summary-area">
+                                            
+                                        </div>
+                                    </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+        </div>
+</div>
+
+    <div id="divActionBar" class="MultipleActionBar alert alert-notification hdn">
+        <button type="button" class="btn-close float-end" data-hide="alert" aria-label="Close"></button>
+        <div>
+            <strong class="ActionBarTitle">
+
+            </strong>
+            <span class="ActionBarContent">
+
+            </span>
+        </div>
+    </div>
+</div>
+        </div>
+
+
+    </div>
+
+</div>
+    </div>
+
+    <div id="MessageContainer" style="margin-bottom: 100px;" class="d-print-none">
+        
+<div class="container"  component alert="{&quot;messages&quot;:[],&quot;messagesToDisplayUrl&quot;:&quot;/eProcurement5G/Util/Alert/MessagesToDisplay&quot;,&quot;scrollbottom&quot;:false,&quot;PresenterIdentifier&quot;:&quot;GlobalMessageHandler&quot;}" >
+</div>
+
+
+    </div>
+
+    
+    
+<div class="scroll-to-top hdn d-print-none">
+    <a href="#scroll-to-top" title="Scroll to top"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+    
+    
+
+    <script src="/eProcurement5G/bundles/_jquery?v=FXDq5aBmgyam1AqjlARb3onz5t43Dks-1dThZHso8vs1"></script>
+
+    <script src="/eProcurement5G/bundles/_jqueryval?v=QDGeYX4MZFcpuNf7-feyi2fp94NSKABUMVrXQ_XLfYw1"></script>
+
+    <script src="/eProcurement5G/bundles/_bootstrap?v=42Ejq4eA2hxWGP8K8fZijRTbf-elf--CSewmRuaZ_q01"></script>
+
+    <script src="/eProcurement5G/bundles/_ajax?v=QebIkc6-OR0K8Wbz2tkRDrtbvDRPHcntTw1lj00YsK01"></script>
+
+    <script src="/eProcurement5G/bundles/_scripts?v=jEX8d67Qe3XlTKnUxikavt--wdU8A4HOQ6pQ0LQKUyM1"></script>
+
+
+    <script src='/eProcurement5G/Scripts/dist/vendor.js?v=-1835517671' type='module'></script>
+    <script src='/eProcurement5G/Scripts/dist/main.js?v=-1835517671' type='module'></script>
+
+
+    
+
+
+    
+    
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4XELOnfVTpAd9feB0f_3gzx704yg-Acw&loading=async&libraries=places"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        const model = {
+            LanguageCode: "en",
+            UserId: "u062wb7Be3yr1tKCNMujGg",
+            HostName: "/eProcurement5G"
+        };
+
+        window.App.ApplicationConfiguration.Initialize(model);
+        window.App.Bootstrapper.Initialize();
+    });
+</script>
+</body>
+</html>
