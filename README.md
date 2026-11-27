@@ -1,6 +1,6 @@
 # Site · dados públicos
 
-Ficheiros de apoio às páginas do site da idD Portugal Defence.
+Ficheiros de apoio às páginas do site da idD.
 
 - `dados/` oportunidades do Diário da República, NATO e UE, atualizadas automaticamente
 - `assets/` imagens gerais
