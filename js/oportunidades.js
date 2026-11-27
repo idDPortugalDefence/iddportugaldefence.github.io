@@ -33,7 +33,7 @@
   function match(q, campos) { if (!q) return true; var h = norm(campos.join(' ')); return norm(q).split(/\s+/).every(function (w) { return h.indexOf(w) > -1; }); }
 
   /* ---------- fontes ---------- */
-  var NTIPO = { FBO: 'Oportunidade futura', RFP: 'Pedido de propostas', RFQ: 'Pedido de cotação', RFI: 'Pedido de informação', IFB: 'Convite para propostas', IFIB: 'Convite para propostas', NCP: 'Concurso NATO', NOI: 'Notificação de intenção', 'ICB / BOA+': 'Concurso internacional (BOA+)', RFIP: 'Pedido de informação' };
+  var NTIPO = { FBO: 'Oportunidade futura', RFP: 'Pedido de propostas', RFQ: 'Pedido de cotação', RFI: 'Pedido de informação', IFB: 'Convite para propostas', IFIB: 'Convite para propostas', NCP: 'Concurso NATO', NOI: 'Notificação de intenção', 'ICB / BOA+': 'Concurso internacional (BOA+)', RFIP: 'Pedido de informação', SP: 'Procedimento simplificado' };
   var FONTES = {
     nacionais: {
       fich: 'oportunidades.json', nome: 'Nacionais', sub: 'Diário da República', cor: '#2c5e3b',

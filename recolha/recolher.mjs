@@ -75,6 +75,22 @@ async function drDireto() {
   return out;
 }
 
+// Junta a lista de um portal (ex.: dados/ncia.json, enviado pelo PC) à lista da página da NATO.
+// Se a recolha do portal for recente, as oportunidades dessa entidade vêm só do portal;
+// se for antiga, juntam-se as duas (sem repetir títulos) e só ficam as do portal ainda em prazo.
+function juntaPortal(lista, ent, ficheiro, horasMax) {
+  let p; try { p = JSON.parse(fs.readFileSync(path.join(saida, ficheiro), 'utf8')); } catch (e) { return lista; }
+  if (!p || !Array.isArray(p.lista) || !p.lista.length) return lista;
+  const fresco = p.gerado && (Date.now() - new Date(p.gerado)) / 36e5 <= horasMax;
+  const t = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const agoraIso = new Date().toISOString().slice(0, 16);
+  const portal = p.lista.filter(o => fresco || (o.prazo && o.prazo >= agoraIso));
+  const titulos = new Set(portal.map(o => t(o.titulo)));
+  const base = lista.filter(o => o.entidade !== ent || (!fresco && !titulos.has(t(o.titulo))));
+  console.log(`${ent}: ${portal.length} do portal (${fresco ? 'recolha recente' : 'recolha antiga, junta com a página da NATO'})`);
+  return base.concat(portal);
+}
+
 async function nato() {
   if (process.env.NATO_FIXTURE) {
     const j = JSON.parse(fs.readFileSync(process.env.NATO_FIXTURE, 'utf8'));
@@ -92,8 +108,9 @@ async function nato() {
     total = (j.pagination && j.pagination.totalPages) || 1;
     p++;
   } while (p <= total && p <= 50);
-  const lista = core.natoBuild(items);
+  let lista = core.natoBuild(items);
   if (!lista.length) throw new Error('NATO sem resultados');
+  lista = juntaPortal(lista, 'NCIA', 'ncia.json', 6);
   grava('nato.json', { gerado: agora, lista });
   return lista.length;
 }
