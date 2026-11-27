@@ -237,3 +237,7 @@ html.pde-lock,html.pde-lock body{overflow:hidden}
   .pec-cl a{font-size:11pt;font-weight:700;color:#fff!important;border-bottom:1px solid #8cc63f}
   .pec-cb small{display:block;margin-top:6mm;font-size:8pt;color:rgba(255,255,255,.5)}
 }
+
+.pde-upd{display:block;margin-top:18px;padding-top:16px;border-top:1px solid #e3e8e0;font-size:13px;color:#5d6b61!important;text-decoration:none!important}
+.pde-upd b{color:#2c5e3b;font-weight:700}
+.pde-upd:hover b{text-decoration:underline}
