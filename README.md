@@ -1,8 +1,8 @@
-# Site idD · dados públicos
+# Site · dados públicos
 
 Ficheiros de apoio às páginas do site da idD Portugal Defence.
 
-- `dados/` oportunidades do Diário da República, NATO e UE, atualizadas automaticamente de 12 em 12 horas
+- `dados/` oportunidades do Diário da República, NATO e UE, atualizadas automaticamente
 - `assets/` imagens gerais
 - `recolha/recolher.mjs` programa que recolhe as oportunidades
 
