@@ -122,4 +122,6 @@ for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', u
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
+// teste temporário de acesso à NCIA e à NSPA (só corre se existir recolha/sonda.mjs)
+if (fs.existsSync(path.join(raiz, 'recolha', 'sonda.mjs'))) { try { await import('./sonda.mjs'); } catch (e) { console.error('Sonda: ' + e.message); } }
 process.exit(erros >= 3 ? 1 : 0);
