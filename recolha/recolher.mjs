@@ -91,6 +91,55 @@ function juntaPortal(lista, ent, ficheiro, horasMax) {
   return base.concat(portal);
 }
 
+// NSPA: lê diretamente o eProcurement da NSPA (lista pública, 200 por página, mais recentes primeiro).
+async function nspa() {
+  const B = 'https://eportal.nspa.nato.int';
+  const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+  const feed = pg => B + '/eProcurement5G/Opportunities/OpportunitiesList/OpportunitiesList?DisplayMode=Default&QueryMode=AvailableForActionOnly&NavigationContext=None&CurrentPageIndex=' + pg + '&SkippedPages=0&PageSize=200&FilterKeywords=Contracts.DTO.Common.ValueTypeDTO%5B%5D&ColumnsToGet=%2A&IsFavorite=False&IsImportant=False&IsTodo=False&IsDone=False&UseDelegation=False&IsDelegationFilterVisible=True&isFlagFilterVisible=True&IsContractPointOfContactFilterVisible=True&IsAssignToMeFilterVisible=False';
+  const MES = { Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06', Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12' };
+  const data = (s, fim) => { const m = String(s || '').match(/(\d{1,2}) (\w{3}) (\d{4})(?: (\d{2}):(\d{2}))?/); if (!m || !MES[m[2]]) return null; return `${m[3]}-${MES[m[2]]}-${m[1].padStart(2, '0')}T${m[4] ? m[4] + ':' + m[5] : (fim ? '23:59' : '00:00')}:00`; };
+  const txt = h => String(h || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+  const agoraIso = new Date().toISOString().slice(0, 16), lista = [], vistos = new Set();
+  let total = 0;
+  for (let pg = 1; pg <= 10; pg++) {
+    let h;
+    if (process.env.NSPA_FIXTURE) { if (pg > 1) break; h = fs.readFileSync(process.env.NSPA_FIXTURE, 'utf8'); }
+    else {
+      const r = await fetch(feed(pg), { headers: { 'User-Agent': UA, 'X-Requested-With': 'XMLHttpRequest', Accept: 'text/html, */*; q=0.01', Referer: B + '/eProcurement5G/Opportunities/OpportunitiesList' } });
+      if (!r.ok) throw new Error('NSPA ' + r.status);
+      h = await r.text();
+    }
+    const linhas = [...h.matchAll(/<tr[^>]*row-id="([^"]+)"[^>]*>([\s\S]*?)<\/tr>/g)];
+    if (!linhas.length) break;
+    let ativasNaPagina = 0;
+    for (const [, rid, corpo] of linhas) {
+      total++;
+      const td = [...corpo.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => m[1]);
+      if (td.length < 6) continue;
+      const estado = txt(td[3]);
+      if (/closed|cancel|award|withdraw|suspend/i.test(estado) || !/publish|amend|open/i.test(estado)) continue;
+      const c0 = td[0].split(/<br\s*\/?>/i), c1 = td[1].split(/<br\s*\/?>/i), c2 = td[2].split(/<br\s*\/?>/i);
+      const ref = txt(c0[0]), titulo = txt(c0.slice(1).join(' ')), tipo = txt(c1[0]) || 'RFP', natureza = txt(c1[1]);
+      const org = txt(c2[0]), orgNome = txt(c2.slice(1).join(' '));
+      const pub = data(txt(td[4]).replace(/Modified on.*/, '')), mod = data((txt(td[4]).match(/Modified on (.*)/) || [])[1]);
+      const fbo = /FBO|NPO/.test(tipo), dt = txt(td[5]);
+      const prazo = fbo ? data(dt.replace(/^.*?Date/, ''), true) : data(dt.replace(/^.*?\)/, '').replace(/^.*?Date/, ''), true);
+      if (!fbo && prazo && prazo < agoraIso) continue;
+      const url = ((corpo.match(/href="(\/eProcurement5G\/[^"]*RowIDEncrypted=[^"&]+)/) || [])[1] || '').replace(/&amp;/g, '&');
+      const id = 'NSPA:' + ref + ':' + rid.slice(-10);
+      if (!titulo || vistos.has(id)) continue;
+      vistos.add(id); ativasNaPagina++;
+      lista.push({ id, fonte: 'nspa', entidade: 'NSPA', entidadeNome: 'NATO Support and Procurement Agency' + (orgNome ? ' · ' + orgNome : ''), tipo, tipoNome: natureza,
+        titulo, ref, valor: null, moeda: '', nopo: pub, modificado: mod, lancamento: null, prazo, prazoFBO: fbo, adjudicacao: null,
+        link: url ? B + url : B + '/eProcurement5G/Opportunities/OpportunitiesList' });
+    }
+    if (pg >= 4 && !ativasNaPagina) break;
+  }
+  if (!lista.length) throw new Error('NSPA sem resultados');
+  grava('nspa.json', { gerado: agora, fonte: B + '/eProcurement5G/Opportunities/OpportunitiesList', lidas: total, lista });
+  return lista.length + ' em aberto (de ' + total + ' lidas)';
+}
+
 async function nato() {
   if (process.env.NATO_FIXTURE) {
     const j = JSON.parse(fs.readFileSync(process.env.NATO_FIXTURE, 'utf8'));
@@ -111,6 +160,7 @@ async function nato() {
   let lista = core.natoBuild(items);
   if (!lista.length) throw new Error('NATO sem resultados');
   lista = juntaPortal(lista, 'NCIA', 'ncia.json', 6);
+  lista = juntaPortal(lista, 'NSPA', 'nspa.json', 6);
   grava('nato.json', { gerado: agora, lista });
   return lista.length;
 }
@@ -135,10 +185,7 @@ async function ue() {
 }
 
 let erros = 0;
-for (const [nome, f] of [['Diário da República', dr], ['NATO', nato], ['UE', ue]]) {
+for (const [nome, f] of [['Diário da República', dr], ['NSPA', nspa], ['NATO', nato], ['UE', ue]]) {
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
-// teste temporário de acesso à NCIA e à NSPA (só corre se existir recolha/sonda.mjs)
-if (fs.existsSync(path.join(raiz, 'recolha', 'sonda.mjs'))) { try { await import('./sonda.mjs'); } catch (e) { console.error('Sonda: ' + e.message); } }
-process.exit(erros >= 3 ? 1 : 0);
