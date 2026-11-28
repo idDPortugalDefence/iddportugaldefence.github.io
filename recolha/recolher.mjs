@@ -184,9 +184,14 @@ async function ue() {
   return lista.length;
 }
 
-const UE_G1 = ['EDA', 'DEFIS', 'SATCEN', 'EUSPA'];
-const UE_G2 = ['EEAS', 'FPI', 'FRONTEX', 'EMSA', 'ENISA', 'ECCC', 'EUROPOL', 'LISA'];
-const UE_G3 = ['JRC', 'HOME', 'ECHO', 'HERA', 'HR', 'SAFE', 'CNECT', 'EASA', 'CEPOL', 'CONSILIUM'];
+const UE_ENT = [
+  ['EDA', 1, /European Defence Agency|\(EDA\)|^EDA\b/i], ['DEFIS', 1, /DEFIS|Defence Industry and Space/i], ['SATCEN', 1, /SATCEN|Satellite Cent/i], ['EUSPA', 1, /EUSPA|Space Programme/i],
+  ['EEAS', 2, /EEAS|External Action/i], ['FPI', 2, /\bFPI\b|Foreign Policy Instruments/i], ['FRONTEX', 2, /Frontex|Border and Coast Guard/i], ['EMSA', 2, /EMSA|Maritime Safety/i],
+  ['ECCC', 2, /ECCC|Cybersecurity Industrial/i], ['ENISA', 2, /ENISA|Agency for Cybersecurity/i], ['EUROPOL', 2, /Europol|Law Enforcement Cooperation/i], ['eu-LISA', 2, /LISA|Large-Scale IT/i],
+  ['CEPOL', 3, /CEPOL|Law Enforcement Training/i], ['JRC', 3, /\bJRC\b|Joint Research Cent/i], ['HOME', 3, /\bHOME\b|Migration and Home Affairs/i], ['ECHO', 3, /\bECHO\b|Civil Protection|Humanitarian Aid/i],
+  ['HERA', 3, /\bHERA\b|Health Emergency Preparedness/i], ['HR', 3, /\bDG HR\b|Human Resources and Security/i], ['SAFE', 3, /DG SAFE|Security and Safety/i], ['CNECT', 3, /CNECT|Communications Networks/i],
+  ['EASA', 3, /EASA|Aviation Safety/i], ['CONSILIUM', 3, /CONSILIUM|Council of the European Union|General Secretariat of the Council/i]
+];
 const UE_TERMOS = /\b(defen[cs]e|military|armed forces|security|surveillance|drones?|uas|uav|rpas|unmanned|cbrn|cyber\w*|satellite|space|ammunition|weapon\w*|munition\w*|border|maritime awareness|crisis management|csdp|cfsp)\b/i;
 async function ueConcursos() {
   const tipos = [['0'], ['4'], ['3']];
@@ -209,32 +214,30 @@ async function ueConcursos() {
     if (res.length) { results = res; tipoUsado = t[0]; break; }
   }
   const md = x => x.metadata || {};
-  const chaveEnt = Object.keys(results.reduce((a, x) => Object.assign(a, md(x)), {})).find(k => /contracting|authority|organi[sz]ation|buyer/i.test(k)) || null;
-  const ent = x => {
-    const v = [].concat((chaveEnt && md(x)[chaveEnt]) || []).join(' ');
-    const m = v.match(/^\s*([A-Z0-9][A-Z0-9 -]*?)\s+-\s/);
-    if (m) return m[1].replace(/^EU-/, '').trim();
-    const all = [...UE_G1, ...UE_G2, ...UE_G3].find(c => new RegExp('\\b' + c + '\\b').test(v));
-    return all || v.slice(0, 60);
-  };
   const g = (x, k) => [].concat(md(x)[k] || [])[0];
-  const lista = [];
+  const caName = x => String(g(x, 'caName') || '').trim();
+  const ident = n => UE_ENT.find(([, , re]) => re.test(n)) || null;
+  const lista = [], vistos = new Set();
   for (const x of results) {
-    const e = ent(x), titulo = String(g(x, 'title') || x.title || x.summary || '').replace(/\s+/g, ' ').trim();
-    const txt = titulo + ' ' + String(g(x, 'description') || g(x, 'descriptionByte') || x.content || '').replace(/<[^>]+>/g, ' ');
-    const grupo = UE_G1.includes(e) ? 1 : UE_G2.includes(e) ? 2 : UE_G3.includes(e) ? 3 : 0;
-    if (!grupo || (grupo === 3 && !UE_TERMOS.test(txt))) continue;
-    const prazos = [].concat(md(x).deadlineDate || md(x).submissionDeadline || []).map(d => String(d).slice(0, 10)).sort();
-    const id = g(x, 'identifier') || g(x, 'reference') || x.reference;
-    lista.push({ id, fonte: 'ue', programa: 'Concurso', entidade: e, grupo, titulo,
+    const n = caName(x), e = ident(n);
+    if (!e) continue;
+    const titulo = String(g(x, 'title') || x.summary || '').replace(/\s+/g, ' ').trim();
+    const desc = String(g(x, 'description') || '').replace(/\s+/g, ' ').trim();
+    if (e[1] === 3 && !UE_TERMOS.test(titulo + ' ' + desc)) continue;
+    const id = g(x, 'identifier') || x.reference;
+    if (!id || vistos.has(id)) continue; vistos.add(id);
+    const prazo = g(x, 'deadlineDate') || g(x, 'closingDate');
+    lista.push({ id, fonte: 'ue', programa: 'Concurso', entidade: e[0], entidadeNome: n, grupo: e[1], titulo, ref: g(x, 'callIdentifier') || '',
+      objetivo: desc.slice(0, 600), cpv: g(x, 'mainCpv') || '', procedimento: g(x, 'procedureType') || '',
       abertura: g(x, 'startDate') ? String(g(x, 'startDate')).slice(0, 10) : null,
-      prazo: prazos.length ? prazos[prazos.length - 1] + 'T23:59:00' : null,
-      procedimento: g(x, 'procedureType') || g(x, 'typeOfProcedure') || '',
-      link: x.url || g(x, 'url') || 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/' + encodeURIComponent(id || '') });
+      prazo: prazo ? String(prazo).slice(0, 16) : null, estado: g(x, 'status') === '31094501' ? 'previsto' : 'aberto',
+      link: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/' + id,
+      plataforma: g(x, 'url') || '' });
   }
   fs.mkdirSync(path.join(saida, 'sonda'), { recursive: true });
-  fs.writeFileSync(path.join(saida, 'sonda', 'ue-concursos-amostra.json'), JSON.stringify({ gerado: agora, tipoUsado, total: results.length, chaveEnt,
-    entidades: results.reduce((a, x) => { const e = ent(x); a[e] = (a[e] || 0) + 1; return a; }, {}),
+  fs.writeFileSync(path.join(saida, 'sonda', 'ue-concursos-amostra.json'), JSON.stringify({ gerado: agora, tipoUsado, total: results.length,
+    entidades: results.reduce((a, x) => { const n = caName(x); a[n] = (a[n] || 0) + 1; return a; }, {}),
+    escolhidas: lista.reduce((a, o) => { a[o.entidade + ' | ' + o.entidadeNome] = (a[o.entidadeNome && o.entidade + ' | ' + o.entidadeNome] || 0) + 1; return a; }, {}),
     exemplos: results.slice(0, 3) }, null, 1));
   grava('ue-concursos.json', { gerado: agora, lista });
   return lista.length + ' (de ' + results.length + ' concursos abertos)';
