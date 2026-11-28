@@ -19,12 +19,13 @@
   function dfmt(p) { if (!p) return ''; var d = new Date(p); return isNaN(d) ? '' : d.getDate() + ' ' + M[d.getMonth()] + ' ' + d.getFullYear(); }
   function tfmt(p) { var d = new Date(p); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
   function quando(p) { return dfmt(p) + (String(p).slice(-8) === '23:59:00' ? '' : ', ' + tfmt(p)); }
-  function aberta(o) { return o.prazo && new Date(o.prazo) >= Date.now(); }
+  function aberta(o) { return o.prazo ? new Date(o.prazo) >= Date.now() : !!o.semPrazo; }
   function money(v, m) { return v == null ? '' : (m === 'EUR' || !m ? eur.format(v) : v.toLocaleString('pt-PT') + ' ' + m); }
   function eurK(v) { return v >= 1e6 ? (v / 1e6).toLocaleString('pt-PT', { maximumFractionDigits: 1 }) + ' M€' : v >= 1e4 ? Math.round(v / 1e3).toLocaleString('pt-PT') + ' mil €' : eur.format(v); }
   function cap(s) { s = String(s || ''); return s === s.toUpperCase() && s.length > 6 ? s.charAt(0) + s.slice(1).toLowerCase() : s; }
   function novo(p) { return p && (Date.now() - new Date(p)) / 864e5 <= 3; }
   function prazoHtml(o) {
+    if (!o.prazo) return '<span class="pdx-dl"><b>Prazo no anúncio</b><small>Consulte a fonte oficial</small></span>';
     var n = dias(o.prazo), cls = n <= 3 ? ' pdx-hot' : n <= 7 ? ' pdx-warm' : '';
     var t = n <= 0 ? 'Termina hoje' : n === 1 ? 'Termina amanhã' : 'Faltam ' + n + ' dias';
     return '<span class="pdx-dl' + cls + '"><b>' + t + '</b><small>' + esc(quando(o.prazo)) + '</small></span>';
@@ -34,6 +35,8 @@
 
   /* ---------- fontes ---------- */
   var NTIPO = { FBO: 'Oportunidade futura', RFP: 'Pedido de propostas', RFQ: 'Pedido de cotação', RFI: 'Pedido de informação', IFB: 'Convite para propostas', IFIB: 'Convite para propostas', NCP: 'Concurso NATO', NOI: 'Notificação de intenção', 'ICB / BOA+': 'Concurso internacional (BOA+)', RFIP: 'Pedido de informação', SP: 'Procedimento simplificado', NPO: 'Notificação de oportunidade' };
+  var PROC = { OPEN: 'Concurso aberto', RESTRICTED: 'Concurso limitado', NEGOTIATED: 'Procedimento por negociação', NEGOTIATED_COMPETITIVE: 'Procedimento concorrencial com negociação', COMPETITIVE_DIALOGUE: 'Diálogo concorrencial', NEG_WO_CALL: 'Negociação sem publicação', CALL_FOR_EXPRESSION_OF_INTEREST: 'Manifestação de interesse', LOW_VALUE: 'Procedimento de baixo valor', MIDDLE_VALUE: 'Procedimento de valor médio' };
+  var UENOME = { EDA: 'Agência Europeia de Defesa', DEFIS: 'DG Indústria de Defesa e Espaço', SATCEN: 'Centro de Satélites da UE', EUSPA: 'Agência da UE para o Programa Espacial', EEAS: 'Serviço Europeu para a Ação Externa', FPI: 'Serviço dos Instrumentos de Política Externa', FRONTEX: 'Frontex · Guarda Europeia de Fronteiras e Costeira', EMSA: 'Agência Europeia da Segurança Marítima', ECCC: 'Centro Europeu de Competências em Cibersegurança', ENISA: 'Agência da UE para a Cibersegurança', EUROPOL: 'Europol', 'eu-LISA': 'eu-LISA · Sistemas informáticos de grande escala', CEPOL: 'CEPOL', JRC: 'Centro Comum de Investigação', HOME: 'DG Migração e Assuntos Internos', ECHO: 'DG Proteção Civil e Ajuda Humanitária', HERA: 'HERA · Preparação e resposta a emergências sanitárias', HR: 'DG Recursos Humanos e Segurança', SAFE: 'DG Segurança (Parlamento Europeu)', CNECT: 'DG Redes de Comunicação, Conteúdos e Tecnologias', EASA: 'Agência da UE para a Segurança da Aviação', CONSILIUM: 'Conselho da UE' };
   var FONTES = {
     nacionais: {
       fich: 'oportunidades.json', nome: 'Nacionais', sub: 'Diário da República', cor: '#2c5e3b',
@@ -81,17 +84,25 @@
       }
     },
     ue: {
-      fich: 'ue.json', nome: 'UE', sub: 'FED e EDIP', cor: '#003399',
-      ents: ['FED', 'EDIP'], ent: function (o) { return o.programa; }, entNome: { FED: 'Fundo Europeu de Defesa (FED)', EDIP: 'EDIP' },
+      fich: 'ue.json', nome: 'UE', sub: 'FED, EDIP e concursos', cor: '#003399',
+      ents: ['FED', 'EDIP', 'Concurso'], ent: function (o) { return o.programa; }, entNome: { FED: 'Fundo Europeu de Defesa (FED)', EDIP: 'EDIP', Concurso: 'Concursos das agências da UE' },
       ordens: [['prazo', 'Prazo mais próximo'], ['valor', 'Maior orçamento'], ['recentes', 'Abertura mais recente']],
-      ordenar: function (L, s) { if (s === 'valor') L.sort(function (a, b) { return (b.orcamento || 0) - (a.orcamento || 0); }); else if (s === 'recentes') L.sort(function (a, b) { return String(b.abertura || '').localeCompare(String(a.abertura || '')); }); else L.sort(function (a, b) { return a.prazo.localeCompare(b.prazo); }); },
-      pesquisa: function (o) { return [o.titulo, o.concurso, o.id, o.call, o.programa, o.objetivo, o.tipoAcao]; },
+      ordenar: function (L, s) { if (s === 'valor') L.sort(function (a, b) { return (b.orcamento || 0) - (a.orcamento || 0); }); else if (s === 'recentes') L.sort(function (a, b) { return String(b.abertura || '').localeCompare(String(a.abertura || '')); }); else L.sort(function (a, b) { return String(a.prazo || '9').localeCompare(String(b.prazo || '9')); }); },
+      pesquisa: function (o) { return [o.titulo, o.concurso, o.id, o.call, o.programa, o.objetivo, o.tipoAcao, o.entidade, o.entidadeNome, o.ref, o.cpv]; },
       cartao: function (o) {
+        if (o.programa === 'Concurso') return { tag: o.entidade, extra: novo(o.abertura) ? 'Novo' : (o.estado === 'previsto' ? 'Previsto' : ''), ref: o.ref || 'Concurso', titulo: o.titulo,
+          meta: [PROC[o.procedimento] || ''], valL: 'Publicado', val: o.abertura ? dfmt(o.abertura) : '—' };
         return { tag: o.programa + (o.usi ? ' · Ucrânia (USI)' : ''), extra: o.estado === 'previsto' ? 'Previsto' : '', ref: o.id, titulo: o.titulo,
           meta: [o.tipoAcao ? o.tipoAcao.replace(/^EDF\s*/, '') : '', o.multi ? 'Várias datas de candidatura' : ''],
           valL: o.orcamento ? 'Orçamento indicativo' : 'Abertura', val: o.orcamento ? eurK(o.orcamento) : (o.abertura ? dfmt(o.abertura) : '—') };
       },
       detalhe: function (o) {
+        if (o.programa === 'Concurso') return { tag: o.entidadeNome && o.entidadeNome !== o.entidade && o.entidadeNome.length < 90 ? o.entidade + ' · ' + o.entidadeNome : (UENOME[o.entidade] || o.entidade), titulo: o.titulo, texto: '',
+          valL: 'Prazo das propostas', val: o.prazo ? quando(o.prazo) : 'Ver anúncio',
+          obj: o.objetivo ? o.objetivo + (o.objetivo.length >= 600 ? '…' : '') : '',
+          linhas: row('Referência', esc(o.ref)) + row('Entidade', esc(UENOME[o.entidade] || o.entidade)) + row('Tipo de procedimento', esc(PROC[o.procedimento] || (/^\d+$/.test(o.procedimento || '') ? '' : o.procedimento))) + row('CPV', esc(o.cpv)) + row('Publicação', esc(dfmt(o.abertura))) +
+            row('Plataforma de submissão', o.plataforma && !/funding-tenders/.test(o.plataforma) ? '<a href="' + esc(o.plataforma) + '" target="_blank" rel="noopener">' + esc((o.plataforma.match(/^https?:\/\/([^/]+)/) || [])[1] || o.plataforma) + '</a>' : ''),
+          botao: 'Ver no portal Funding & Tenders', nota: 'Os concursos das agências e serviços da UE estão abertos a empresas estabelecidas na UE, isoladas ou em agrupamento. A documentação e a submissão estão indicadas no anúncio.' };
         var hoje = new Date().toISOString().slice(0, 10);
         return { tag: (o.programa === 'FED' ? 'Fundo Europeu de Defesa' : 'EDIP · Programa para a Indústria de Defesa') + (o.usi ? ' · Ucrânia (USI)' : ''), titulo: o.titulo, texto: o.concurso,
           valL: 'Orçamento indicativo', val: o.orcamento ? eur.format(o.orcamento) : '—',
@@ -129,7 +140,8 @@
     ue: ['As candidaturas são submetidas no portal Funding & Tenders da Comissão Europeia, com registo prévio da entidade (código PIC).',
       'No Fundo Europeu de Defesa, a candidatura é feita em consórcio: em regra, pelo menos 3 entidades independentes de 3 Estados-Membros da UE ou países associados. Nos concursos de tecnologias disruptivas podem bastar 2.',
       'Os beneficiários e subcontratados têm de estar estabelecidos na UE ou em país associado, com a gestão executiva aí sediada. Há regras próprias para entidades controladas por países terceiros.',
-      'Cada concurso tem condições próprias, incluindo os do EDIP: confirme sempre o documento do concurso. A idD pode ajudar a encontrar parceiros portugueses.']
+      'Cada concurso tem condições próprias, incluindo os do EDIP: confirme sempre o documento do concurso. A idD pode ajudar a encontrar parceiros portugueses.',
+      'Os concursos das agências e serviços da UE (Agência Europeia de Defesa, EUSPA, Frontex, Serviço Europeu para a Ação Externa, entre outros) são contratos públicos: a proposta é submetida pela empresa, sozinha ou em agrupamento, na plataforma indicada em cada anúncio.']
   };
   var GUIA_NATO = 'https://www.iddportugal.pt/wp-content/uploads/2023/07/Guia-Aquisicao-NATO-2023.pdf';
   var h0 = (location.hash || '').replace('#', '');
@@ -264,7 +276,7 @@
         (g.k === 'nato' ? '<a href="' + GUIA_NATO + '">Guia da idD de participação em concursos NATO ↗</a>' : '') + '</div>';
       g.L.forEach(function (o) {
         num++; var id = 'pdc-' + num, c = g.F.cartao(o), D = g.F.detalhe(o), host = (String(o.link).match(/^https?:\/\/([^/]+)/) || [])[1] || 'fonte oficial';
-        cal.push({ o: o, k: g.k, F: g.F, id: id, num: num, t: c.titulo, tag: c.tag });
+        if (o.prazo) cal.push({ o: o, k: g.k, F: g.F, id: id, num: num, t: c.titulo, tag: c.tag });
         idx += '<a class="pdc-ir" href="#' + id + '"><i>' + ('0' + num).slice(-2) + '</i><span><b>' + esc(c.titulo) + '</b><small>' + esc(c.tag) + ' · ' + esc(c.ref) + '</small></span><em>' + (o.prazo ? esc(dfmt(o.prazo)) : '') + '</em></a>';
         var nd = dias(o.prazo), pcls = nd <= 3 ? ' pdc-hot' : nd <= 7 ? ' pdc-warm' : '';
         fichas += '<article class="pdc-f" id="' + id + '" style="--c:' + g.F.cor + '"><div class="pdc-ft"><span class="pdc-n">' + ('0' + num).slice(-2) + '</span><span class="pdc-tag">' + esc(D.tag) + '</span>' +
