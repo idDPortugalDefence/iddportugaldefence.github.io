@@ -1,0 +1,494 @@
+{
+ "gerado": "2026-11-28T12:07:49.926Z",
+ "tipoUsado": "0",
+ "total": 1419,
+ "chaveEnt": "cftContractingSystems",
+ "entidades": {
+  "": 1299,
+  "PUBLIC_CONTRACT": 96,
+  "ESTABLISHMENT_FRAMEWORK_AGREEMENT": 22,
+  "DYNAMIC_PURCHASING_SYSTEM": 2
+ },
+ "exemplos": [
+  {
+   "apiVersion": "2.159",
+   "reference": "987741b0-46fb-4fea-ad74-facf2689f4a3F4Een",
+   "url": "https://eu.eu-supply.com/ctm/supplier/publictenders?B=F4E",
+   "contentType": "text/plain",
+   "language": "en",
+   "databaseLabel": "SEDIA",
+   "database": "SEDIA",
+   "summary": "Integration of the JT-60SA Actively Cooled Divertor",
+   "weight": 0,
+   "groupById": "1",
+   "content": "Integration of the JT-60SA Actively Cooled Divertor",
+   "accessRestriction": false,
+   "checksum": "1E6ED87C4DC536C4C1C5AAE80F5C5EE685D0957A8FBBC1A0057C402897D0FABF",
+   "metadata": {
+    "procedureType": [
+     "NEGOTIATED_COMPETITIVE"
+    ],
+    "es_SortDate": [
+     "2026-11-27T01:00:00.000+0000"
+    ],
+    "sortStatus": [
+     "1"
+    ],
+    "contractType": [
+     "31095498"
+    ],
+    "description": [
+     "The scope of this contract is divided into service and hardware. The service\nencompasses tasks such as storage, assembly, welding, installation, and inspection of the\ndivertor components and diagnostic components. The hardware involves the production and/or\nacquisition of Langmuir probes, Halo current (Rogowski) coils, Thermocouples, Gas injection\npipes, Electrical shunts, Diagnostic connectors, Divertor fasteners, Divertor alignment\ncomponents, Main water pipe caps."
+    ],
+    "language": [
+     "en"
+    ],
+    "title": [
+     "Integration of the JT-60SA Actively Cooled Divertor"
+    ],
+    "type": [
+     "0"
+    ],
+    "esST_checksum": [
+     "1E6ED87C4DC536C4C1C5AAE80F5C5EE685D0957A8FBBC1A0057C402897D0FABF"
+    ],
+    "cftId": [
+     "987741b0-46fb-4fea-ad74-facf2689f4a3"
+    ],
+    "esST_FileName": [
+     "file.txt"
+    ],
+    "callIdentifier": [
+     "F4E-OPE-1405"
+    ],
+    "DATASOURCE": [
+     "SEDIA"
+    ],
+    "REFERENCE": [
+     "987741b0-46fb-4fea-ad74-facf2689f4a3F4Een"
+    ],
+    "additionalCpvs": [
+     "[]"
+    ],
+    "identifier": [
+     "987741b0-46fb-4fea-ad74-facf2689f4a3"
+    ],
+    "caName": [
+     "Fusion for Energy(F4E)"
+    ],
+    "es_ContentType": [
+     "text/plain"
+    ],
+    "esDA_FirstIngestDate": [
+     "2026-11-12T08:54:17.882+0100"
+    ],
+    "programmePeriod": [
+     "2014 - 2020",
+     "2021 - 2027"
+    ],
+    "deadlineDate": [
+     "2026-12-10T14:00:00.000+0000"
+    ],
+    "esDA_IngestDate": [
+     "2026-11-27T12:01:41.452+0100"
+    ],
+    "closingDate": [
+     "2026-12-10T14:00:00Z"
+    ],
+    "url": [
+     "https://eu.eu-supply.com/ctm/supplier/publictenders?B=F4E"
+    ],
+    "es_Combine": [
+     "1"
+    ],
+    "esST_URL": [
+     "https://eu.eu-supply.com/ctm/supplier/publictenders?B=F4E"
+    ],
+    "lots": [
+     "[]"
+    ],
+    "esDA_QueueDate": [
+     "2026-11-27T12:01:41.445+0100"
+    ],
+    "mainCpv": [
+     "71630000"
+    ],
+    "mainCpvCode": [
+     "{\"mainCode\":\"71630000\",\"supplementaryCode\":[]}"
+    ],
+    "startDate": [
+     "2026-11-27T01:00:00.000+0000"
+    ],
+    "status": [
+     "31094502"
+    ]
+   },
+   "enrichedMetadata": {},
+   "children": [],
+   "highlightedFragments": [],
+   "citation": "Integration of the JT-60SA Actively Cooled Divertor. Available at: https://eu.eu-supply.com/ctm/supplier/publictenders?B=F4E"
+  },
+  {
+   "apiVersion": "2.159",
+   "reference": "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
+   "contentType": "text/plain",
+   "language": "en",
+   "databaseLabel": "SEDIA",
+   "database": "SEDIA",
+   "summary": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
+   "weight": 0,
+   "groupById": "2",
+   "content": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
+   "accessRestriction": false,
+   "checksum": "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7",
+   "metadata": {
+    "es_SortDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "cftPartyLegalEntityId": [
+     "47352548"
+    ],
+    "cftMaxNumberOfLots": [
+     "0"
+    ],
+    "contractType": [
+     "31095498"
+    ],
+    "awardMethod": [],
+    "cftContractingSystems": [],
+    "twoStageDeadlineDate": [],
+    "language": [
+     "en"
+    ],
+    "type": [
+     "0"
+    ],
+    "cftDocuments": [
+     "{}"
+    ],
+    "callIdentifier": [
+     "EC-JRC/PTT/2026/OP/6801-PIN"
+    ],
+    "cftSubmissionsAllowed": [
+     "false"
+    ],
+    "DATASOURCE": [
+     "SEDIA"
+    ],
+    "frameworkProgramme": [],
+    "cftPublicationDisplayStatus": [],
+    "identifier": [
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+    ],
+    "es_ContentType": [
+     "text/plain"
+    ],
+    "geographicalZones": [],
+    "programmePeriod": [
+     "2014 - 2020",
+     "2021 - 2027"
+    ],
+    "cftSubscriptionsAllowed": [
+     "true"
+    ],
+    "deadlineDate": [],
+    "cftCorrigendaList": [],
+    "closingDate": [],
+    "es_Combine": [
+     "2"
+    ],
+    "esST_URL": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+    ],
+    "esDA_QueueDate": [
+     "2026-11-27T05:01:49.152+0100"
+    ],
+    "programmeDivisionProspect": [],
+    "mainCpv": [
+     "71242000",
+     "71248000"
+    ],
+    "mainCpvCode": [
+     "{\"mainCode\":\"71248000\"}"
+    ],
+    "startDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "status": [
+     "31094501"
+    ],
+    "procedureType": [
+     "47396222"
+    ],
+    "sortStatus": [
+     "2"
+    ],
+    "conditionOfParticipation": [],
+    "description": [
+     "JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure."
+    ],
+    "title": [
+     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
+    ],
+    "esST_checksum": [
+     "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7"
+    ],
+    "cftId": [
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+    ],
+    "esST_FileName": [
+     "file.txt"
+    ],
+    "REFERENCE": [
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+    ],
+    "cftTendersMayBeSubmitted": [],
+    "cftTimezone": [
+     "Europe/Amsterdam"
+    ],
+    "cftEstimatedTotalProcedureValue": [
+     "500000   EUR"
+    ],
+    "cftContractNoticeLink": [
+     "[\"824963-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+    ],
+    "cftRepublish": [
+     "true"
+    ],
+    "cftSubmissionMethodCode": [
+     "ESUBMISSION"
+    ],
+    "cftProcurementType": [
+     "31095498"
+    ],
+    "cftEstimatedOverallContractAmount": [
+     "500000"
+    ],
+    "caName": [
+     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
+    ],
+    "cftPlannedDate": [
+     "16/12/2026"
+    ],
+    "cftPublishedPinReference": [],
+    "esDA_FirstIngestDate": [
+     "2026-11-27T05:01:49.186+0100"
+    ],
+    "esDA_IngestDate": [
+     "2026-11-27T05:01:49.186+0100"
+    ],
+    "cftInterinstitutional": [],
+    "cftQuestionsAnswersAllowed": [
+     "true"
+    ],
+    "url": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+    ],
+    "lots": [
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/2\",\"governmentAgreementConstraintIndicator\":true,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"71248000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":500000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks\",\"description\":\"JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"71242000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"procurementProjectLotID\":\"PAR-0001\",\"benefittingZones\":[]}]}"
+    ],
+    "cftEXARegistrationDeadline": [],
+    "indicativeLaunch": [],
+    "geographicalZone": [],
+    "cftLeadContractingAuthorityCode": [
+     "[{\"name\":\"European Commission, DG JRC - Joint Research Centre\",\"link\":\"https://ec.europa.eu/jrc/\",\"isLeadAuthority\":true}]"
+    ],
+    "cftBuyerProfileUrl": [],
+    "cftPublicationDateEForm": [
+     "2026-11-27T00:00:00"
+    ],
+    "cftEstimatedOverallContractCurrency": [
+     "EUR"
+    ]
+   },
+   "enrichedMetadata": {},
+   "children": [],
+   "highlightedFragments": [],
+   "citation": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+  },
+  {
+   "apiVersion": "2.159",
+   "reference": "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
+   "contentType": "text/plain",
+   "language": "en",
+   "databaseLabel": "SEDIA",
+   "database": "SEDIA",
+   "summary": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
+   "weight": 0,
+   "groupById": "1",
+   "content": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
+   "accessRestriction": false,
+   "checksum": "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191",
+   "metadata": {
+    "es_SortDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "cftPartyLegalEntityId": [
+     "47352348"
+    ],
+    "cftMaxNumberOfLots": [
+     "0"
+    ],
+    "contractType": [
+     "31095499"
+    ],
+    "awardMethod": [],
+    "cftContractingSystems": [],
+    "twoStageDeadlineDate": [],
+    "language": [
+     "en"
+    ],
+    "type": [
+     "0"
+    ],
+    "cftDocuments": [
+     "{\"cftDocuments\":[{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779acee\",\"sortKey\":\"00007\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Draft contract - Example 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Draft contract1354226-1_SK.docx\",\"documentFileName\":\"Draft contract1354226-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779d472\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Draft contract\"}],\"documentID\":\"080166e537799e19\",\"attachmentID\":\"090166e53779acee\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Draft contract\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537796b22\",\"sortKey\":\"00001\",\"documentType\":\"Invitation letter\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 1 Invitation letter 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Invitation letter1354221-1_SK.docx\",\"documentFileName\":\"Invitation letter1354221-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779b4df\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Invitation to tender\"}],\"documentID\":\"080166e537796b15\",\"attachmentID\":\"090166e537796b22\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Admin Specif - 1 Invitation letter 26 46\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779939b\",\"sortKey\":\"00006\",\"documentType\":\"Technical specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Technical Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Technique specification1354225-1_SK.docx\",\"documentFileName\":\"Technique specification1354225-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779c8f1\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Technical specifications\"}],\"documentID\":\"080166e537798b1e\",\"attachmentID\":\"090166e53779939b\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Technical Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797a90\",\"sortKey\":\"00003\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 3 Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377b14c0\",\"attachmentID\":\"090166e5377b108c\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779a15a\",\"sortKey\":\"00005\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"TENDER FORM 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Tender forms 1354224-1_SK.docx\",\"documentFileName\":\"Tender forms 1354224-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779cb44\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Tender form\"}],\"documentID\":\"080166e537799a0a\",\"attachmentID\":\"090166e53779a15a\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"TENDER FORM\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537798e77\",\"sortKey\":\"00004\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Annex V Financial Identification Form_V1.7z\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537798e39\",\"attachmentID\":\"090166e537798e77\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Annex V - Financial Identification Form\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797990\",\"sortKey\":\"00002\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Conditions1354222-1_SK_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377af3bf\",\"attachmentID\":\"090166e5377b0c44\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Conditions\"}]}"
+    ],
+    "callIdentifier": [
+     "EP-INLO/LUX/2026/OP/0034"
+    ],
+    "cftSubmissionsAllowed": [
+     "true"
+    ],
+    "DATASOURCE": [
+     "SEDIA"
+    ],
+    "frameworkProgramme": [],
+    "cftPublicationDisplayStatus": [],
+    "identifier": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "es_ContentType": [
+     "text/plain"
+    ],
+    "geographicalZones": [],
+    "programmePeriod": [
+     "2014 - 2020",
+     "2021 - 2027"
+    ],
+    "cftSubscriptionsAllowed": [
+     "true"
+    ],
+    "deadlineDate": [
+     "2027-01-28T23:59:59.000+0000"
+    ],
+    "cftCorrigendaList": [],
+    "closingDate": [
+     "2027-01-28T23:59:59Z"
+    ],
+    "es_Combine": [
+     "1"
+    ],
+    "esST_URL": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "esDA_QueueDate": [
+     "2026-11-27T09:15:53.378+0100"
+    ],
+    "programmeDivisionProspect": [],
+    "mainCpv": [
+     "09310000"
+    ],
+    "mainCpvCode": [
+     "{\"mainCode\":\"09310000\"}"
+    ],
+    "startDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "status": [
+     "31094502"
+    ],
+    "procedureType": [
+     "47396220"
+    ],
+    "updateDate": [
+     "2027-01-29T10:00:00.000+0000"
+    ],
+    "sortStatus": [
+     "1"
+    ],
+    "conditionOfParticipation": [],
+    "description": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "title": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "esST_checksum": [
+     "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191"
+    ],
+    "cftId": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "esST_FileName": [
+     "file.txt"
+    ],
+    "REFERENCE": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "cftTendersMayBeSubmitted": [],
+    "cftTimezone": [
+     "Europe/Luxembourg"
+    ],
+    "cftEstimatedTotalProcedureValue": [
+     "150000   EUR"
+    ],
+    "cftContractNoticeLink": [
+     "[\"826319-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+    ],
+    "cftRepublish": [
+     "true"
+    ],
+    "cftSubmissionMethodCode": [
+     "PAPER_COPY"
+    ],
+    "cftProcurementType": [
+     "31095499"
+    ],
+    "cftEstimatedOverallContractAmount": [
+     "150000"
+    ],
+    "caName": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "cftPlannedDate": [],
+    "cftPublishedPinReference": [],
+    "esDA_FirstIngestDate": [
+     "2026-11-27T05:02:00.758+0100"
+    ],
+    "esDA_IngestDate": [
+     "2026-11-27T09:15:53.386+0100"
+    ],
+    "cftInterinstitutional": [],
+    "cftQuestionsAnswersAllowed": [
+     "true"
+    ],
+    "url": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "lots": [
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{\"tendererRequirementTypeCode\":\"epo-procurement-document\",\"tendererRequirementTypeCodeListName\":\"selection-criteria-source\"}},\"tenderValidityPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":\"6\"},\"languages\":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],\"callForTendersDocumentReference\":{\"documentType\":\"non-restricted-document\",\"attachmentExternalReferenceURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"documentStatusCode\":\"official\",\"documentStatusCodelistName\":\"document-status\",\"languageID\":\"ENG\",\"id\":\"default-text\"},\"postAwardProcess\":{\"electronicOrderUsageIndicator\":\"true\",\"electronicPaymentUsageIndicator\":\"true\"},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"contractExecutionRequirement\":[{},{},{}],\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{\"subordinateAwardingCriterion\":[{\"awardingCriterionTypeCodeListName\":\"award-criterion-type\",\"descriptionLanguageID\":\"ENG\",\"description\":\"Please consult the procurement documents.\",\"awardCriterionParameter\":[{\"parameterNumeric\":\"100\",\"parameterCodeListName\":\"number-weight\",\"parameterCode\":\"per-exa\"}],\"awardingCriterionTypeCode\":\"price\"}]}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementProjectID\":\"EP-INLO/LUX/2026/OP/0034\",\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"09310000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":150000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":24},\"procurementTypeCode\":\"supplies\",\"name\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"description\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"contractExtension\":{\"renewal\":{\"period\":{\"descriptionLanguageID\":\"ENG\",\"description\":\"The contract is concluded for an initial period of 12 (twelve)     months, renewable 1 (one) time(s). Please consult the draft contract in the procurement documents.\"}}},\"smeSuitableIndicator\":false},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"submissionMethodCodeListName\":\"esubmission\",\"auctionTerms\":{\"auctionConstraintIndicator\":\"false\"},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"},{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"dps-usage\"}],\"openTenderEvent\":{\"occurrenceDate\":\"2027-01-29+01:00\",\"occurrenceTime\":\"10:00:00+01:00\"},\"tenderSubmissionDeadlinePeriod\":{\"endDate\":\"2027-01-28+01:00\",\"endTime\":\"23:59:59+01:00\"},\"submissionMethodCode\":\"not-allowed\",\"additionalInformationRequestPeriod\":{\"endDate\":\"2027-01-15+01:00\",\"endTime\":\"2027-01-15+01:00\"},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"LOT-0001\"}]}"
+    ],
+    "cftEXARegistrationDeadline": [],
+    "indicativeLaunch": [],
+    "geographicalZone": [],
+    "cftLeadContractingAuthorityCode": [
+     "[{\"name\":\"European Parliament, SG - Directorate-General for Infrastructure and Logistics\",\"link\":\"http://www.europarl.europa.eu\",\"isLeadAuthority\":true}]"
+    ],
+    "cftBuyerProfileUrl": [],
+    "cftPublicationDateEForm": [
+     "2026-11-27T00:00:00"
+    ],
+    "cftEstimatedOverallContractCurrency": [
+     "EUR"
+    ]
+   },
+   "enrichedMetadata": {},
+   "children": [],
+   "highlightedFragments": [],
+   "citation": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+  }
+ ]
+}
