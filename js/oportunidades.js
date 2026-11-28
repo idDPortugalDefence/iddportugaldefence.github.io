@@ -26,6 +26,7 @@
   function novo(p) { return p && (Date.now() - new Date(p)) / 864e5 <= 3; }
   function prazoHtml(o) {
     if (!o.prazo) return '<span class="pdx-dl"><b>Prazo no anúncio</b><small>Consulte a fonte oficial</small></span>';
+    if (o.dps || (o.programa === 'Concurso' && /\bDPS\b|dynamic purchasing/i.test(o.titulo || ''))) { var dd = new Date(o.prazo); return '<span class="pdx-dl"><b>Sempre aberto</b><small>até ' + MES[dd.getMonth()].slice(0, 3) + ' ' + dd.getFullYear() + '</small></span>'; }
     var n = dias(o.prazo), cls = n <= 3 ? ' pdx-hot' : n <= 7 ? ' pdx-warm' : '';
     var t = n <= 0 ? 'Termina hoje' : n === 1 ? 'Termina amanhã' : 'Faltam ' + n + ' dias';
     return '<span class="pdx-dl' + cls + '"><b>' + t + '</b><small>' + esc(quando(o.prazo)) + '</small></span>';
@@ -100,7 +101,7 @@
         if (o.programa === 'Concurso') return { tag: o.entidadeNome && o.entidadeNome !== o.entidade && o.entidadeNome.length < 90 ? o.entidade + ' · ' + o.entidadeNome : (UENOME[o.entidade] || o.entidade), titulo: o.titulo, texto: '',
           valL: 'Prazo das propostas', val: o.prazo ? quando(o.prazo) : 'Ver anúncio',
           obj: o.objetivo ? o.objetivo + (o.objetivo.length >= 600 ? '…' : '') : '',
-          linhas: row('Referência', esc(o.ref)) + row('Entidade', esc(UENOME[o.entidade] || o.entidade)) + row('Tipo de procedimento', esc(PROC[o.procedimento] || (/^\d+$/.test(o.procedimento || '') ? '' : o.procedimento))) + row('CPV', esc(o.cpv)) + row('Publicação', esc(dfmt(o.abertura))) +
+          linhas: row('Referência', esc(o.ref)) + row('Modalidade', (o.dps || /\bDPS\b|dynamic purchasing/i.test(o.titulo || '')) ? 'Sistema de aquisição dinâmico: as empresas podem pedir a admissão a qualquer momento até ao fim do prazo' : '') + row('Entidade', esc(UENOME[o.entidade] || o.entidade)) + row('Tipo de procedimento', esc(PROC[o.procedimento] || (/^\d+$/.test(o.procedimento || '') ? '' : o.procedimento))) + row('CPV', esc(o.cpv)) + row('Publicação', esc(dfmt(o.abertura))) +
             row('Plataforma de submissão', o.plataforma && !/funding-tenders/.test(o.plataforma) ? '<a href="' + esc(o.plataforma) + '" target="_blank" rel="noopener">' + esc((o.plataforma.match(/^https?:\/\/([^/]+)/) || [])[1] || o.plataforma) + '</a>' : ''),
           botao: 'Ver no portal Funding & Tenders', nota: 'Os concursos das agências e serviços da UE estão abertos a empresas estabelecidas na UE, isoladas ou em agrupamento. A documentação e a submissão estão indicadas no anúncio.' };
         var hoje = new Date().toISOString().slice(0, 10);
