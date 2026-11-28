@@ -1,13 +1,857 @@
 {
- "gerado": "2026-11-28T12:07:49.926Z",
+ "gerado": "2026-11-28T12:16:47.042Z",
  "tipoUsado": "0",
  "total": 1419,
- "chaveEnt": "cftContractingSystems",
  "entidades": {
-  "": 1299,
-  "PUBLIC_CONTRACT": 96,
-  "ESTABLISHMENT_FRAMEWORK_AGREEMENT": 22,
-  "DYNAMIC_PURCHASING_SYSTEM": 2
+  "15": 3,
+  "31": 9,
+  "33": 3,
+  "36": 26,
+  "42": 1,
+  "51": 1,
+  "53": 22,
+  "61": 4,
+  "62": 1,
+  "64": 7,
+  "67": 1,
+  "78": 1,
+  "80": 1,
+  "81": 1,
+  "85": 1,
+  "86": 1,
+  "87": 1,
+  "89": 1,
+  "91": 2,
+  "93": 3,
+  "100": 1,
+  "101": 1,
+  "109": 1,
+  "127": 2,
+  "138": 35,
+  "Fusion for Energy(F4E)": 4,
+  "Donation of decommissioned ICT assets II (iPhone 8)": 1,
+  "Aviation training services for the European Union Aviation Safety Agency - EASA": 1,
+  "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks": 1,
+  "Online safety application": 1,
+  "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia": 2,
+  "Concessione di servizi di ristorazione (bevande e snack) mediante distributori automatici presso il JRC della Commissione europea a Ispra, Italia": 1,
+  "Dépose et remplacement de huit vitrages émaillés noirs des façades des tours Comenius et Montesquieu de la Cour de justice de l’Union européenne": 1,
+  "Processing of human serum for the production of CRMs": 1,
+  "Maintenance of the Agri-Press platform for 2 years": 1,
+  "Provision of services in instructional design and production of interactive digital learning products": 1,
+  "EUSPA-RP-23-26 - “PRIM – Prototype for GNSS Radio-Frequency Interference Monitoring”": 1,
+  "Concession d’exploitation d’un magasin de journaux dans les bâtiments de la Cour de justice de l’Union européenne": 2,
+  "Fourniture de lits ergonomiques et de matelas à l'usage des crèches dans les structures gérées par la Commission européenne, à Bruxelles.": 1,
+  "Provision of Signage Solution for the EUAA in Malta": 1,
+  "Provision of linguistic services for audiovisual material": 1,
+  "Framework Contract for the provision of technical services to the  European Commission for radio regulatory activities required to support the EU Space Programmes": 1,
+  "Provision of Preventative and Corrective Maintenance for the EUAA Premises in Brussels, Belgium": 1,
+  "Provision of cleaning services for the EUAA premises in Athens. Greece": 1,
+  "Photovoltaic Power Plan Project": 1,
+  "DVD/271218 Estimating the national hepatitis C prevalence in EU/EEA countries": 1,
+  "Support service for the Coalition against Poverty": 1,
+  "Purchase of Furniture for the EUDA": 1,
+  "Prestación de servicios de biblioteca y de gestión del contenido digital": 1,
+  "Cleaning Services framework contract – EU Delegation to Kenya": 1,
+  "« Confection des toges de la Cour de justice de l'Union européenne »": 1,
+  "Big data analytics for skills intelligence": 1,
+  "ENSOC Hosting Site PT ICT Infrastructure (Computing, Storage, Networking, Cybersecurity)": 1,
+  "Supply of an inert glovebox chain for the JRC Karlsruhe": 1,
+  "Hire of passenger cars with driver": 1,
+  "Better Internet for Kids (BIK) Platform - EU Coordination": 1,
+  "SUPPORT FACILITY FOR BROADBAND COMPETENCE OFFICES (BCOs)": 1,
+  "Call for Experts – EUSPA-CEI-03-26 - Call for expression of interest to establish a list of external remunerated experts.": 1,
+  "Supply of size parts designed for Wheaton 14 mm stoppers to be installed on the Dara SX-180 machine": 1,
+  "mid-throughput next generation genome sequencer": 2,
+  "OHD/260934 Support to a point prevalence survey of healthcare-associated infections and antimicrobial use in long-term care facilities, including data validation and analysis": 2,
+  "Achat de tenues de service et vêtements professionnels - Uniformes hommes": 1,
+  "Fourniture de service d'assurance \"tous risques sauf\"  pour le matériel informatique de la Cour de justice de l'UE": 1,
+  "Mission de contrôleur technique en accessibilité": 1,
+  "Feasibility study on introduction of the European Child Guarantee Card": 1,
+  "Design and project management for the fit out works of the new EBA office": 1,
+  "Security services for the Delegation of the European Union to Serbia": 1,
+  "Fourniture de matériel « pre-owned » pour serveurs et stockage ainsi que fourniture de la maintenance": 2,
+  "Security Guard and Reception/Switchboard services for the EU-House in Ireland": 1,
+  "Organisation of public events for the EC representation in Cyprus": 1,
+  "Market and economic research; polling and statistics EUSPA/OP/06/26 Provision of technical and business support for space downstream market development": 1,
+  "VT/2026/137 Study on individuals’ wealth and indebtedness": 1,
+  "Audit of the annual accounts of EUAA for the year ended 31/12/2026": 1,
+  "Evaluation of the performance of the Director of the European Training Foundation (ETF) and the ETF’s duties and requirements in the coming years": 1,
+  "Framework service contract for defence testing and evaluation campaigns and other operational experimentation activities": 1,
+  "Insurance advisory and brokerage services for EFCA": 1,
+  "Open procedure for the conclusion of a single framework contract on the supply of IT hardware equipment to the benefit of CFSP Bodies and Persons": 2,
+  "Framework service contract for operating the \"Hydrological Forecast Centre - Computation\" in support to the Copernicus Emergency Management Service (CEMS) Flood Early Warning Systems": 2,
+  "Support to the Ministry of Economy and Environment of Ukraine with approximation of EU's legislation on critical raw materials": 1,
+  "Aggregation and provision of commercial resources for the GOVSATCOM Common Union pool": 1,
+  "Copernicus Land Monitoring Service - Operation of global bio-geophysical terrestrial variables": 2,
+  "Durchführung von Strahlenschutzaufgaben in Rückbauprojekten": 2,
+  "External examining": 1,
+  "Internal Evaluation of Training Programmes": 1,
+  "EU-Canada Digital Partnership": 1,
+  "Development of methods and modelling of carbon and environmental footprint of critical raw materials (CRMs) in EV-batteries.": 1,
+  "Provision of reception services for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Security Assessment Services": 1,
+  "Durchführung von Aufbau und Änderung von Elektroinstallationen an Handschuhkästen, heißen Zellen, Labors und im Gebäude im JRC Karlsruhe": 1,
+  "Printing services in the context of exhibitions, campaigns and related outreach services": 1,
+  "Support for the implementation of VET reforms": 1,
+  "Provision of Academic Services for the European Executive Master’s in Asylum and Reception Management": 1,
+  "Data management services - 210901/8077": 1,
+  "Study on Generative AI Systems Monitoring Methodologies": 1,
+  "Fornecimento de Eletricidade às instalações da EMSA": 1,
+  "Contrato marco de servicios de seguridad. Servicios de Seguridad para la Delegación de la Unión Europea en Colombia": 1,
+  "Provision of canteen, catering, cleaning and other related services": 1,
+  "Provision of seminars to train judges and legal practitioners on EU non-discrimination, EU gender equality and EU disability legislation": 1,
+  "Assistance mechanism on Maritime Spatial Planning (MSP)": 1,
+  "Security works and maintenace services on security installations for the EU delegations, Residences and EEAS office buildings worldwide": 1,
+  "Content support to the Forest Information System for Europe (FISE) and forest assessments with respect to support to forest-related EU policies": 1,
+  "European network of legal experts in gender equality, disability and non-discrimination": 1,
+  "Completion and development of Environmental Footprint Datasets": 1,
+  "Multiple Framework Contracts in cascade for support services for expert groups and other stakeholders in the field of health  and food 2027-2031": 1,
+  "Supply and maintenance of one Liquid Scintillation Counter for LMR": 2,
+  "Provision of legal advice services for the staff of the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Facilities and Corporate Support Services": 2,
+  "Sanierung einer Shutteranlage im JRC Karlsruhe": 1,
+  "Provision of Travel Agency services": 2,
+  "European Capitals of Tourism": 1,
+  "Servicios de agencia de viajes para la Delegación de la Unión Europea en Colombia": 1,
+  "Rental of up to 8 armored cars for European Union Training Mission – Somalia (EUTM-S)": 1,
+  "Support for the assessment of the aviation non-CO2 MRV framework": 1,
+  "EU Security Sector Governance Facility": 1,
+  "Support for the organisation of events and other communication and information activities of the European Parliament Liaison Office in Greece": 1,
+  "Europa Experience Floor Staff - Slovakia": 1,
+  "Alquiler de coche con conductor": 1,
+  "Corsi di formazione e servizi di consulenza specifici incentrati su tematiche relative all’organizzazione amministrativa e operativa, con contenuti specializzati adattati alle esigenze del settore della ristorazione (catering) Ispra-Italia": 1,
+  "Provision of interim staff for the European Labour Authority and the European Commission Representation in Slovakia / Bratislava": 1,
+  "Preparation of audits, detailed design, tender documents, supervision of civil works for the implementation of energy efficiency measures in local public buildings across all four municipalities": 1,
+  "Maintenance Services for Perkin Elmer Scientific Instruments": 2,
+  "Prestation de service pour l’audit des gestionnaires des crèches du Parlement européen à Bruxelles et à Luxembourg.": 1,
+  "Technical Assistance for Priority Human Resources and Government Service Performance": 1,
+  "Services of project management and architecture in the field of information technology": 2,
+  "EU-Algeria 4 Business: mise en œuvre d'activités de dialogue économique, de facilitation du commerce et de l'investissement en Algérie": 1,
+  "PKI L2/L3 maintenance services": 1,
+  "SEC/260994 - Provision of services related to social and behavioural studies": 1,
+  "Comprehensive management of Transition and Resilience Platform (TRP) (2026CE160AT107)": 1,
+  "PRESTATIONS ARCHITECTURALES ET TECHNIQUES A BAZOCHES": 1,
+  "Assistance and Insurance Coverage for work-related travel": 1,
+  "Provision of Venue and Site Facilities and Related Services for Team Events and activities outside Brussels": 1,
+  "Delivering IT and Firearms Equipment to the NFFP in the frame of the EU4Security Moldova Project": 1,
+  "FORM26 - Provision of multilingual desktop publishing, formatting and file processing services": 1,
+  "Framework Contract for Impact Assessment and Evaluation Support Studies in the Field of Transport and Tourism": 1,
+  "Hydrogen Startup and Scaleup Hub": 1,
+  "Servicios de vending - concesión de máquinas expendedoras y alquiler de dispensadores de agua y máquinas bebidas calientes.": 2,
+  "Insurance Brokerage Services for the EU Delegation to the USA": 1,
+  "ECCAIRS.2 - E2 MIDAS - Maintenance, Infrastructure, Development and Application Support": 1,
+  "Policy Dialogue and Public Diplomacy Facility for the United States": 1,
+  "Learning through Experimentation for Adaptive Programming (LEAP) - Producing experimental designs for ERDF/CF/JTF investment in the field of energy efficiency measures": 1,
+  "Learning through Experimentation for Adaptive Programming (LEAP) - Producing experimental designs for ERDF/CF/JTF investment in the field of access to quality public services": 1,
+  "Assistance technique d’appui pour la mise en oeuvre du programme MASSALEK «Participation des jeunes à la dynamisation touristique et culturelle des territoires, en Algérie»": 1,
+  "Creation of a pool of experts to support ECHA’s Committee for Risk Assessment (RAC) and Committee for Socio-Economic Analysis (SEAC)": 1,
+  "Maintenance services for Applied Biosystems (Life Technologies) Scientific Instruments": 2,
+  "AccessibleEU - phase II": 1,
+  "Security services for the Delegation of the European Union to China": 1,
+  "Entreprise générale pour la réalisation de travaux de rénovation et de transformation ou de construction (TRT)  pour les bâtiments occupés/gérés par la Commission": 1,
+  "Open call for tenders for the provision of Service Desk, Digital Workplace, other IT support services, and Stock Management for the Council of the European Union (SMARTSUP-II)": 1,
+  "PIAST AI-Optimised Supercomputer": 1,
+  "EU Space Traffic Coordination Platform": 1,
+  "Supply of Equipment for Tunceli Solid WAste Management Project": 1,
+  "In-country support services – South Eastern Europe and Türkiye": 1,
+  "EU-Vietnam Cooperation Facility": 2,
+  "Maintenance, update and further development of EFSA's Chemical Hazards Database OpenFoodTox 3.0.": 1,
+  "EUDOR – Long-term digital preservation service": 1,
+  "Provision of cleaning services for the premises of Europe House in Warsaw, Poland.": 2,
+  "Travaux GTC - GTB - Supervision": 1,
+  "Service FWC for the Provision of Satellite Communication, related Services and Supplies (26.ISE.JP.001)": 1,
+  "Fornitura di materiale generico di cancelleria e materiale promozionale eco-sostenibile": 1,
+  "Facilitating the implementation of decentralised manufacturing for biotech medicinal products": 1,
+  "EUDEL Tanzania - travel agency services": 1,
+  "Liste von Anbietern von Catering-Dienstleistungen für das JRC Karlsruhe": 1,
+  "Procurement of firefighting equipment": 1,
+  "06D30/2026/M034 – Bruxelles - Contrat-cadre de fourniture et installation d’équipements de signalétique": 1,
+  "Supply of technical material and equipment": 1,
+  "Multiple framework contract for the supply of ICT hardware, spare parts, accessories and associated services (SUPEPAAS)": 1,
+  "ACQUISITION, DELIVERY, INSTALLATION AND HARDWARE AND SOFTWARE MAINTENANCE OF INNOVATE INDUSTRIAL GRADE SUPERCOMPUTER – FOR THE EUROPEAN HIGH PERFORMANCE COMPUTING JOINT UNDERTAKING (EUROHPC JU)": 1,
+  "Reception, maintenance and auxiliary services to the EIT in Budapest, Hungary": 1,
+  "Provision of cleaning services to the EIT in Budapest, Hungary": 1,
+  "NEB Academy Coordination and Support Centre": 1,
+  "Achat et maintenance de type « Omnium » d'une machine multifonction pour l'effectuation de test ophtalmologique pour le Service Médical de Luxembourg": 1,
+  "Multiannual FWC on monitoring, research and analysis related to VET and qualifications": 2,
+  "Europa Experience Floor Staff - ITA": 1,
+  "Removal services for eu-LISA operational site in Strasbourg": 1,
+  "remplacement d'onduleurs et batteries": 2,
+  "Multi-Component Security Monitoring System": 1,
+  "European Surveys with Asylum Migrants (EU SAM)": 1,
+  "Blue Book traineeship - Welcome Conference External Venue Hire": 1,
+  "Training for ENP East and Central Asia countries": 1,
+  "Fourniture de matériel pour serveurs et stockage \"PRE-OWNED\" ainsi que fourniture de la maintenance": 1,
+  "Provision of Interim Staff services to the EIT": 1,
+  "Facility supporting Interreg NEXT programmes(2021-2027)and preparatory activities for the next MFF programming period on the EU’s ext. eastern and southern borders, in the framework of the ERDF,NDICI and CF for the use of TA. 2026CE160AT059": 1,
+  "Purchase of 14” business laptops with a three-year warranty for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "ZAG 2026 Zamjena uredskih tepiha*": 1,
+  "Assessing the Elasticity of Retail Investment to Tax Incentives": 1,
+  "Mapping data sources relevant to occupational exposure to cancer risk factors in the EU": 1,
+  "Fourniture et pose de produits de signalétique pour la Cour de justice de l'Union européenne": 1,
+  "Célébration de fin d'année 2026 de l’EBA – Lieu de réception et services associés": 1,
+  "Provision of coffee, tea and complementaries": 1,
+  "Framework contract for EUDA scientific studies support services": 1,
+  "Technical assistance for vehicle testing at VELA (Vehicle Laboratories)": 1,
+  "Further alignment with the Energy Efficiency acquis": 1,
+  "FRANET - F-SE-26-T01 Provision of services related to data collection and research services on fundamental rights issues": 1,
+  "Workshops & Expert missions for the Southern Mediterranean Countries (2027-2029)": 1,
+  "Short term stability of ERM-CA714 - pharmaceuticals in wastewater": 1,
+  "Provision of security services": 1,
+  "Provision of a comprehensive publishing service for EFSA’s scientific outputs": 1,
+  "Gestione e manutenzione dell'impianto di trattamento delle acque reflue": 1,
+  "Mobile Telephony Subscriptions for the European Commission Representation in Greece": 1,
+  "Automated Evidence Collection and Monitoring for Industrial Transformation and Recycling Facilities": 1,
+  "Ship design and safety assessment of nuclear fission technologies for maritime applications": 1,
+  "Framework service contract for the collection of meteorological and hydrological in-situ data in support to the Copernicus Emergency Management Service (CEMS) Flood Early Warning Systems": 2,
+  "Study in Europe Initiative (Enhancing the attractiveness of Europe as a study destination for global talent) & Erasmus Mundus Support Initiative (Supporting joint programmes in attracting talent through Erasmus Mundus scholarships)": 1,
+  "Hand-held radioisotopes Identifiers for EUSECTRA trainings in JRC Karlsruhe": 1,
+  "Provision of Communication Services and Organisation of Public Events and Information Activities": 1,
+  "Strengthening the capacities of the IPA bodies for the effective implementation of the Operational Programme on Energy 2024-2027": 1,
+  "Service de transport d'enfants fréquentant le Centre Polyvalent de l'Enfance, géré par l'Office Infrastructures et Logistique Luxembourg (OIL).": 1,
+  "Lieferung eines Magnetventilblocks für das JRC Karlsruhe": 1,
+  "Framework Service Contract for the provision of software development services for ECHA IT port": 1,
+  "Notice of Call for Expression of Interest – Remunerated Experts - Various scientific profiles within the field of dangerous substances": 1,
+  "Call for tender concerning provision of an insurance cover for the European Commission at its premises at Grange, Dunsany, Co. Meath, Ireland": 2,
+  "Development, Implementation, Maintenance and  Operation of financial IT Systems": 1,
+  "Financial and accounting support": 1,
+  "Calibration, preventive and corrective maintenance services for the gas detection systems Petten labs": 1,
+  "Provision of Canteen Services": 1,
+  "Aircraft Performance training": 1,
+  "Technical Assistance in support of  Chapter 22 and Cohesion Policy in Albania": 1,
+  "Provision of travel services related to returns by scheduled flights supported by Frontex": 2,
+  "Tallinnas Vabaduse väljakul 9. mail 2027 toimuva Euroopa päeva tähistamise ürituse ala korraldamine ja haldamine": 1,
+  "Servizio di controllo qualità in entrata delle derrate alimentari presso il servizio ristorazione, gestito dall’Unità OIB.LS.3, sul Sito della Commissione Europea a Ispra (VA)": 1,
+  "Strengthening the capacities of the IPA Bodies for the effective implementation of the Operational Programme EU for Youth Employment 2024-2027": 1,
+  "Euroopa päeva kontserdi ja festivaliala korraldamine Narvas 2027": 1,
+  "Provision of external audit services": 1,
+  "Interpretation services for the events of the European Commission Representation in Hungary": 1,
+  "ERM-AD623k characterisation stuyd 1": 1,
+  "Microplate reader with absorbance, fluorescence and luminescence": 1,
+  "AT pour la mise en œuvre d’activités de dialogue économique, de facilitation du commerce et de l’investissement en Algériele projet « EU-Algeria 4BUSINESS »": 1,
+  "AO 26 023 — Contrat cadre de Travaux de Techniques Spéciales dans les bâtiments du Parlement européen à Bruxelles": 1,
+  "Provision of rental of storage facilities for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "NL-Petten: Onderhoud, reparatie, ondersteuning van faciliteiten en kleinschalige renovatie van gebouwen, externe zones en bijbehorende infrastructuur": 1,
+  "Formations en premiers secours pour le personnel des Institutions européennes au Grand-Duché de Luxembourg.": 1,
+  "Complete reconstruction, modernisation and replacement of the passive structured cabling infrastructure within an existing building of EPLO Athens located in Greece.": 1,
+  "Investigating the role of agro-dealers and service providers in supporting the agroecological transition among smallholders in West Kenya": 1,
+  "Acquisition and provision of voice telephony services for the telecommunication needs of Cedefop": 1,
+  "Strengthening digital connectivity and the digital transformation of businesses and public services in Albania": 2,
+  "Capacity Building of Youth Policy Actors for Efficient Implementation of the Youth Guarantee": 1,
+  "Provision of copywriting, editorial and proofreading services to Eurojust": 2,
+  "Technical assistance to update the Union Implementation Plan of the Stockholm Convention": 1,
+  "Supply of equipment for automatization and modernisation of data collection processes of IT system of the Statistical Office of Montenegro (MONSTAT)": 1,
+  "Development and assembly of a new motion control system for one of the neutron diffractometers at the High Flux Reactor": 1,
+  "Strengthening the capacities of the IPA bodies for the effective implementation of the Operational Programme on Digital Economy and Society 2024-2027": 1,
+  "Fourniture de poudres de laits, farines et céréales infantiles destinées aux enfants fréquentant les crèches gérées par la Commission européenne à Bruxelles.": 1,
+  "Rental of transport services for the EPP Group meeting in Taormina, ITALY, from 12/10/2026 to 15/10/2026.": 1,
+  "Purchase of interpretation services for EU COMES TO YOUR SCHOOL, Japan": 1,
+  "Maritime Spatial Planning Assistance Mechanism and European Blue Forum": 1,
+  "Chauffeur- und Limousinendienste für die Vertretung der Europäischen Kommission in Deutschland.": 1,
+  "Services related to tabletop exercises in the fields of physical security, crisis management, and business continuity.": 1,
+  "Experimental online survey on generative AI, mental health, and help-seeking among young adults in Europe.": 1,
+  "Supply of the vault/cash operations equipment for strengthening institutional capacity of the Central Bank of Montenegro": 1,
+  "Defining the next steps for collaboration in SDV, Data Pooling and Autonomous Driving in the European Connected and Autonomous Vehicle Alliance (ECAVA)": 1,
+  "Study on transformative innovation capabilities and enabling conditions for sustainable competitiveness": 1,
+  "Multiple framework contract for studies in the field of external relations": 1,
+  "Technological developments and roaming study": 1,
+  "Aufbau und Änderung von Elektroinstallationen an Handschuhkästen, heißen Zellen, Labors und im Gebäude": 1,
+  "Mechanische Fertigungs- und Montagearbeiten von wissenschaftlichen Geräten und Apparaturen im JRC Karlsruhe": 1,
+  "Consolidation, extension and field testing on longitudinal data of the Multi-MNO reference pipeline to process Mobile Network Operator data for official statistics (Multi-MNO+)": 1,
+  "« Supply, maintenance and leasing of fitness equipment for the Court of Justice of the European Union in Luxembourg Lot 1: Supply and maintenance of musculation equipment Lot 2 : Leasing of cardio equipment": 1,
+  "Wartung/Instandhaltung/Installation von Anlagen in einer kerntechnischen Einrichtung": 1,
+  "Study on Adaptive Learning and Experimental Designs for Investments in the Context of NRPPs": 2,
+  "Provision of Three-year interim review of EIT Culture & Creativity": 1,
+  "DPS for IT Infrastructure, Platform and Managed ICT Services for eu-LISA": 1,
+  "Call for Tenders for the selection of Artificial Intelligence Gigafactory Consortia and the establishment of AI Gigafactories": 1,
+  "Provision of modification, transportation and installation services for container units": 1,
+  "Study in Europe & Erasmus Mundus Support": 1,
+  "Fourniture de mobilier pour l'aménagement et l’équipement des espaces de travail et de convivialité de la Commission européenne et autres entités participantes": 1,
+  "First aid and firefighting trainings": 1,
+  "Support to the Economic Modelling of Agriculture and Rural Development Policies in Europe IV": 1,
+  "Dynamic Purchasing System (DPS) for Provision of Technical Equipment for Standing Corps": 1,
+  "Enhancing JRC Modelling Tools for Active Mobility Modes and Affordability: Comprehensive Network Characterisation and Transport Poverty Indicators.": 1,
+  "ERCEA Staff End-of-Year Event on 17/12/2026 – Rental of venue and catering services": 1,
+  "Service of Occupational Risk Assessment Documents (Documento di Valutazione dei Rischi – DVR) for buildings, workplaces and activities located at the JRC Ispra site.": 1,
+  "Capacity Reservation for Personal Protective Equipment Pilot": 1,
+  "Lieferung und Installation einer Photovoltaikanlage auf dem bestehenden Beton-Fahrzeugunterstand im JRC Karlsruhe": 1,
+  "Renovatie van de weg en het wegdek vóór gebouw 020 tot aan het hoofdkruispunt van het JRC Geel.": 1,
+  "Marché de fourniture et d’installation d’équipements au profit des lycées techniques professionnels du Bénin": 1,
+  "Support of the implementation of the European Industrial Alliance on Small Modular Reactors (SMRs)": 1,
+  "In vitro ADME assays for hepatic clearance and plasma protein binding": 1,
+  "Multiple framework contract for the supply of ICT equipment, spare parts, accessories and associated services": 1,
+  "Framework contract for the supply of testing and off-board charging equipment for electrified vehicles": 1,
+  "Brüsszeli tanulmányutak szervezése és lebonyolítása magyar újságírócsoportok számára a 2026-2030. években": 1,
+  "Call for expression of interest with a view to drawing up lists of experts to assist in operational coordination and assistance in projects on Capacity building and coastguard related functions and Fisheries data and control technologies": 1,
+  "SEC/260994 - Provision of services related to social and behavioural studies for ECDC": 1,
+  "Catering Services, supplies and arrangement of venues.": 1,
+  "Support the preparatory work on the universal PFAS restriction:  (1) Site-specific PFAS management plan: horizontal considerations; (2) Supply chain communication, including labelling; (3) Reporting of continued use": 1,
+  "Assistance and Insurance Coverage for work-related missions and authorised travels": 1,
+  "Provision of coffee machines, hot beverage supplies and related services for EUAA in Cyprus": 1,
+  "Supply of dress shoes for security officers and receptionists at the three sites of the European Parliament (Brussels, Strasbourg and Luxembourg)": 1,
+  "Étude sur la restauration": 1,
+  "Services of a journalist to author, review and revise texts for the website": 1,
+  "NFFP Tracking and Management System Development for the Republic of Moldova": 1,
+  "Study to support the performance assessment of the Brexit Adjustment Reserve (BAR)": 1,
+  "Annual Maintenance and Performance Qualification of a Thermo ICP-MS": 1,
+  "TIMS FILAMENTS": 1,
+  "Cateringdienstleistungen für Veranstaltungen, Besuche und Konferenzen für das JRC Karlsruhe": 1,
+  "Courier Services": 3,
+  "Insurance consultancy services framework contract for the MSP in FPI.6": 1,
+  "Supply of thermal cameras": 1,
+  "Night Vision Imaging System (NVIS) Flight Test Refresher Training": 1,
+  "Gold disks": 1,
+  "Support to Defence Innovation and Operational Experimentation Activities, including BraveTech EU Testing and Evaluation Campaigns (Phase 2) - Request for information (RFI)/market survey - Information Session: 3 September 2026": 1,
+  "Request of service to provide a well structured, traceable logistics framework that enables the successful execution of the IEA Task 53 test campaigns on bi-directional charging system at JRC Ispra.": 1,
+  "AI-assisted Data Collection and Process Mining Analysis of Administrative Acts Linked to Local Public Investments": 1,
+  "NEB Knowledge Portal: advancing impact, knowledge management and monitoring of results": 1,
+  "The cost of decarbonising and renewing the EU fishing fleet – Assessment of investment needs, technical constraints, and policy barriers": 1,
+  "Online Manager Media Database Tool": 1,
+  "Support the preparatory work on the universal PFAS restriction: (1) safe conditions for use and disposal of PFAS; (2) analytical methods and enforcement": 1,
+  "Supply of Temperature Calibration Oil Bath": 1,
+  "Connection of Vinica to WWTP Kocani, including partial rehabilitation and extension of sewarage and stormwater systems in the Municipality of Vinica": 1,
+  "Wastewater collection and treatment investment project in the Municipality of Stip": 1,
+  "Provision of expert support for RoHS: SEAC capacity building and technical support services": 1,
+  "Crypto assets markets data II": 1,
+  "Moderation on an online training on participatory processes for local, regional and national public administrations in the EU_2026 developments": 1,
+  "Chauffeur- und Limousinendienste": 1,
+  "HAB detection based on analysis of spatial patterns in EO data": 1,
+  "Transporto priemonių su vairuotoju ir vairuotojo be transporto priemonės nuomos paslaugos": 1,
+  "NP5 single FWC for Uniform acceptance services": 1,
+  "Lease, Rent, and Hire Purchase of Instrumentation for Electrical Measurements": 2,
+  "Work‑related accidents in the EU: An ‘OSH in figures’ analysis of trends, causes and prevention": 1,
+  "Supply of IT Equipment for High School Educators for supporting the use of the System for Management of Pre-University Education (SMIP) in Albania": 1,
+  "Provision of pitch training for EIT Award nominees": 1,
+  "Support services to Simpl’s Programme -  Support Office (PSO II) Open procedure": 1,
+  "Identification of a harmonised and reliable risk assessment methodology including thresholds for anti-microbial resistance (AMR) and reliable methods for sampling and analysis in surface water and groundwater": 1,
+  "CYBER26": 1,
+  "Furniture purchase and maintenance services": 1,
+  "Catering Services for the European Commission Representation in Cyprus": 1,
+  "Travel agency services for the European Commission Representation in Cyprus": 1,
+  "Maintenance FWC Instron Test Machines": 1,
+  "Provision of fuel, energy cards and services in selected areas of Montenegro": 3,
+  "property insurance (fire and terrorism)": 1,
+  "VIL - Transporto priemonių nuomos paslaugos Lietuvos pimininkavimo Europos Vadovų Tarybai metu": 1,
+  "NL-Petten: Vervanging van de bekledingspanelen van gecorrodeerd staal op de technische vloer op het dak van gebouw 312, met inbegrip van de bijbehorende werkzaamheden en reparaties.": 1,
+  "VIL - Vairuotojo nuomos paslaugos Lietuvos pimininkavimoEuropos Vadovų Tarybai metu": 1,
+  "Development of Technical Aviation Safety Promotion Content": 1,
+  "DPS for Technology Acquisition Framework (TAF) for eu-LISA": 1,
+  "Servizio di organizzazione di corsi di formazione a contenuto pedagogico e psicologico per il personale educatore della Crèche (Asilo nido) e della Garderie (Doposcuola), gestite dall'Unità OIB.LS.3 presso il Sito della Commissione europea": 1,
+  "Fornitura di prodotti farmaceutici per l'infanzia, destinati al settore Childcare, gestito dall’Unità OIB.LS.3 sul Sito della Commissione Europea a Ispra (VA)": 1,
+  "Maintenance and Support Services for the CPVO Oracle Database Environment": 1,
+  "Type Rating Conversion EC135 T2+/P2+ to T3H/P3H": 1,
+  "VIL - Remonto, dažymo ir kilimų klojimo darbai": 1,
+  "Technical Assistance to Project Preparation for Environment and Climate Change": 1,
+  "Aircraft Performance training course": 1,
+  "Servizi di doganalista per il JRC di Ispra": 1,
+  "EFSA Journal": 1,
+  "Satellite-Based Basemap Service provision": 1,
+  "Interim secretarial, administrative, project management and related services": 1,
+  "Emerging Health Technologies reports 2026-2028 pursuant to Regulation (EU) 2021/2282 on Health Technology Assessment": 1,
+  "Electrical steering for blinds in the headquarters of the European Labour Authority.": 1,
+  "Komplexný monitoring médií na Slovensku": 1,
+  "Supervision of the Works Contract for Connection of Vinica to WWTP Kocani Including Partial Rehabilitation and Extension of Sewerage and Stormwater Systems in the Municipality of Vinica": 1,
+  "Capacity Building of the Management and Control System and Partners Implementing the Operational Programme": 1,
+  "CINEA Away Day": 1,
+  "Call for Expression of Interest to establish a list of scientific/academic/operational experts to assist the European Parliament’s Directorate-General for Security and Safety (DG SAFE)": 1,
+  "Rental of interpretation and conference equipment for the Connecting EU 2026 Seminar taking place in in  Sofia on 6-7 July 2026": 1,
+  "Achat et livraison de bons cadeaux pour les membres du personnel du Comité économique et social européen (CESE)": 1,
+  "Procurement of dictionaries, specialised databases on linguistic and terminological issues and encyclopaedias in electronic format": 1,
+  "Supply of Equipment for Mersin ITS SAP": 1,
+  "Formations prévention incendie théoriques et pratiques": 1,
+  "Catering for Cyprus Presidency Days, Brussels 7 May 2026": 1,
+  "EEA/ENS/26/001 - Enhancing the integration of small-scale fisheries into marine governance through improved spatial data and indicators": 1,
+  "Open call for scientific and regulatory experts": 1,
+  "Nettoyage des toges de la Cour de justice de l'Union européenne": 2,
+  "Quality Assurance to Monitoring & Evaluation Systems for the EU External Action": 1,
+  "Rental of interpretation and conference equipment for the High-Level Western Balkans Conference in Vienna on 29 May 2026": 1,
+  "Consultancy services supporting women’s initiatives and gender equality in Western Balkan border police": 1,
+  "EU FAB+ Multiple Sourcing Pilot for Capacity Reservation for PPEs": 1,
+  "Rental of interpretation and conference equipment for the EESC's Group II Extraordinary Meeting taking place in Nicosia on 2-3 June 2026": 1,
+  "Provision of services related to the Business Continuity Plan for EU Publications Office Managed Services": 1,
+  "Supply of a camera for the transmission electron microscope": 1,
+  "EEA/RES/26/002 - Provision of consultancy services on the development and implementation of a staff survey on Diversity, Equity and Inclusion (DEI) at the EEA": 1,
+  "Interpretation of the High-Level Western Balkans Conference (Vienna, 29 May 2026)": 1,
+  "Environmental Coordinator services at JRC-Geel": 1,
+  "The Impact of the War in Ukraine on EU Border Regions: Socio-economic, Infrastructure and Cohesion Policy Implications": 1,
+  "Radioactive transport from JRC-Geel to USA": 1,
+  "Fixed wing aircraft Autopilot – Design, Operation and Certification": 1,
+  "Support to Zero Pollution Stakeholder Platform 2026/2027": 1,
+  "Catering for event  (40 years enlargement ceremony for Spain and Portugal) in Brussels on 17 April 2026": 1,
+  "Supply of dry ice": 1,
+  "Development of OSH Wiki articles focusing on psychosocial risks and mental health issues in the Health and Social Care (HeSCare) sector": 1,
+  "Study on the reference techno-economic parameters for demand side response in the European power system for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Purchase of  thirty  \"16 inch \" laptops": 2,
+  "FWC for Ride-hailing and transportation services in France": 1,
+  "Capacity-building for the Implementation of Interreg and Cohesion Policy (BiH-MNE)": 1,
+  "Space Traffic Coordination Platform": 1,
+  "Multi-Component Security Monitoring System for the EU Space Security Operations Centre (SOC)": 1,
+  "Supply and maintenance of an IC system": 1,
+  "JRC Ispra Servizi Doganali": 1,
+  "EUSPA/OP/10/26 - OPERATIONAL IT ASSETS FOR EUSPA SOM/GSMCs": 1,
+  "The transformation of EU farms under the AI revolution": 1,
+  "Supply of an Autosampler and Thermal Desorption TD System for GC/GCMS": 1,
+  "Personal Microwave Security Scanners": 1,
+  "Guarding and Front Desk Services for EUSPA HQ": 1,
+  "Maintenance of security, safety and building management installations of Europe House in The Hague, the Netherlands 2026 - 2030": 1,
+  "Sistema di acquisizione alta velocità": 1,
+  "Dynamic Purchasing System (DPS) for Large media strategy, planning, buying and asset adaptation services": 1,
+  "DVD/261005-Support on Vaccine Advice Processes and Forward Planning": 1,
+  "Technical Assistance for Harmonization of Regulation (EU) No 528/2012 on Biocidal Products (BPR)": 1,
+  "NL-Petten: Diensten kadercontract voor het uitvoeren van legionella controle en beheersmaatregelen waaronder legionellamonsterneming, temperatuurmeting en controles.": 1,
+  "Trait-based food web analysis": 1,
+  "Provision of technical consultancy and supervision services for the interior fit-out of Premises for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "ZAG 2026 Zamjena uredskih tepiha": 1,
+  "ZAG 2026*Zamjena uredskih podnih obloga": 1,
+  "EP - Vendors' list - legal assistance in Estonian law": 1,
+  "DYNAMIC PURCHASING SYSTEM (DPS) FOR THE ORGANISATION OF EVENTS IN IRELAND": 1,
+  "EP - Vendors' list - legal assistance in Portuguese law": 1,
+  "EP - Vendors' list - legal assistance in Swedish law": 1,
+  "EP - Vendors' list - legal assistance in Maltese law": 1,
+  "EP - Vendors' list - legal assistance in Croatian law": 1,
+  "EP - Vendors' list - legal assistance in Danish law": 1,
+  "EP - Vendors' list - legal assistance in Austrian law": 1,
+  "EP - Vendors' list - legal assistance in Italian law": 1,
+  "EP - Vendors' list - legal assistance in Romanian law": 1,
+  "EP - Vendors' list - legal assistance in Slovenian law": 1,
+  "PE — Liste de vendeurs — assistance juridique en droit français": 1,
+  "EP - Vendors' list - legal assistance in Dutch law": 1,
+  "EP - Vendors' list - legal assistance in Spanish law": 1,
+  "EP - Vendors' list - legal assistance in Czech law": 1,
+  "PE — Liste de vendeurs — assistance juridique en droit belge": 1,
+  "EP - Vendors' list - legal assistance in Polish law": 1,
+  "EP - Vendors' list - legal assistance in Greek law": 1,
+  "EP - Vendors' list - legal assistance in German law": 1,
+  "EP - Vendors' list - legal assistance in Irish law": 1,
+  "EP - Vendors' list - legal assistance in Slovak law": 1,
+  "EP - Vendors' list - legal assistance in Latvian law": 1,
+  "EP - Vendors' list - legal assistance in Hungarian law": 1,
+  "EP - Vendors' list - legal assistance in Finnish law": 1,
+  "EP - Vendors' list - legal assistance in Cypriot law": 1,
+  "PE — Liste de vendeurs — assistance juridique en droit luxembourgeois": 1,
+  "EP - Vendors' list - legal assistance in Lithuanian law": 1,
+  "EP - Vendors' list - legal assistance in Bulgarian law": 1,
+  "Generative AI and gender equality: a thematic focus of the Gender Equality Index 2027": 1,
+  "Organisation of the process and EIT Awards Ceremony in Ireland (2026 december)": 1,
+  "Certification audits on management systems": 2,
+  "Hire of passenger cars with drivers starting from Lisbon and Porto": 1,
+  "PRIZE CONTEST   LOITERING MUNITIONS: “SENTINEL STRIKE CHALLENGE” & Information  session on 17 March 2026": 1,
+  "Servizi di un/a cardiologo/a per il Servizio medico di Ispra": 1,
+  "EEA/RES/26/009 - Training and coaching services on quality management  system to the European Environment Agency's Staff (EEA)": 1,
+  "Provision of Local Catering Services to the EIT": 1,
+  "Transportation of civilian weapons, ammunitions, non-lethal weapons, and tactical equipment including import-export, transit, brokering and technical assistance in European Union": 1,
+  "Provision of Internet Services (Internet access, SIP, FAX and IPTV) for eu-LISA’s HQ in Tallinn": 1,
+  "Provision of confidential and professional 24/7 counselling support services (Employee Assistance Programme) - RELAUNCH": 1,
+  "Legal advice to assist with office space lease": 1,
+  "Supply of Personal Protective Equipment (PPE) equipment": 1,
+  "Mise à disposition de personnel destiné aux services de restauration de la Commission européenne au Luxembourg": 1,
+  "Mapping workers’ occupational exposure to nanomaterials": 1,
+  "LAV - Wi-Fi and Mobile Telephony Subscriptions": 1,
+  "Durchführung von Trinkwasser Inspektionen, Hygieneinspektionen der RLT-Anlagen und Luftqualitätsmessungen im JRC Karlsruhe": 1,
+  "Supply of Custom-made and Personalised Conference and Promotional Materials": 1,
+  "Formations dans le secteur de la prévention et protection au travail": 1,
+  "BEREITSTELLUNG VON REINIGUNGSDIENSTLEISTUNGEN UND -MATERIAL": 1,
+  "Fourniture de denrées alimentaires pour les services  de restauration de la Commission européenne à Luxembourg et à Bruxelles": 1,
+  "Policy briefs on use of long-term care and childcare services": 1,
+  "Supply of a new cooling system": 1,
+  "Uniforms for security guards": 1,
+  "Fornitura di carni rosse (bovine, suine, ovine ed equine), carni bianche (avicunicole) fresche refrigerate e congelate, uova e suoi derivati per la mensa e il Clubhouse, gestiti dell’Unità OIB.OS.3 presso il Centro Comune di Ricerca (JRC)": 1,
+  "TRADE/2026/A2/A04 - Strategic Foresight Seminar": 1,
+  "Supply 3 of Equipment for Advanced Prototype Station (APS)": 1,
+  "Provision of photo and video recording services for the EC Representation in Bulgaria (2026 -2030)": 1,
+  "Projet d’Appui à la Gouvernance N°3 - Assistance technique": 1,
+  "Security services for the Delegation of the European Union to Armenia": 1,
+  "EEA/CCE/26/003 - Implementing circular bioeconomy – good examples of circular business models on bioeconomy and insights on the benefits of increasing the circularity of Europe’s bioeconomy": 1,
+  "Prestations de services dans le domaine de la restauration pour les self-services et cafétérias de la Commission européenne à Bruxelles et alentours": 1,
+  "Assistance technique au développement du secteur forêt - bois au Gabon": 1,
+  "Global Gateway Transport and Urban Facility 2": 1,
+  "Assistance Technique au profit des autorités ivoiriennes pour la coordination dans le Nord de la Côte d'Ivoire": 2,
+  "Technical Assistance to ECOWAS in Transport Governance in the West Africa under NDICI": 1,
+  "Climate change and implications for occupational safety and health: analysis of regulatory framework, impacts, and measurement challenges (3 Lots)": 1,
+  "List of Vendors for the Provision of Interim staff for the JRC Karlsruhe": 1,
+  "Megadrought impacts": 1,
+  "Supply of Stationery products and Office supplies for EUAA in Italy": 1,
+  "Services de nettoyage pour les bureaux à Marseille de la Representation de la CE et le bureau du PE": 1,
+  "Four-Year Framework Contract for the Annual Audits of the Joint Sickness Insurance Scheme (JSIS) Annual Accounts (2025–2028)": 1,
+  "Fornitura di materiale per i laboratori scientifici del JRC di Ispra": 1,
+  "Care of plants at EIGE": 1,
+  "Consolidated Tape Provider selection procedure - OTC derivatives": 1,
+  "Cross-border cooperation in the Western Balkans – Regional Technical Assistance - Cross-border Institution Building (CBIB+) Phase V": 1,
+  "Relaunch - Post-Earthquake Transport Recovery Action (PETRA) in Kahramanmaraş": 1,
+  "Maritime analysis tool": 1,
+  "Monitoring of the development and implementation of ICT standards and  standardisation deliverables in ITU-T": 1,
+  "Servicios de consultoría en proyectos de compensación voluntaria de emisiones de gases efecto invernadero.": 1,
+  "Cloud printing services for ELA's office in Bratislava": 1,
+  "Obstaranie nového služobného vozidla pre dopravu, mobilitu zamestnancov a logistickú podporu": 1,
+  "Implementation report of the ECCC required under Article 38(2) of Regulation (EU) 2021/887": 1,
+  "Provision of a feasibility assessment and the development of a pathways report for carbon neutrality for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Provision of training services for the EUIPO Mediation Centre": 2,
+  "Purchase of tactical equipement": 1,
+  "Purchase of tactical clothes": 1,
+  "Security services for the Delegation of the European Union to Ghana": 1,
+  "Provision of fuel, energy cards and services in selected areas of Moldova": 1,
+  "Rental of indoor swimming pool services II": 1,
+  "Basic First Aid, AED and Firefighting Training": 2,
+  "LEGAL ADVICE AND SUPPORT TO EUSPA": 1,
+  "RMS/260882 Plant services": 1,
+  "Provision of security services to the European Labour Authority": 1,
+  "Prestations de maintenance préventive et curative des équipements de restauration de la Commission européenne au Luxembourg": 1,
+  "Asistencia técnica a los programas temáticos sociedad civil y derechos humanos en Colombia": 1,
+  "Fourniture de décoration d'intérieur pour les espaces de convivialité dans les bâtiments de la Commission européenne à Bruxelles.": 1,
+  "EU sanctions compliance and due diligence helpdesk": 1,
+  "Rent of transport services for EPP, S&D and Renew Group in Ljubljana, Slovenia from 04/02/2026 to 06/02/2026.": 1,
+  "Technical assistance for the implementation of the support project to the EU-China Agricultural Cooperation": 1,
+  "Fornitura, installazione e manutenzione di sistemi di protezione fisica e impianti speciali": 2,
+  "Contraband kits": 1,
+  "Tehniskais, satura un publicitātes atbalsts Eiropas Komisijas pārstāvniecībai politisko prioritāšu komunikācijā": 1,
+  "Implementation of Pest survey toolkit in EFSA Azure Cloud datalake architecture": 1,
+  "Trade in Services- COMESA": 1,
+  "NL-Petten: Supply of one power to power module and hydrogen storage unit including associated maintenance services for HERO project.": 1,
+  "LOCATION VOITURES": 1,
+  "Fourniture soit régulière, soit ponctuelle de décorations florales et services associés": 1,
+  "Purchase of HP Z8-G5 workstation": 1,
+  "SERVICES D’ASSISTANCE TECHNIQUE DANS LE DOMAINE DES BÂTIMENTS POUR LA COMMISSION EUROPÉENNE DANS LA RÉGION DE BRUXELLES-CAPITALE ET ENVIRONS": 1,
+  "Supply of the gloves for nuclear laboratory gloveboxes at the JRC Karlsruhe": 1,
+  "Technical Assistance for Climate Change Adaptation Planning and Improved Response": 1,
+  "Lieferung von Reinigungs- und Waschprodukten an das JRC Karslruhe": 1,
+  "Appui à la communication de l'UE en Tunisie": 1,
+  "Security services for the Delegation of the European Union to Mauritius, including Rodrigues Island": 1,
+  "Technical Assistance for Enhancement of the Institutional Capacity of Turkish Electricity Distribution Corporation (TEDAŞ) on Live Line Maintenance in line with EU Standards and Practices": 1,
+  "Purchase of audiovisual products for the For Our Planet campaign": 1,
+  "Medical services for CEPOL": 1,
+  "Provision of medical services for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Data provision and analysis on secondary raw materials to boost recovery of Strategic and Critical Raw Materials (SCRMs) contained in Waste Electric and Electronic Equipment (WEEE)": 1,
+  "Cleaning Services for cleaning needs for the premises of SG/REFORM-DG HOME-DG ECFIN in Greece": 1,
+  "Supply of Equipment for Tunceli Solid Waste Management Project": 1,
+  "Pagaidu darbinieku noma pārstāvniecībā Latvijā": 1,
+  "COTS Controlled Radiated Pattern Antenna (CRPA)": 1,
+  "Apoyo a la Delegación de la Unión Europea y los Estados Miembros en la promoción de la Agenda de Inversión del Global Gateway.": 1,
+  "Transport lent de la valise diplomatique": 1,
+  "Portable hyperspectral spectrometer to be used for the collection of in situ radiometric measurements above water.": 1,
+  "Fornitura di materiale per ufficio per EFSA": 1,
+  "Study on the impact of the EU-Ukraine Road Transport Agreement on the road transport industry": 1,
+  "Scientific ICT PCs (nr. 64) for JRC Dir D and E": 1,
+  "Call for expressions of interest (CEI)  to establish a list of independent experts to provide expertise to the European Union Agency for Railways in the field of Vehicle Authorisation .": 1,
+  "Dimensional measurements instrument": 1,
+  "Konzeption, Organisation und Durchführung von Diskussionsveranstaltungen für Jugendliche": 1,
+  "Review of the data on the expansion of agricultural production areas onto forests and other land with high carbon stock for the purposes of the Renewable Energy Directive": 1,
+  "Border regions Peer exchange on solving border obstacles": 1,
+  "Mobile Services": 1,
+  "Breaking barriers, building resilience in the EU: gender equality for a future-ready workforce": 1,
+  "Servicios de limpieza y desinfección, gestión de residuos y control de plagas": 1,
+  "NL-Petten: Vervangen Brandmeldinstallaties van gebouwen 308/309 en 312/313 op het GCO Petten terrein": 1,
+  "Dynamic Purchasing System (DPS) for IT SERVICES RELATED TO APPLICATION DEVELOPMENT AND MAINTENANCE": 1,
+  "Consultancy services for firearms shooting instructor’s course delivery, revision and providing individualised feedback for learners": 1,
+  "Konzeption, Organisation und Durchführung von Journalistenseminaren zur Vermittlung von EU-Wissen": 1,
+  "NL-Petten: Natuurbeheer van Natura 2000-gebied GCO Petten": 1,
+  "Purchase 17 inch laptop": 1,
+  "AO 06D20/2025/M035 - USUFRUIT D’ESPACES IMMOBILIERS POUR LE PARLEMENT EUROPEEN À BRUXELLES": 1,
+  "Mental Wellbeing Support and Advisory Services": 1,
+  "Aviation careers resources & workforce challenges support": 1,
+  "Provision of uniform design services": 1,
+  "Rental of transport services for EPP Bureau meeting in Heidelberg, Germany from 10/12/2025 to 12/12/2025.": 1,
+  "Study on the expected investment return of commercial digital submarine cables to establish a profitability benchmark for CEF Digital": 1,
+  "Preventief en correctief onderhoud van binnen zonwering systemen van het Gemeenschappelijk Centrum voor Onderzoek te Petten'": 1,
+  "Provision of Event Organization Services for the Euromost Conference": 1,
+  "Media monitoring and analysis": 1,
+  "Catering services for Trade Policy Day - 20/11/2025 in Brussels": 1,
+  "Scientific ICT workstations for Unit E1": 1,
+  "Purchase of Furniture": 1,
+  "Service de nettoyage des bureaux à Paris et à Marseille.": 1,
+  "Dodávka služebního auta pro zastoupení Evropské komise v Praze, Česká republika": 1,
+  "HR legal services to EIGE": 1,
+  "Servicii medicale anuale și de recrutare pentru personalul din cadrul Reprezentanței Comisiei Europene din București, România": 1,
+  "Delivery of training on fire safety and Floor Marshals": 1,
+  "Maintenance of Technical Installations and Engineering Services at the Delegation of the European Union to the United Kingdom (Europe House)": 1,
+  "Replacement of the Service Vehicle for Transport, Staff Mobility, and Logistical Support": 1,
+  "Supply of hand guns for close protection": 1,
+  "Euroopa päev 2026 Narva": 1,
+  "Support Services for virtual career fairs": 1,
+  "EEA/RES/25/014 - Provision of mental health and wellbeing services to EEA staff members": 1,
+  "EU Customs Data Hub for e-Commerce": 1,
+  "Study on balancing market design for the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Pilot projects for online outreach within the Recruitment Campaigns for the EBCG Standing Corps Cat 1 (2025-2028)": 1,
+  "NL-Petten: Study on cooling individual and centralized technologies to cover the current and future cooling demand in the residential sector of the EU": 1,
+  "Consultancy and provision of data and insights for identification and monitoring of deeptech innovation": 1,
+  "Dry ice boxes": 1,
+  "Erd-, Beton- und Pflasterarbeiten für EUSECTRA Fertigcontainer": 1,
+  "Improved radioactive waste management in the Western Balkans": 1,
+  "Provision of fuel and energy cards in selected areas of Serbia": 1,
+  "Provision of services related to research on how Generative AI shapes public opinion, and the effects on Polarisation and the Market for News.": 1,
+  "Provision of business intelligence and data visualization services for the monitoring of start-ups supported by the EIT Community.": 1,
+  "Preliminary assessment of potential POPs candidates": 1,
+  "Framework contract for provision of maintenance services for geothermal monowell and cooling circuit installation in scientific laboratories at the JRC Petten in two (2) lots.": 1,
+  "FORNITURA DI N.4 QUADRICICLI NUOVI ELETTRICI di Categoria L6e": 1,
+  "Suministro de equipos de seguridad contra incendios e intrusiones y prestación de servicios de mantenimiento relacionados en EU-OSHA": 1,
+  "MAD/MAD/ Provision of subscription services to the national and international press online and in paper and to data bases to the European Commission Representation in Spain": 1,
+  "Rental of indoor swimming pool": 1,
+  "Supervision of fit-out works for the new Frontex premises in Brussels": 1,
+  "FOURNITURE DE SÉPARATEURS D’ESPACES, DE SÉPARATEURS DE BUREAUX ACOUSTIQUES ET SERVICES ASSOCIES": 1,
+  "Supply of Laboratory Equipment for improving monitoring practices in ambient air quality in compliance to CAFE Directive (2008/50/EC)": 1,
+  "Systematic review of dermal and respiratory sensitising effects of micro-organisms": 1,
+  "Dienstencontract voor preventief en correctief onderhoud van persluchtinstallatie apparatuur van het GCO-Petten": 1,
+  "Local social media support at the European Commission Representation in Hungary in 2026-2029": 1,
+  "ATH REP - Supply of Official Car": 1,
+  "Rent of congress premises and ancillary services for ECR in Rome": 1,
+  "Fornitura di servizi e attrezzature nel settore delle tecnologie multimediali e ibride per sale riunioni.": 1,
+  "Scintillator detectors": 1,
+  "Helsinki Representation new electric official car": 1,
+  "“Services in support of the technical implementation of interoperability obligations in Article 6(7) DMA”": 1,
+  "Digital transformation of the IT system of the Statistical Office of Montenegro (MONSTAT)": 1,
+  "Rent of congress premises and ancillary services for EPP, Heidelberg 12/25": 1,
+  "Kogukonna haldur 2026 (eesti ja vene keeles)": 1,
+  "Provision of consultancy services on the development of tools as part of the Toolboxes for Vulnerable Groups in Return  and other projects developed under Pre-Return Projects": 1,
+  "Call for expressions of interest (CEI)  to establish a list of independent experts to provide expertise to the European Union Agency for Railways.": 1,
+  "Dynamic Purchasing System (DPS) for Provision of Software Development, Project Management and Quality Assurance Services (PROMAQ DPS 1: Software development and maintenance services)": 1,
+  "Donation of scientific equipment": 2,
+  "Dynamic Purchasing System (DPS) for Provision of Software Development, Project Management and Quality Assurance Services (PROMAQ DPS 2: Project management, quality assurance and other support services)": 1,
+  "Servizi di un/a pediatra": 1,
+  "Support to implementation of \"EU for modern public administration\"": 1,
+  "Drought Chatbot for the European and Global Drought Observatories": 1,
+  "Navigation Integrity & GNSS User Authentication Receiver Development": 1,
+  "provision de cours de langues": 1,
+  "Green Lanes support platform": 1,
+  "Operational water-surface reflectance factors for above-water radiometry": 1,
+  "Servizi pediatrici": 1,
+  "Study to analyse national sick leave policies and their impacts on workers’ health and productivity to identify best practices for workers and businesses": 1,
+  "ZAG - Obnova/oprema recepcije u prostorijama Predstavništva EK-a u Zagrebu (Hrvatska).": 1,
+  "EFSA and EUAN premises in Brussels": 1,
+  "Promoting Trade and Investment in Angola": 1,
+  "Suministro de señalética y vinilos": 1,
+  "Call for expression of interest for the establishment of a list of remunerated external experts": 1,
+  "Long-term operating leasing (48 months) of a new official vehicle for the Representation of the European Commission in BARCELONA, without purchase option.": 1,
+  "Reservering van plaatsen in plaatselijke crèche": 1,
+  "Technical Assistance for river basin and flood risk plan": 2,
+  "EU-Kazakhstan trade and economic cooperation": 1,
+  "Data collection activity on perception of nuclear risks": 1,
+  "Call for expression of interest for the establishment of a database of external remunerated experts to support public health risk assessments": 1,
+  "Provision of Office Space for the European Union Agency for Asylum (EUAA) in Madrid, Spain": 1,
+  "Maintenance of rising vehicle barriers": 2,
+  "Installatie van veiligheidsbalustrades voor daken en vogelnetten in verscheidene gebouwen op de locatie van JRC Petten": 1,
+  "Facade renovation and insulation Building 020": 1,
+  "Recycling capacity benchmarks (Article 5) in the Critical Raw Materials Act": 1,
+  "DUB - Telephony services - Mobile and virtual landlines": 1,
+  "Donation reusable & recyclable goods to non-profit organizations for humanitarian, social, charity or environmental purposes": 2,
+  "Technical Assistance for the Initiative Access to Sustainable Finance for Green and Climate-Smart Value Chains": 1,
+  "Purchase of two official vehicles for the Representation of the European Commission in Rome and Milan": 1,
+  "NL-Petten- Battery Abuse Testing for Thermal and Emission Study in 2 lots": 1,
+  "Lista de proveedores para la concesión de espacios comerciales en la EUIPO": 1,
+  "Raamcontract voor het inhuren van tijdelijk personeel": 1,
+  "Subscription to a Press Aggregator database for the internal use of the European Parliament (Members of the European Parliament, their staff, and staff of the Institution).": 1,
+  "Developing National Stocktake System for Global Efforts on Climate Change": 2,
+  "SENIOR OFFICIAL MEETING ON YEMEN": 1,
+  "Purchase, storage and delivery  of live attenuated homologous vaccine against Lumpy Skin Disease": 1,
+  "Support to cancer screening and prevention and to neonatal care": 1,
+  "Call for Expression of Interest: ref. No 24.CSD.NP3.452 - List of Vendors for the provision of ‘’Catering Services for EDA’’": 1,
+  "Supplies for Ghana's Food and Drugs Authority - Molecular Biology Laboratory": 1,
+  "Call for Expression of Interest for the Establishment of a database of external remunerated experts providing expertise in the field of industrial relations and social dialogue to Eurofound": 1,
+  "DUB - Telecommunication services": 1,
+  "PEM Electrolyser Stack produced outside EU countries (China)": 1,
+  "Technical Assistance for “Support for the Digital Transformation of Manufacturing Industry”": 1,
+  "Rent of congress premises and ancillary services for EPP Bureau meeting in PARIS, FR, from 26/03/2025 to 28/03/2025.": 1,
+  "Strategic Communication of the European Union in Ethiopia – 2025-2027": 1,
+  "(LOT 1) : Maintenance des équipements et installations de sécurité des bâtiments du SEAE à Bruxelles lié à l'application SMI. (LOT 2) Maintenance des équipements et installations de sécurité des bâtiments du SEAE à Bruxelles hors SMI.": 1,
+  "Call for Expressions of Interest (CEI) to establish an EUAA list of external remunerated experts": 1,
+  "EUSPA-CP-09-24 - Galileo Service Operator II (GSOp II)": 2,
+  "Overview of regulation, policies, strategies, initiatives and programmes for the prevention of work-related cardiovascular diseases (CVDs)": 1,
+  "Supply of “Equipment for Composite Material and Technical Textile Prototype Production and Application Center - Lot 1: 3D Printer Type I”": 1,
+  "Automated DNA and RNA extraction platform using the magnetic bead technology": 1,
+  "Organisation Theory-6 workshop": 1,
+  "Supply of Equipment for Kadir Has University Creative Industries Platform (KHAS YEP)": 1,
+  "Fornitura di pasticceria per la mensa e il Clubhouse, gestiti dall’unità OIB.LS.3 presso il Centro Comune di Ricerca (JRC), sul Sito della Commissione Europea a Ispra (VA), comprese le operazioni di imballaggio, trasporto e consegna": 1,
+  "VIP transport services Sweden": 1,
+  "Supply of a compact navigation and timing device based on the exploitation of signals from optical space pulsars.": 1,
+  "IT Operations, Engineering and Evolution services": 1,
+  "Strengthening the Energy Performance of Public Building Stock through Sustainable Strategies": 1,
+  "Erneuerung der Raumluftüberwachungselektronik  im Flügel F des JRC  Karlsruhe": 2,
+  "Contrôle des absences médicales": 1,
+  "ASME Boiler & Pressure Vessel Code": 1,
+  "Rent of congress premises and ancillary services for EPP Presidency and Heads of Delegation meeting in Stockholm, SE, from 03/02/2025 to 07/02/2025.": 1,
+  "Provision of custom-made and personalised promotional materials": 1,
+  "Servizio di copertura assicurativa del trasporto e giacenza merci e beni del Centro Comune di Ricerca di Ispra": 1,
+  "ASME Boiler & Pressure Vessel Code subscription": 1,
+  "Frontex Surveillance Aircraft Services with land/coastline range fixed wing aircraft": 1,
+  "Belgique-Bruxelles: Avis de prospection du marché immobilier – Prévision des besoins immobiliers pour les années 2026 à 2032 du Parlement européen à Bruxelles": 1,
+  "Supply2 of Equipment for DTECH4ENT - Deep Technology Incubator for Entrepreneurs": 1,
+  "Highly purified recombinant h cystatin C": 1,
+  "Custom-made cardboard boxes": 1,
+  "Stromliefervertrag für das EU-Haus und die Ausstellung „Erlebnis Europa“ in Wien": 1,
+  "Παροχή υπηρεσιών ενοικίασης αυτοκινήτου με οδηγό για τις ανάγκες της Αντιπροσωπείας της Ευρωπαικής Επιτροπής στην Ελλάδα": 1,
+  "Service traiteur évènementiel pour la Commission européenne à Bruxelles et sur son site d’Overijse": 1,
+  "Fornitura di tende per interni con posa in opera per gli alloggi del Centro Comune di Ricerca (Joint Research Center - JRC), gestiti dall’Unità OIB.LS.3, sul Sito della Commissione Europea a Ispra (VA) Italia": 1,
+  "Purchasing of Individual ballistic shield and ballistic whiteboard panel": 1,
+  "Purchase of access to and analysis of data on performance of films supported under Films on the Move scheme of Creative Europe: MEDIA Programme and of other types of films.": 1,
+  "ADS-B Data to perform analysis on GNSS spoofing": 1,
+  "Document destruction JRC Geel": 1,
+  "Az Európai Unió Házának (Budapest, Magyarország) villamos energiával történő ellátása 2025-2026. években": 1,
+  "Post-Earthquake Transport Recovery Action (PETRA) in Kahramanmaraş": 1,
+  "Call for expression of interest for medical device and in-vitro diagnostics medical devices experts (EXPAMED) and patient, consumer and healthcare professional experts (P&HCP)": 1,
+  "Telpu uzkopšanas un atkritumu aizvākšanas pakalpojumi Eiropas mājā Rīgā": 1,
+  "Empirical analyses on innovation capabilities and industrial dynamics in European rural areas": 1,
+  "Fassadenbauarbeiten am Neubau Flügel M  im JRC Karlsruhe": 2,
+  "Unterstützung der Pressearbeit der Vertretung der Europäischen Kommission in Deutschland": 1,
+  "Provision of stationery, office supplies and office related consumables for EUSPA premises in Czech Republic and Spain": 1,
+  "Moderation on an online training on participatory processes for local, regional and national public administrations in the EU": 1,
+  "NL-Petten: Levering en vervanging van brandmeldinstallaties (BMI) van gebouwen 312 en 313 van het JRC Petten onderzoek centrum.": 1,
+  "Durchführung von Objektsicherungsaufgaben im JRC Karlsruhe": 1,
+  "Call for expressions of interest (CEI) to establish an EUAA list of remunerated external experts in the field of Medical Country of Origin Information (MedCOI)": 1,
+  "Call for Expressions of Interest (CEI) to establish an EUAA list of Remunerated External Experts for deployment in EUAA Asylum Support Teams": 1,
+  "Development of DFMC SBAS/HARAIM Receiver Demonstrator": 1,
+  "Fourniture d’énergie électrique aux Institutions européennes au Grand-Duché de Luxembourg": 1,
+  "Installation of Solar Power Plant  and construction of distribution network in Barclayville": 1,
+  "Call for Expression of Interest for the Establishment of a Pre-selected list of candidates for “Provision of representativeness studies to Eurofound”": 1,
+  "Supply and maintenance of 4 x IPP55plus Peltier-cooled incubators": 1,
+  "Supply and maintenance of biological threat detection device for the incoming post": 1,
+  "Market survey on communication services": 1,
+  "Call for Expression of Interest for the Establishment of a Database of Independent Individual External Experts to Provide Expertise to the European Union Aviation Safety Agency": 1,
+  "List of vendors for the provision of independent and on-hand expertise on specialised services in the field of intellectual property rights": 1,
+  "Professional Services Dynamic Purchasing System (PROSERV DPS)": 1,
+  "Erstellung von Vorprüfunterlagen zur Genehmigung und Errichtung eines Spaltstofflagers im Laborflügel M": 1,
+  "Wartung von Zugangserfassungssystem des JRC Karlsruhe": 1,
+  "Proofreading and editing services": 1,
+  "HEDI Uptake of Innovation - Autonomous Systems for Cross-domain Logistics (Air and Land)": 1,
+  "Professional Services Dynamic Purchasing System": 1,
+  "Zeitarbeitskraft für das JRC-Karlsruhe": 1,
+  "Technical Assistance for Strengthening the Capacity of Ministry of Health for Population Based Cancer Screening for Disadvantaged Groups": 1,
+  "Evolution of Galileo SAR-RLS beacons for maritime applications": 1,
+  "Technical Assistance for the Implementation of the Sound Public Financial Management Support Programme": 1,
+  "Provision of scientific, technical and secretarial support in the field of scientific customs": 1,
+  "Dynamic Purchasing System for Cloud Services (CLOUD III DPS)": 1,
+  "Assistance Technique au programme d'appui à la transition énergétique, Bénin": 1,
+  "Neubau Flügel M am Standort des JRC Karlsruhe Lieferung der Technischen Gebäudeausrüstung TGA Teil 2 – Gewerke Elektrotechnik, Leit- und Kommunikationstechnik, Strahlenschutzmesstechnik": 1,
+  "Strengthening the National Capacity of Climate Finance": 1,
+  "Arbeiten an Raumlufttechnischen (RLT) Anlagen": 1,
+  "CFT-1748 - CERBERUS - IT Security Operations and Testing, Business Continuity, Information Protection and Access Control Consultancy Services": 1,
+  "Etudes technique, économique, environnementale, sociale et de sécurité routière du projet de réhabilitation en 2x2 voies du tronçon Allada- Bohicon (76 km)": 1,
+  "Consultancy services for EMSA e-laboratory": 1,
+  "Technical Assistance to Monitor the Performance of EU Support to Refugees in Türkiye": 1,
+  "Technical Cooperation Platform for an inclusive Green Growth TEI": 1,
+  "Technical Assistance for Supporting Civil Society Through Social Entrepreneurship in Türkiye": 1,
+  "Supply and installation of a gas chromatograph hyphenated to a consecutive quadrupole high-resolution time-of-flight mass spectrometer, instrument control and data analysis software": 1,
+  "CDT": 24,
+  "ENV": 3,
+  "EPDGCOMM": 13,
+  "DEVCO": 69,
+  "ENER": 1,
+  "DGNEAR": 84,
+  "SATCEN": 3,
+  "FPI": 7,
+  "ECDC": 6,
+  "EUIPO": 6,
+  "HOME": 2,
+  "JRCIPR": 23,
+  "COMM": 15,
+  "OIB": 6,
+  "ESTAT": 5,
+  "EPDGSAFE": 3,
+  "CNECT": 6,
+  "GROW": 10,
+  "REGIO": 2,
+  "JRCKRU": 19,
+  "SESAR": 2,
+  "EUOSHA": 1,
+  "FRONTEX": 5,
+  "EISMEA": 3,
+  "COR": 1,
+  "EASA": 2,
+  "JRCPTT": 7,
+  "EUROFOUND": 4,
+  "EPDGLINC": 3,
+  "JRCGEE": 6,
+  "CLIMA": 4,
+  "EFSA": 10,
+  "EUAA": 2,
+  "EMSA": 6,
+  "EIB": 11,
+  "COUNCIL": 14,
+  "CJEU": 7,
+  "ELA": 2,
+  "DEFIS": 2,
+  "TRADE": 3,
+  "MOVE": 3,
+  "EPDGINLO": 32,
+  "HR": 3,
+  "EEAS": 21,
+  "RTD": 2,
+  "EUROPOL": 1,
+  "EMA": 3,
+  "ITEC": 1,
+  "EIOPA": 1,
+  "SANTE": 8,
+  "JRCSVQ": 4,
+  "EEA": 2,
+  "ETF": 2,
+  "HADEA": 6,
+  "EULISA": 5,
+  "EPDGFINS": 1,
+  "EDA": 1,
+  "CINEA": 3,
+  "EPRS": 1,
+  "PMO": 4,
+  "BUDG": 1,
+  "ECHA": 4,
+  "EBA": 2,
+  "EFCA": 1,
+  "TAXUD": 1,
+  "REFORM": 1,
+  "ECA": 2,
+  "EAC": 1,
+  "COMP": 2,
+  "EPPO": 1,
+  "AGRI": 1,
+  "EPDGIPOL": 1,
+  "ECHO": 1,
+  "CORDL": 3,
+  "DGT": 1,
+  "EUROHPCJU": 1,
+  "JRCBRU": 1,
+  "OIL": 1,
+  "CAJU": 1,
+  "EURAIL": 1,
+  "EIF": 2,
+  "EPDGTRAD": 1,
+  "FRA": 1,
+  "JRC": 1
+ },
+ "escolhidas": {
+  "EUSPA | EUSPA-RP-23-26 - “PRIM – Prototype for GNSS Radio-Frequency Interference Monitoring”": 1,
+  "EUSPA | Framework Contract for the provision of technical services to the  European Commission for radio regulatory activities required to support the EU Space Programmes": 1,
+  "EUSPA | Call for Experts – EUSPA-CEI-03-26 - Call for expression of interest to establish a list of external remunerated experts.": 1,
+  "EUSPA | Market and economic research; polling and statistics EUSPA/OP/06/26 Provision of technical and business support for space downstream market development": 1,
+  "EMSA | Fornecimento de Eletricidade às instalações da EMSA": 1,
+  "EEAS | Security works and maintenace services on security installations for the EU delegations, Residences and EEAS office buildings worldwide": 1,
+  "eu-LISA | Entreprise générale pour la réalisation de travaux de rénovation et de transformation ou de construction (TRT)  pour les bâtiments occupés/gérés par la Commission": 1,
+  "eu-LISA | Removal services for eu-LISA operational site in Strasbourg": 1,
+  "FRONTEX | Provision of travel services related to returns by scheduled flights supported by Frontex": 2,
+  "eu-LISA | DPS for IT Infrastructure, Platform and Managed ICT Services for eu-LISA": 1,
+  "FPI | Insurance consultancy services framework contract for the MSP in FPI.6": 1,
+  "eu-LISA | DPS for Technology Acquisition Framework (TAF) for eu-LISA": 1,
+  "SAFE | Call for Expression of Interest to establish a list of scientific/academic/operational experts to assist the European Parliament’s Directorate-General for Security and Safety (DG SAFE)": 1,
+  "EEAS | Quality Assurance to Monitoring & Evaluation Systems for the EU External Action": 1,
+  "EUSPA | EUSPA/OP/10/26 - OPERATIONAL IT ASSETS FOR EUSPA SOM/GSMCs": 1,
+  "EUSPA | Guarding and Front Desk Services for EUSPA HQ": 1,
+  "eu-LISA | Provision of Internet Services (Internet access, SIP, FAX and IPTV) for eu-LISA’s HQ in Tallinn": 1,
+  "ECCC | Implementation report of the ECCC required under Article 38(2) of Regulation (EU) 2021/887": 1,
+  "EUSPA | LEGAL ADVICE AND SUPPORT TO EUSPA": 1,
+  "JRC | Scientific ICT PCs (nr. 64) for JRC Dir D and E": 1,
+  "FRONTEX | Supervision of fit-out works for the new Frontex premises in Brussels": 1,
+  "EUSPA | EUSPA-CP-09-24 - Galileo Service Operator II (GSOp II)": 2,
+  "FRONTEX | Frontex Surveillance Aircraft Services with land/coastline range fixed wing aircraft": 1,
+  "JRC | Document destruction JRC Geel": 1,
+  "EUSPA | Provision of stationery, office supplies and office related consumables for EUSPA premises in Czech Republic and Spain": 1,
+  "EMSA | Consultancy services for EMSA e-laboratory": 1,
+  "SATCEN | SATCEN": 3,
+  "FPI | FPI": 7,
+  "CNECT | CNECT": 2,
+  "FRONTEX | FRONTEX": 5,
+  "EMSA | EMSA": 6,
+  "DEFIS | DEFIS": 2,
+  "EEAS | EEAS": 21,
+  "EUROPOL | EUROPOL": 1,
+  "eu-LISA | EULISA": 5,
+  "EDA | EDA": 1,
+  "HOME | HOME": 1
  },
  "exemplos": [
   {
@@ -130,24 +974,194 @@
   },
   {
    "apiVersion": "2.159",
-   "reference": "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
+   "reference": "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN",
    "contentType": "text/plain",
    "language": "en",
    "databaseLabel": "SEDIA",
    "database": "SEDIA",
-   "summary": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
+   "summary": "Donation of decommissioned ICT assets II (iPhone 8)",
    "weight": 0,
-   "groupById": "2",
-   "content": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
+   "groupById": "1",
+   "content": "Donation of decommissioned ICT assets II (iPhone 8)",
    "accessRestriction": false,
-   "checksum": "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7",
+   "checksum": "2BAA63AB8EDFE03C0AC4BC14F74A1BA38AAE4A5EABCE944783D130D895A32580",
    "metadata": {
     "es_SortDate": [
      "2026-11-27T00:00:00.000+0000"
     ],
     "cftPartyLegalEntityId": [
-     "47352548"
+     "47352444"
+    ],
+    "cftMaxNumberOfLots": [
+     "0"
+    ],
+    "contractType": [
+     "31095498"
+    ],
+    "awardMethod": [],
+    "cftContractingSystems": [],
+    "twoStageDeadlineDate": [],
+    "language": [
+     "en"
+    ],
+    "type": [
+     "0"
+    ],
+    "cftDocuments": [
+     "{\"cftDocuments\":[{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e5376155c6\",\"sortKey\":\"00002\",\"documentType\":\"Other invitation to tender document\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"2a. Annex 1 to CEI - Application form English_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761557b\",\"attachmentID\":\"090166e5376155c6\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"2a. Annex 1 to CEI - Application form English\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615622\",\"sortKey\":\"00003\",\"documentType\":\"Other invitation to tender document\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"2b. Annex 1 to CEI - Application form French_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761559b\",\"attachmentID\":\"090166e537615622\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"FR\",\"documentTitle\":\"2b. Annex 1 to CEI - Application form French\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53761510c\",\"sortKey\":\"00001\",\"documentType\":\"Invitation letter\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"1. Call for Expression of Interest _V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5376150ec\",\"attachmentID\":\"090166e53761510c\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"1. Call for Expression of Interest\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615629\",\"sortKey\":\"00004\",\"documentType\":\"Declaration on honour (tender)\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"3. Annex 2 to CEI - Declaration on the honour English_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537615a17\",\"attachmentID\":\"090166e537615629\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"3. Annex 2 to CEI - Declaration on the honour English\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537616cec\",\"sortKey\":\"00007\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"5. Annex 4 to CEI - Hand-over certificate EBA ICT assets donation_V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761668b\",\"attachmentID\":\"090166e537616cec\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"5. Annex 4 to CEI - Hand-over certificate EBA ICT assets donation\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e5376162a0\",\"sortKey\":\"00005\",\"documentType\":\"Declaration on honour (tender)\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"3. Annex 2 to CEI - Declaration on the honour French_V1.DOCX\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5376162a8\",\"attachmentID\":\"090166e5376162a0\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"FR\",\"documentTitle\":\"3. Annex 2 to CEI - Declaration on the honour French\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615b41\",\"sortKey\":\"00006\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"4. Annex 3 to CEI - Donation agreement_V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537616371\",\"attachmentID\":\"090166e537615b41\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"4. Annex 3 to CEI - Donation agreement\"}]}"
+    ],
+    "callIdentifier": [
+     "EBA/2026/CEI/0010"
+    ],
+    "cftSubmissionsAllowed": [
+     "true"
+    ],
+    "DATASOURCE": [
+     "SEDIA"
+    ],
+    "frameworkProgramme": [],
+    "cftPublicationDisplayStatus": [],
+    "identifier": [
+     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+    ],
+    "es_ContentType": [
+     "text/plain"
+    ],
+    "geographicalZones": [],
+    "programmePeriod": [
+     "2014 - 2020",
+     "2021 - 2027"
+    ],
+    "cftSubscriptionsAllowed": [
+     "true"
+    ],
+    "deadlineDate": [],
+    "cftCorrigendaList": [],
+    "closingDate": [],
+    "es_Combine": [
+     "1"
+    ],
+    "esST_URL": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+    ],
+    "esDA_QueueDate": [
+     "2026-11-27T05:02:00.438+0100"
+    ],
+    "programmeDivisionProspect": [],
+    "mainCpv": [
+     "79000000",
+     "32250000"
+    ],
+    "mainCpvCode": [
+     "{\"mainCode\":\"79000000\"}"
+    ],
+    "startDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "status": [
+     "31094502"
+    ],
+    "procedureType": [
+     "47396202"
+    ],
+    "sortStatus": [
+     "1"
+    ],
+    "conditionOfParticipation": [],
+    "description": [
+     "TYPE OF NOTICE \nThis call for expressions of interest for donation falls outside the scope of public procurement rules. The procedure will, however, comply with the general procurement principles of transparency, proportionality, equal treatment, non-discrimination and sound financial management. \nDESCRIPTION OF THE SUBJECT MATTER of the call for expressions of interest \nThe aim of this call for expressions of interest is to compile a list of pre-selected candidates, according to the criteria set out in the call for expressions of interests, for the donation of ICT equipment no longer used by the EBA. A donation agreement will be signed with the selected candidate(s). See template in Annex 3 to the Call for expressions of interests. The equipment consists of 109 iPhones.  The iPhones are fully functional and have been wiped, i.e. they have been reset to factory settings. The iPhone model is the iPhone 8 Plus. They were all purchased in 2020. \nHOW TO SUBMIT AN EXPRESSION OF INTEREST \nThe expressions of interest must be sent by email to tenders@eba.europa.eu. The call for expressions of interests notice and annexes are also available in https://www.eba.europa.eu/about-us/procurement, under \"Documents\". COMMENT SOUMETTRE UNE MANIFESTATION D'INTERET Les manifestations d'interet doivent être envoyées par courriel à tenders@eba.europa.eu. L'avis d'appel à manifestations d'interet et ses annexes sont aussi disponibles à https://www.eba.europa.eu/about-us/procurement, dans \"Documents\"."
+    ],
+    "title": [
+     "Donation of decommissioned ICT assets II (iPhone 8)"
+    ],
+    "esST_checksum": [
+     "2BAA63AB8EDFE03C0AC4BC14F74A1BA38AAE4A5EABCE944783D130D895A32580"
+    ],
+    "cftId": [
+     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+    ],
+    "esST_FileName": [
+     "file.txt"
+    ],
+    "REFERENCE": [
+     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+    ],
+    "cftTendersMayBeSubmitted": [],
+    "cftTimezone": [
+     "Europe/Paris"
+    ],
+    "cftEstimatedTotalProcedureValue": [],
+    "cftContractNoticeLink": [
+     "[\"824835-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+    ],
+    "cftRepublish": [
+     "true"
+    ],
+    "cftSubmissionMethodCode": [
+     "PAPER_COPY"
+    ],
+    "cftProcurementType": [
+     "31095498"
+    ],
+    "caName": [
+     "Donation of decommissioned ICT assets II (iPhone 8)"
+    ],
+    "cftPlannedDate": [],
+    "cftPublishedPinReference": [],
+    "esDA_FirstIngestDate": [
+     "2026-11-27T05:02:00.450+0100"
+    ],
+    "esDA_IngestDate": [
+     "2026-11-27T05:02:00.450+0100"
+    ],
+    "cftInterinstitutional": [],
+    "cftQuestionsAnswersAllowed": [
+     "true"
+    ],
+    "url": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+    ],
+    "lots": [
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{\"tendererRequirementTypeCode\":\"epo-procurement-document\",\"tendererRequirementTypeCodeListName\":\"selection-criteria-source\"}},\"tenderValidityPeriod\":{},\"languages\":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],\"callForTendersDocumentReference\":{\"documentType\":\"non-restricted-document\",\"attachmentExternalReferenceURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1\",\"documentStatusCode\":\"official\",\"documentStatusCodelistName\":\"document-status\",\"languageID\":\"ENG\",\"id\":\"default-text\"},\"postAwardProcess\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"contractExecutionRequirement\":[{},{}],\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"79000000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":12},\"procurementTypeCode\":\"services\",\"name\":\"Donation of decommissioned ICT assets II (iPhone 8)\",\"description\":\"TYPE OF NOTICE \\nThis call for expressions of interest for donation falls outside the scope of public procurement rules. The procedure will, however, comply with the general procurement principles of transparency, proportionality, equal treatment, non-discrimination and sound financial management. \\nDESCRIPTION OF THE SUBJECT MATTER of the call for expressions of interest \\nThe aim of this call for expressions of interest is to compile a list of pre-selected candidates, according to the criteria set out in the call for expressions of interests, for the donation of ICT equipment no longer used by the EBA. A donation agreement will be signed with the selected candidate(s). See template in Annex 3 to the Call for expressions of interests. The equipment consists of 109 iPhones.  The iPhones are fully functional and have been wiped, i.e. they have been reset to factory settings. The iPhone model is the iPhone 8 Plus. They were all purchased in 2020. \\nHOW TO SUBMIT AN EXPRESSION OF INTEREST \\nThe expressions of interest must be sent by email to tenders@eba.europa.eu. The call for expressions of interests notice and annexes are also available in https://www.eba.europa.eu/about-us/procurement, under \\\"Documents\\\". COMMENT SOUMETTRE UNE MANIFESTATION D'INTERET Les manifestations d'interet doivent être envoyées par courriel à tenders@eba.europa.eu. L'avis d'appel à manifestations d'interet et ses annexes sont aussi disponibles à https://www.eba.europa.eu/about-us/procurement, dans \\\"Documents\\\".\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"32250000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{},\"submissionMethodCodeListName\":\"esubmission\",\"auctionTerms\":{},\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"submissionMethodCode\":\"not-allowed\",\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"LOT-0001\"}]}"
+    ],
+    "cftEXARegistrationDeadline": [],
+    "indicativeLaunch": [],
+    "geographicalZone": [],
+    "cftLeadContractingAuthorityCode": [
+     "[{\"name\":\"European Banking Authority\",\"link\":\"https://www.eba.europa.eu/\",\"isLeadAuthority\":true}]"
+    ],
+    "cftBuyerProfileUrl": [],
+    "cftPublicationDateEForm": [
+     "2026-11-27T00:00:00"
+    ],
+    "cftEstimatedOverallContractCurrency": []
+   },
+   "enrichedMetadata": {},
+   "children": [],
+   "highlightedFragments": [],
+   "citation": "Donation of decommissioned ICT assets II (iPhone 8). Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
+  },
+  {
+   "apiVersion": "2.159",
+   "reference": "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN",
+   "contentType": "text/plain",
+   "language": "en",
+   "databaseLabel": "SEDIA",
+   "database": "SEDIA",
+   "summary": "Aviation training services for the European Union Aviation Safety Agency - EASA",
+   "weight": 0,
+   "groupById": "2",
+   "content": "Aviation training services for the European Union Aviation Safety Agency - EASA",
+   "accessRestriction": false,
+   "checksum": "D65DD3320ECE91EE6190B52B69C97259B3791FB2D81131B5FB704781FDADB4DD",
+   "metadata": {
+    "es_SortDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "cftPartyLegalEntityId": [
+     "47352376"
     ],
     "cftMaxNumberOfLots": [
      "0"
@@ -168,7 +1182,7 @@
      "{}"
     ],
     "callIdentifier": [
-     "EC-JRC/PTT/2026/OP/6801-PIN"
+     "EASA/2027/OP/0001-PIN"
     ],
     "cftSubmissionsAllowed": [
      "false"
@@ -179,7 +1193,7 @@
     "frameworkProgramme": [],
     "cftPublicationDisplayStatus": [],
     "identifier": [
-     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
     ],
     "es_ContentType": [
      "text/plain"
@@ -199,18 +1213,18 @@
      "2"
     ],
     "esST_URL": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
     ],
     "esDA_QueueDate": [
-     "2026-11-27T05:01:49.152+0100"
+     "2026-11-27T05:01:54.126+0100"
     ],
     "programmeDivisionProspect": [],
     "mainCpv": [
-     "71242000",
-     "71248000"
+     "80531200",
+     "80531000"
     ],
     "mainCpvCode": [
-     "{\"mainCode\":\"71248000\"}"
+     "{\"mainCode\":\"80531200\"}"
     ],
     "startDate": [
      "2026-11-27T00:00:00.000+0000"
@@ -226,32 +1240,32 @@
     ],
     "conditionOfParticipation": [],
     "description": [
-     "JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure."
+     "The aim of this call for tender is to maintain, update, and expand the expertise of the Agency’s staff across a wide range of aviation technical areas. To this end EASA intends to conclude multiple framework contracts for the provision of aviation training services.\nIn support of its core mandate to ensure the highest levels of aviation safety, the Agency seeks to procure high quality training services that support its operational and strategic objectives."
     ],
     "title": [
-     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
+     "Aviation training services for the European Union Aviation Safety Agency - EASA"
     ],
     "esST_checksum": [
-     "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7"
+     "D65DD3320ECE91EE6190B52B69C97259B3791FB2D81131B5FB704781FDADB4DD"
     ],
     "cftId": [
-     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
     ],
     "esST_FileName": [
      "file.txt"
     ],
     "REFERENCE": [
-     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
     ],
     "cftTendersMayBeSubmitted": [],
     "cftTimezone": [
-     "Europe/Amsterdam"
+     "Europe/Berlin"
     ],
     "cftEstimatedTotalProcedureValue": [
-     "500000   EUR"
+     "800000   EUR"
     ],
     "cftContractNoticeLink": [
-     "[\"824963-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+     "[\"826152-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
     ],
     "cftRepublish": [
      "true"
@@ -263,36 +1277,36 @@
      "31095498"
     ],
     "cftEstimatedOverallContractAmount": [
-     "500000"
+     "800000"
     ],
     "caName": [
-     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
+     "Aviation training services for the European Union Aviation Safety Agency - EASA"
     ],
     "cftPlannedDate": [
-     "16/12/2026"
+     "18/01/2027"
     ],
     "cftPublishedPinReference": [],
     "esDA_FirstIngestDate": [
-     "2026-11-27T05:01:49.186+0100"
+     "2026-11-27T05:01:54.134+0100"
     ],
     "esDA_IngestDate": [
-     "2026-11-27T05:01:49.186+0100"
+     "2026-11-27T05:01:54.134+0100"
     ],
     "cftInterinstitutional": [],
     "cftQuestionsAnswersAllowed": [
      "true"
     ],
     "url": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
     ],
     "lots": [
-     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/2\",\"governmentAgreementConstraintIndicator\":true,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"71248000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":500000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks\",\"description\":\"JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"71242000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"procurementProjectLotID\":\"PAR-0001\",\"benefittingZones\":[]}]}"
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"80531200\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":400000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"Aviation training on Airworthiness (Initial & Continuing) and related Audit, Risk and Safety Matters\",\"description\":\"Provision of technical expertise in initial and continuing airworthiness, covering aircraft design, certification, and life-cycle suitability for safe flight. Includes organisational approval principles for design, production, and maintenance, as well as emerging technologies and industry trends. Also covers aviation risk, safety and security management systems, with associated processes, tools, and performance management methods relevant to airworthiness.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"80531000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"fa-wo-rc\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"PAR-0001\"},{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"80531200\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":400000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"Aviation training on Air Operations, Aircrew, Aerodromes and related Audit, Risk and Safety Matters\",\"description\":\"Provision of technical expertise in air operations, aircrew, aerodromes, and related procedures and practices, supporting the continuous development of operational knowledge. Includes aviation risk, safety and security management systems, with associated processes, tools, and performance management methods. Excludes pilot type rating-specific courses.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"80531000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"fa-wo-rc\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"PAR-0002\"}]}"
     ],
     "cftEXARegistrationDeadline": [],
     "indicativeLaunch": [],
     "geographicalZone": [],
     "cftLeadContractingAuthorityCode": [
-     "[{\"name\":\"European Commission, DG JRC - Joint Research Centre\",\"link\":\"https://ec.europa.eu/jrc/\",\"isLeadAuthority\":true}]"
+     "[{\"name\":\"European Union Aviation Safety Agency\",\"link\":\"https://www.easa.europa.eu\",\"isLeadAuthority\":true}]"
     ],
     "cftBuyerProfileUrl": [],
     "cftPublicationDateEForm": [
@@ -305,190 +1319,7 @@
    "enrichedMetadata": {},
    "children": [],
    "highlightedFragments": [],
-   "citation": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
-  },
-  {
-   "apiVersion": "2.159",
-   "reference": "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
-   "contentType": "text/plain",
-   "language": "en",
-   "databaseLabel": "SEDIA",
-   "database": "SEDIA",
-   "summary": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
-   "weight": 0,
-   "groupById": "1",
-   "content": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
-   "accessRestriction": false,
-   "checksum": "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191",
-   "metadata": {
-    "es_SortDate": [
-     "2026-11-27T00:00:00.000+0000"
-    ],
-    "cftPartyLegalEntityId": [
-     "47352348"
-    ],
-    "cftMaxNumberOfLots": [
-     "0"
-    ],
-    "contractType": [
-     "31095499"
-    ],
-    "awardMethod": [],
-    "cftContractingSystems": [],
-    "twoStageDeadlineDate": [],
-    "language": [
-     "en"
-    ],
-    "type": [
-     "0"
-    ],
-    "cftDocuments": [
-     "{\"cftDocuments\":[{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779acee\",\"sortKey\":\"00007\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Draft contract - Example 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Draft contract1354226-1_SK.docx\",\"documentFileName\":\"Draft contract1354226-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779d472\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Draft contract\"}],\"documentID\":\"080166e537799e19\",\"attachmentID\":\"090166e53779acee\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Draft contract\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537796b22\",\"sortKey\":\"00001\",\"documentType\":\"Invitation letter\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 1 Invitation letter 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Invitation letter1354221-1_SK.docx\",\"documentFileName\":\"Invitation letter1354221-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779b4df\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Invitation to tender\"}],\"documentID\":\"080166e537796b15\",\"attachmentID\":\"090166e537796b22\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Admin Specif - 1 Invitation letter 26 46\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779939b\",\"sortKey\":\"00006\",\"documentType\":\"Technical specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Technical Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Technique specification1354225-1_SK.docx\",\"documentFileName\":\"Technique specification1354225-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779c8f1\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Technical specifications\"}],\"documentID\":\"080166e537798b1e\",\"attachmentID\":\"090166e53779939b\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Technical Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797a90\",\"sortKey\":\"00003\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 3 Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377b14c0\",\"attachmentID\":\"090166e5377b108c\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779a15a\",\"sortKey\":\"00005\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"TENDER FORM 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Tender forms 1354224-1_SK.docx\",\"documentFileName\":\"Tender forms 1354224-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779cb44\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Tender form\"}],\"documentID\":\"080166e537799a0a\",\"attachmentID\":\"090166e53779a15a\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"TENDER FORM\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537798e77\",\"sortKey\":\"00004\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Annex V Financial Identification Form_V1.7z\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537798e39\",\"attachmentID\":\"090166e537798e77\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Annex V - Financial Identification Form\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797990\",\"sortKey\":\"00002\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Conditions1354222-1_SK_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377af3bf\",\"attachmentID\":\"090166e5377b0c44\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Conditions\"}]}"
-    ],
-    "callIdentifier": [
-     "EP-INLO/LUX/2026/OP/0034"
-    ],
-    "cftSubmissionsAllowed": [
-     "true"
-    ],
-    "DATASOURCE": [
-     "SEDIA"
-    ],
-    "frameworkProgramme": [],
-    "cftPublicationDisplayStatus": [],
-    "identifier": [
-     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
-    ],
-    "es_ContentType": [
-     "text/plain"
-    ],
-    "geographicalZones": [],
-    "programmePeriod": [
-     "2014 - 2020",
-     "2021 - 2027"
-    ],
-    "cftSubscriptionsAllowed": [
-     "true"
-    ],
-    "deadlineDate": [
-     "2027-01-28T23:59:59.000+0000"
-    ],
-    "cftCorrigendaList": [],
-    "closingDate": [
-     "2027-01-28T23:59:59Z"
-    ],
-    "es_Combine": [
-     "1"
-    ],
-    "esST_URL": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
-    ],
-    "esDA_QueueDate": [
-     "2026-11-27T09:15:53.378+0100"
-    ],
-    "programmeDivisionProspect": [],
-    "mainCpv": [
-     "09310000"
-    ],
-    "mainCpvCode": [
-     "{\"mainCode\":\"09310000\"}"
-    ],
-    "startDate": [
-     "2026-11-27T00:00:00.000+0000"
-    ],
-    "status": [
-     "31094502"
-    ],
-    "procedureType": [
-     "47396220"
-    ],
-    "updateDate": [
-     "2027-01-29T10:00:00.000+0000"
-    ],
-    "sortStatus": [
-     "1"
-    ],
-    "conditionOfParticipation": [],
-    "description": [
-     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
-    ],
-    "title": [
-     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
-    ],
-    "esST_checksum": [
-     "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191"
-    ],
-    "cftId": [
-     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
-    ],
-    "esST_FileName": [
-     "file.txt"
-    ],
-    "REFERENCE": [
-     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
-    ],
-    "cftTendersMayBeSubmitted": [],
-    "cftTimezone": [
-     "Europe/Luxembourg"
-    ],
-    "cftEstimatedTotalProcedureValue": [
-     "150000   EUR"
-    ],
-    "cftContractNoticeLink": [
-     "[\"826319-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
-    ],
-    "cftRepublish": [
-     "true"
-    ],
-    "cftSubmissionMethodCode": [
-     "PAPER_COPY"
-    ],
-    "cftProcurementType": [
-     "31095499"
-    ],
-    "cftEstimatedOverallContractAmount": [
-     "150000"
-    ],
-    "caName": [
-     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
-    ],
-    "cftPlannedDate": [],
-    "cftPublishedPinReference": [],
-    "esDA_FirstIngestDate": [
-     "2026-11-27T05:02:00.758+0100"
-    ],
-    "esDA_IngestDate": [
-     "2026-11-27T09:15:53.386+0100"
-    ],
-    "cftInterinstitutional": [],
-    "cftQuestionsAnswersAllowed": [
-     "true"
-    ],
-    "url": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
-    ],
-    "lots": [
-     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{\"tendererRequirementTypeCode\":\"epo-procurement-document\",\"tendererRequirementTypeCodeListName\":\"selection-criteria-source\"}},\"tenderValidityPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":\"6\"},\"languages\":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],\"callForTendersDocumentReference\":{\"documentType\":\"non-restricted-document\",\"attachmentExternalReferenceURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"documentStatusCode\":\"official\",\"documentStatusCodelistName\":\"document-status\",\"languageID\":\"ENG\",\"id\":\"default-text\"},\"postAwardProcess\":{\"electronicOrderUsageIndicator\":\"true\",\"electronicPaymentUsageIndicator\":\"true\"},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"contractExecutionRequirement\":[{},{},{}],\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{\"subordinateAwardingCriterion\":[{\"awardingCriterionTypeCodeListName\":\"award-criterion-type\",\"descriptionLanguageID\":\"ENG\",\"description\":\"Please consult the procurement documents.\",\"awardCriterionParameter\":[{\"parameterNumeric\":\"100\",\"parameterCodeListName\":\"number-weight\",\"parameterCode\":\"per-exa\"}],\"awardingCriterionTypeCode\":\"price\"}]}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementProjectID\":\"EP-INLO/LUX/2026/OP/0034\",\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"09310000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":150000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":24},\"procurementTypeCode\":\"supplies\",\"name\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"description\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"contractExtension\":{\"renewal\":{\"period\":{\"descriptionLanguageID\":\"ENG\",\"description\":\"The contract is concluded for an initial period of 12 (twelve)     months, renewable 1 (one) time(s). Please consult the draft contract in the procurement documents.\"}}},\"smeSuitableIndicator\":false},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"submissionMethodCodeListName\":\"esubmission\",\"auctionTerms\":{\"auctionConstraintIndicator\":\"false\"},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"},{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"dps-usage\"}],\"openTenderEvent\":{\"occurrenceDate\":\"2027-01-29+01:00\",\"occurrenceTime\":\"10:00:00+01:00\"},\"tenderSubmissionDeadlinePeriod\":{\"endDate\":\"2027-01-28+01:00\",\"endTime\":\"23:59:59+01:00\"},\"submissionMethodCode\":\"not-allowed\",\"additionalInformationRequestPeriod\":{\"endDate\":\"2027-01-15+01:00\",\"endTime\":\"2027-01-15+01:00\"},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"LOT-0001\"}]}"
-    ],
-    "cftEXARegistrationDeadline": [],
-    "indicativeLaunch": [],
-    "geographicalZone": [],
-    "cftLeadContractingAuthorityCode": [
-     "[{\"name\":\"European Parliament, SG - Directorate-General for Infrastructure and Logistics\",\"link\":\"http://www.europarl.europa.eu\",\"isLeadAuthority\":true}]"
-    ],
-    "cftBuyerProfileUrl": [],
-    "cftPublicationDateEForm": [
-     "2026-11-27T00:00:00"
-    ],
-    "cftEstimatedOverallContractCurrency": [
-     "EUR"
-    ]
-   },
-   "enrichedMetadata": {},
-   "children": [],
-   "highlightedFragments": [],
-   "citation": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+   "citation": "Aviation training services for the European Union Aviation Safety Agency - EASA. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
   }
  ]
 }
