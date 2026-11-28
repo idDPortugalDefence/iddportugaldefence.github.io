@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-28T12:20:56.026Z",
+ "gerado": "2026-11-28T12:28:19.098Z",
  "tipoUsado": "0",
  "total": 1419,
  "entidades": {
@@ -141,9 +141,9 @@
   "Servicios de vending - concesión de máquinas expendedoras y alquiler de dispensadores de agua y máquinas bebidas calientes.": 2,
   "Insurance Brokerage Services for the EU Delegation to the USA": 1,
   "ECCAIRS.2 - E2 MIDAS - Maintenance, Infrastructure, Development and Application Support": 1,
-  "Policy Dialogue and Public Diplomacy Facility for the United States": 1,
   "Learning through Experimentation for Adaptive Programming (LEAP) - Producing experimental designs for ERDF/CF/JTF investment in the field of energy efficiency measures": 1,
   "Learning through Experimentation for Adaptive Programming (LEAP) - Producing experimental designs for ERDF/CF/JTF investment in the field of access to quality public services": 1,
+  "Policy Dialogue and Public Diplomacy Facility for the United States": 1,
   "Assistance technique d’appui pour la mise en oeuvre du programme MASSALEK «Participation des jeunes à la dynamisation touristique et culturelle des territoires, en Algérie»": 1,
   "Creation of a pool of experts to support ECHA’s Committee for Risk Assessment (RAC) and Committee for Socio-Economic Analysis (SEAC)": 1,
   "Maintenance services for Applied Biosystems (Life Technologies) Scientific Instruments": 2,
@@ -817,33 +817,10 @@
  "escolhidas": {
   "EUSPA | EUSPA-RP-23-26 - “PRIM – Prototype for GNSS Radio-Frequency Interference Monitoring”": 1,
   "EUSPA | Call for Experts – EUSPA-CEI-03-26 - Call for expression of interest to establish a list of external remunerated experts.": 1,
-  "EUSPA | Market and economic research; polling and statistics EUSPA/OP/06/26 Provision of technical and business support for space downstream market development": 1,
   "EEAS | Security works and maintenace services on security installations for the EU delegations, Residences and EEAS office buildings worldwide": 1,
   "eu-LISA | DPS for IT Infrastructure, Platform and Managed ICT Services for eu-LISA": 1,
   "eu-LISA | DPS for Technology Acquisition Framework (TAF) for eu-LISA": 1,
-  "SAFE | Call for Expression of Interest to establish a list of scientific/academic/operational experts to assist the European Parliament’s Directorate-General for Security and Safety (DG SAFE)": 1,
-  "EUSPA | EUSPA/OP/10/26 - OPERATIONAL IT ASSETS FOR EUSPA SOM/GSMCs": 1,
-  "JRC | Scientific ICT PCs (nr. 64) for JRC Dir D and E": 1,
-  "EUSPA | EUSPA-CP-09-24 - Galileo Service Operator II (GSOp II)": 1,
-  "FRONTEX | Frontex Surveillance Aircraft Services with land/coastline range fixed wing aircraft": 1,
-  "JRC | Document destruction JRC Geel": 1,
-  "EMSA | Consultancy services for EMSA e-laboratory": 1,
-  "SAFE | EPDGSAFE": 3,
-  "CNECT | CNECT": 2,
-  "EMSA | EMSA": 3,
-  "DEFIS | DEFIS": 2,
-  "EEAS | EEAS": 18,
-  "EUROPOL | EUROPOL": 1,
-  "EDA | EDA": 1,
-  "JRC | JRCSVQ": 2,
-  "HR | HR": 2,
-  "FPI | FPI": 2,
-  "FRONTEX | FRONTEX": 1,
-  "JRC | JRCPTT": 1,
-  "eu-LISA | EULISA": 4,
-  "SATCEN | SATCEN": 2,
-  "HOME | HOME": 1,
-  "CONSILIUM | COUNCIL": 2
+  "EUSPA | EUSPA/OP/10/26 - OPERATIONAL IT ASSETS FOR EUSPA SOM/GSMCs": 1
  },
  "exemplos": [
   {
