@@ -185,13 +185,15 @@ async function ue() {
 }
 
 const UE_ENT = [
-  ['EDA', 1, /European Defence Agency|\(EDA\)|^EDA\b/i], ['DEFIS', 1, /DEFIS|Defence Industry and Space/i], ['SATCEN', 1, /SATCEN|Satellite Cent/i], ['EUSPA', 1, /EUSPA|Space Programme/i],
-  ['EEAS', 2, /EEAS|External Action/i], ['FPI', 2, /\bFPI\b|Foreign Policy Instruments/i], ['FRONTEX', 2, /Frontex|Border and Coast Guard/i], ['EMSA', 2, /EMSA|Maritime Safety/i],
-  ['ECCC', 2, /ECCC|Cybersecurity Industrial/i], ['ENISA', 2, /ENISA|Agency for Cybersecurity/i], ['EUROPOL', 2, /Europol|Law Enforcement Cooperation/i], ['eu-LISA', 2, /LISA|Large-Scale IT/i],
-  ['CEPOL', 3, /CEPOL|Law Enforcement Training/i], ['JRC', 3, /\bJRC\b|Joint Research Cent/i], ['HOME', 3, /\bHOME\b|Migration and Home Affairs/i], ['ECHO', 3, /\bECHO\b|Civil Protection|Humanitarian Aid/i],
-  ['HERA', 3, /\bHERA\b|Health Emergency Preparedness/i], ['HR', 3, /\bDG HR\b|Human Resources and Security/i], ['SAFE', 3, /DG SAFE|Security and Safety/i], ['CNECT', 3, /CNECT|Communications Networks/i],
-  ['EASA', 3, /EASA|Aviation Safety/i], ['CONSILIUM', 3, /CONSILIUM|Council of the European Union|General Secretariat of the Council/i]
+  ['EDA', 1, /^EDA$/, /\bEDA\b|European Defence Agency/], ['DEFIS', 1, /^DEFIS$/, /\bDEFIS\b|Defence Industry and Space/], ['SATCEN', 1, /^SATCEN$/, /\bSATCEN\b|Satellite Cent(re|er)/], ['EUSPA', 1, /^EUSPA$/, /\bEUSPA\b|EU Agency for the Space Programme/],
+  ['EEAS', 2, /^EEAS$/, /\bEEAS\b|European External Action Service/], ['FPI', 2, /^FPI$/, /\bFPI\b|Foreign Policy Instruments/], ['FRONTEX', 2, /^FRONTEX$/, /\bFrontex\b|Border and Coast Guard/], ['EMSA', 2, /^EMSA$/, /\bEMSA\b|Maritime Safety Agency/],
+  ['ECCC', 2, /^ECCC$/, /\bECCC\b|Cybersecurity Industrial/], ['ENISA', 2, /^ENISA$/, /\bENISA\b|Agency for Cybersecurity/], ['EUROPOL', 2, /^EUROPOL$/, /\bEuropol\b/], ['eu-LISA', 2, /^EU-?LISA$/, /\beu-LISA\b/],
+  ['CEPOL', 3, /^CEPOL$/, /\bCEPOL\b/], ['JRC', 3, /^JRC/, /\bJRC\b|Joint Research Cent/], ['HOME', 3, /^(DG)?HOME$/, /\bDG HOME\b/], ['ECHO', 3, /^(DG)?ECHO$/, /\bDG ECHO\b/],
+  ['HERA', 3, /^HERA$/, /\bHERA\b/], ['HR', 3, /^(DG)?HR$/, /\bDG HR\b/], ['SAFE', 3, /^(EPDG)?SAFE$/, /\bDG SAFE\b/], ['CNECT', 3, /^(DG)?CNECT$/, /\bDG CNECT\b/],
+  ['EASA', 3, /^EASA$/, /\bEASA\b/], ['CONSILIUM', 3, /^(COUNCIL|CONSILIUM)$/, /General Secretariat of the Council/]
 ];
+const UE_ADMIN = /\b(cleaning|stationery|office supplies|travel (agency|services)|travel|catering|canteen|restaurant|vending|electricity|electric power|energy cards|fuel|removal services|insurance|furniture|legal advice|translation|interpret\w*|fit-out|front desk|guarding|internet services|copywriting|proofreading|certification audits?|recruitment|courier|donation|nursery|crèche|signage)\b|eletricidade|nettoyage|limpieza|vending|mobilier/i;
+const UE_CPV_ADMIN = /^(09|15|18|22|30192|39|45|55|60|63|64|66|70|79(?!71)|80|85|90|92|98)/;
 const UE_TERMOS = /\b(defen[cs]e|military|armed forces|security|surveillance|drones?|uas|uav|rpas|unmanned|cbrn|cyber\w*|satellite|space|ammunition|weapon\w*|munition\w*|border|maritime awareness|crisis management|csdp|cfsp)\b/i;
 async function ueConcursos() {
   const tipos = [['0'], ['4'], ['3']];
@@ -216,7 +218,7 @@ async function ueConcursos() {
   const md = x => x.metadata || {};
   const g = (x, k) => [].concat(md(x)[k] || [])[0];
   const caName = x => String(g(x, 'caName') || '').trim();
-  const ident = n => UE_ENT.find(([, , re]) => re.test(n)) || null;
+  const ident = n => UE_ENT.find(([, , cod]) => cod.test(n.toUpperCase().replace(/\s+/g, ''))) || UE_ENT.find(([, , , nome]) => nome.test(n)) || null;
   const lista = [], vistos = new Set();
   for (const x of results) {
     const n = caName(x), e = ident(n);
@@ -224,6 +226,7 @@ async function ueConcursos() {
     const titulo = String(g(x, 'title') || x.summary || '').replace(/\s+/g, ' ').trim();
     const desc = String(g(x, 'description') || '').replace(/\s+/g, ' ').trim();
     if (e[1] === 3 && !UE_TERMOS.test(titulo + ' ' + desc)) continue;
+    if (e[1] < 3 && (UE_ADMIN.test(titulo) || UE_CPV_ADMIN.test(String(g(x, 'mainCpv') || ''))) && !UE_TERMOS.test(titulo)) continue;
     const id = g(x, 'identifier') || x.reference;
     if (!id || vistos.has(id)) continue; vistos.add(id);
     const prazo = g(x, 'deadlineDate') || g(x, 'closingDate');
