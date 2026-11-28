@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-28T15:55:37.059Z",
+ "gerado": "2026-11-28T16:57:22.275Z",
  "tipoUsado": "0",
  "total": 1419,
  "entidades": {
@@ -29,21 +29,21 @@
   "127": 2,
   "138": 35,
   "Fusion for Energy(F4E)": 4,
-  "Donation of decommissioned ICT assets II (iPhone 8)": 1,
-  "Aviation training services for the European Union Aviation Safety Agency - EASA": 1,
   "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks": 1,
-  "Online safety application": 1,
   "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia": 2,
-  "Concessione di servizi di ristorazione (bevande e snack) mediante distributori automatici presso il JRC della Commissione europea a Ispra, Italia": 1,
-  "Dépose et remplacement de huit vitrages émaillés noirs des façades des tours Comenius et Montesquieu de la Cour de justice de l’Union européenne": 1,
+  "Aviation training services for the European Union Aviation Safety Agency - EASA": 1,
+  "Donation of decommissioned ICT assets II (iPhone 8)": 1,
+  "Online safety application": 1,
   "Processing of human serum for the production of CRMs": 1,
+  "Dépose et remplacement de huit vitrages émaillés noirs des façades des tours Comenius et Montesquieu de la Cour de justice de l’Union européenne": 1,
+  "Concessione di servizi di ristorazione (bevande e snack) mediante distributori automatici presso il JRC della Commissione europea a Ispra, Italia": 1,
   "Maintenance of the Agri-Press platform for 2 years": 1,
+  "Concession d’exploitation d’un magasin de journaux dans les bâtiments de la Cour de justice de l’Union européenne": 2,
   "Provision of services in instructional design and production of interactive digital learning products": 1,
   "EUSPA-RP-23-26 - “PRIM – Prototype for GNSS Radio-Frequency Interference Monitoring”": 1,
-  "Concession d’exploitation d’un magasin de journaux dans les bâtiments de la Cour de justice de l’Union européenne": 2,
+  "Provision of linguistic services for audiovisual material": 1,
   "Fourniture de lits ergonomiques et de matelas à l'usage des crèches dans les structures gérées par la Commission européenne, à Bruxelles.": 1,
   "Provision of Signage Solution for the EUAA in Malta": 1,
-  "Provision of linguistic services for audiovisual material": 1,
   "Framework Contract for the provision of technical services to the  European Commission for radio regulatory activities required to support the EU Space Programmes": 1,
   "Provision of Preventative and Corrective Maintenance for the EUAA Premises in Brussels, Belgium": 1,
   "Provision of cleaning services for the EUAA premises in Athens. Greece": 1,
@@ -53,15 +53,16 @@
   "Purchase of Furniture for the EUDA": 1,
   "Prestación de servicios de biblioteca y de gestión del contenido digital": 1,
   "Cleaning Services framework contract – EU Delegation to Kenya": 1,
-  "« Confection des toges de la Cour de justice de l'Union européenne »": 1,
   "Big data analytics for skills intelligence": 1,
   "ENSOC Hosting Site PT ICT Infrastructure (Computing, Storage, Networking, Cybersecurity)": 1,
-  "Supply of an inert glovebox chain for the JRC Karlsruhe": 1,
+  "« Confection des toges de la Cour de justice de l'Union européenne »": 1,
   "Hire of passenger cars with driver": 1,
+  "Supply of an inert glovebox chain for the JRC Karlsruhe": 1,
   "Better Internet for Kids (BIK) Platform - EU Coordination": 1,
   "SUPPORT FACILITY FOR BROADBAND COMPETENCE OFFICES (BCOs)": 1,
-  "Call for Experts – EUSPA-CEI-03-26 - Call for expression of interest to establish a list of external remunerated experts.": 1,
   "Supply of size parts designed for Wheaton 14 mm stoppers to be installed on the Dara SX-180 machine": 1,
+  "Call for Experts – EUSPA-CEI-03-26 - Call for expression of interest to establish a list of external remunerated experts.": 1,
+  "Fourniture de matériel « pre-owned » pour serveurs et stockage ainsi que fourniture de la maintenance": 2,
   "mid-throughput next generation genome sequencer": 2,
   "OHD/260934 Support to a point prevalence survey of healthcare-associated infections and antimicrobial use in long-term care facilities, including data validation and analysis": 2,
   "Achat de tenues de service et vêtements professionnels - Uniformes hommes": 1,
@@ -70,29 +71,28 @@
   "Feasibility study on introduction of the European Child Guarantee Card": 1,
   "Design and project management for the fit out works of the new EBA office": 1,
   "Security services for the Delegation of the European Union to Serbia": 1,
-  "Fourniture de matériel « pre-owned » pour serveurs et stockage ainsi que fourniture de la maintenance": 2,
   "Security Guard and Reception/Switchboard services for the EU-House in Ireland": 1,
   "Organisation of public events for the EC representation in Cyprus": 1,
   "Market and economic research; polling and statistics EUSPA/OP/06/26 Provision of technical and business support for space downstream market development": 1,
   "VT/2026/137 Study on individuals’ wealth and indebtedness": 1,
   "Audit of the annual accounts of EUAA for the year ended 31/12/2026": 1,
   "Evaluation of the performance of the Director of the European Training Foundation (ETF) and the ETF’s duties and requirements in the coming years": 1,
+  "Copernicus Land Monitoring Service - Operation of global bio-geophysical terrestrial variables": 2,
   "Framework service contract for defence testing and evaluation campaigns and other operational experimentation activities": 1,
   "Insurance advisory and brokerage services for EFCA": 1,
   "Open procedure for the conclusion of a single framework contract on the supply of IT hardware equipment to the benefit of CFSP Bodies and Persons": 2,
   "Framework service contract for operating the \"Hydrological Forecast Centre - Computation\" in support to the Copernicus Emergency Management Service (CEMS) Flood Early Warning Systems": 2,
   "Support to the Ministry of Economy and Environment of Ukraine with approximation of EU's legislation on critical raw materials": 1,
   "Aggregation and provision of commercial resources for the GOVSATCOM Common Union pool": 1,
-  "Copernicus Land Monitoring Service - Operation of global bio-geophysical terrestrial variables": 2,
   "Durchführung von Strahlenschutzaufgaben in Rückbauprojekten": 2,
   "External examining": 1,
   "Internal Evaluation of Training Programmes": 1,
   "EU-Canada Digital Partnership": 1,
-  "Development of methods and modelling of carbon and environmental footprint of critical raw materials (CRMs) in EV-batteries.": 1,
-  "Provision of reception services for the European Union Agency for the Cooperation of Energy Regulators": 1,
   "Security Assessment Services": 1,
   "Durchführung von Aufbau und Änderung von Elektroinstallationen an Handschuhkästen, heißen Zellen, Labors und im Gebäude im JRC Karlsruhe": 1,
   "Printing services in the context of exhibitions, campaigns and related outreach services": 1,
+  "Development of methods and modelling of carbon and environmental footprint of critical raw materials (CRMs) in EV-batteries.": 1,
+  "Provision of reception services for the European Union Agency for the Cooperation of Energy Regulators": 1,
   "Support for the implementation of VET reforms": 1,
   "Provision of Academic Services for the European Executive Master’s in Asylum and Reception Management": 1,
   "Data management services - 210901/8077": 1,
@@ -107,8 +107,8 @@
   "European network of legal experts in gender equality, disability and non-discrimination": 1,
   "Completion and development of Environmental Footprint Datasets": 1,
   "Multiple Framework Contracts in cascade for support services for expert groups and other stakeholders in the field of health  and food 2027-2031": 1,
-  "Supply and maintenance of one Liquid Scintillation Counter for LMR": 2,
   "Provision of legal advice services for the staff of the European Union Agency for the Cooperation of Energy Regulators": 1,
+  "Supply and maintenance of one Liquid Scintillation Counter for LMR": 2,
   "Facilities and Corporate Support Services": 2,
   "Sanierung einer Shutteranlage im JRC Karlsruhe": 1,
   "Provision of Travel Agency services": 2,
@@ -121,12 +121,12 @@
   "Europa Experience Floor Staff - Slovakia": 1,
   "Alquiler de coche con conductor": 1,
   "Corsi di formazione e servizi di consulenza specifici incentrati su tematiche relative all’organizzazione amministrativa e operativa, con contenuti specializzati adattati alle esigenze del settore della ristorazione (catering) Ispra-Italia": 1,
-  "Provision of interim staff for the European Labour Authority and the European Commission Representation in Slovakia / Bratislava": 1,
-  "Preparation of audits, detailed design, tender documents, supervision of civil works for the implementation of energy efficiency measures in local public buildings across all four municipalities": 1,
   "Maintenance Services for Perkin Elmer Scientific Instruments": 2,
   "Prestation de service pour l’audit des gestionnaires des crèches du Parlement européen à Bruxelles et à Luxembourg.": 1,
   "Technical Assistance for Priority Human Resources and Government Service Performance": 1,
   "Services of project management and architecture in the field of information technology": 2,
+  "Provision of interim staff for the European Labour Authority and the European Commission Representation in Slovakia / Bratislava": 1,
+  "Preparation of audits, detailed design, tender documents, supervision of civil works for the implementation of energy efficiency measures in local public buildings across all four municipalities": 1,
   "EU-Algeria 4 Business: mise en œuvre d'activités de dialogue économique, de facilitation du commerce et de l'investissement en Algérie": 1,
   "PKI L2/L3 maintenance services": 1,
   "SEC/260994 - Provision of services related to social and behavioural studies": 1,
@@ -942,194 +942,24 @@
   },
   {
    "apiVersion": "2.159",
-   "reference": "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN",
+   "reference": "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN",
    "contentType": "text/plain",
    "language": "en",
    "databaseLabel": "SEDIA",
    "database": "SEDIA",
-   "summary": "Donation of decommissioned ICT assets II (iPhone 8)",
-   "weight": 0,
-   "groupById": "1",
-   "content": "Donation of decommissioned ICT assets II (iPhone 8)",
-   "accessRestriction": false,
-   "checksum": "2BAA63AB8EDFE03C0AC4BC14F74A1BA38AAE4A5EABCE944783D130D895A32580",
-   "metadata": {
-    "es_SortDate": [
-     "2026-11-27T00:00:00.000+0000"
-    ],
-    "cftPartyLegalEntityId": [
-     "47352444"
-    ],
-    "cftMaxNumberOfLots": [
-     "0"
-    ],
-    "contractType": [
-     "31095498"
-    ],
-    "awardMethod": [],
-    "cftContractingSystems": [],
-    "twoStageDeadlineDate": [],
-    "language": [
-     "en"
-    ],
-    "type": [
-     "0"
-    ],
-    "cftDocuments": [
-     "{\"cftDocuments\":[{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e5376155c6\",\"sortKey\":\"00002\",\"documentType\":\"Other invitation to tender document\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"2a. Annex 1 to CEI - Application form English_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761557b\",\"attachmentID\":\"090166e5376155c6\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"2a. Annex 1 to CEI - Application form English\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615622\",\"sortKey\":\"00003\",\"documentType\":\"Other invitation to tender document\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"2b. Annex 1 to CEI - Application form French_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761559b\",\"attachmentID\":\"090166e537615622\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"FR\",\"documentTitle\":\"2b. Annex 1 to CEI - Application form French\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53761510c\",\"sortKey\":\"00001\",\"documentType\":\"Invitation letter\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"1. Call for Expression of Interest _V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5376150ec\",\"attachmentID\":\"090166e53761510c\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"1. Call for Expression of Interest\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615629\",\"sortKey\":\"00004\",\"documentType\":\"Declaration on honour (tender)\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"3. Annex 2 to CEI - Declaration on the honour English_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537615a17\",\"attachmentID\":\"090166e537615629\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"3. Annex 2 to CEI - Declaration on the honour English\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537616cec\",\"sortKey\":\"00007\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"5. Annex 4 to CEI - Hand-over certificate EBA ICT assets donation_V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e53761668b\",\"attachmentID\":\"090166e537616cec\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"5. Annex 4 to CEI - Hand-over certificate EBA ICT assets donation\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e5376162a0\",\"sortKey\":\"00005\",\"documentType\":\"Declaration on honour (tender)\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"3. Annex 2 to CEI - Declaration on the honour French_V1.DOCX\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5376162a8\",\"attachmentID\":\"090166e5376162a0\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"FR\",\"documentTitle\":\"3. Annex 2 to CEI - Declaration on the honour French\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537615b41\",\"sortKey\":\"00006\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"4. Annex 3 to CEI - Donation agreement_V1.pdf\",\"publicationFormat\":\"PDF\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537616371\",\"attachmentID\":\"090166e537615b41\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"4. Annex 3 to CEI - Donation agreement\"}]}"
-    ],
-    "callIdentifier": [
-     "EBA/2026/CEI/0010"
-    ],
-    "cftSubmissionsAllowed": [
-     "true"
-    ],
-    "DATASOURCE": [
-     "SEDIA"
-    ],
-    "frameworkProgramme": [],
-    "cftPublicationDisplayStatus": [],
-    "identifier": [
-     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-    ],
-    "es_ContentType": [
-     "text/plain"
-    ],
-    "geographicalZones": [],
-    "programmePeriod": [
-     "2014 - 2020",
-     "2021 - 2027"
-    ],
-    "cftSubscriptionsAllowed": [
-     "true"
-    ],
-    "deadlineDate": [],
-    "cftCorrigendaList": [],
-    "closingDate": [],
-    "es_Combine": [
-     "1"
-    ],
-    "esST_URL": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-    ],
-    "esDA_QueueDate": [
-     "2026-11-27T05:02:00.438+0100"
-    ],
-    "programmeDivisionProspect": [],
-    "mainCpv": [
-     "79000000",
-     "32250000"
-    ],
-    "mainCpvCode": [
-     "{\"mainCode\":\"79000000\"}"
-    ],
-    "startDate": [
-     "2026-11-27T00:00:00.000+0000"
-    ],
-    "status": [
-     "31094502"
-    ],
-    "procedureType": [
-     "47396202"
-    ],
-    "sortStatus": [
-     "1"
-    ],
-    "conditionOfParticipation": [],
-    "description": [
-     "TYPE OF NOTICE \nThis call for expressions of interest for donation falls outside the scope of public procurement rules. The procedure will, however, comply with the general procurement principles of transparency, proportionality, equal treatment, non-discrimination and sound financial management. \nDESCRIPTION OF THE SUBJECT MATTER of the call for expressions of interest \nThe aim of this call for expressions of interest is to compile a list of pre-selected candidates, according to the criteria set out in the call for expressions of interests, for the donation of ICT equipment no longer used by the EBA. A donation agreement will be signed with the selected candidate(s). See template in Annex 3 to the Call for expressions of interests. The equipment consists of 109 iPhones.  The iPhones are fully functional and have been wiped, i.e. they have been reset to factory settings. The iPhone model is the iPhone 8 Plus. They were all purchased in 2020. \nHOW TO SUBMIT AN EXPRESSION OF INTEREST \nThe expressions of interest must be sent by email to tenders@eba.europa.eu. The call for expressions of interests notice and annexes are also available in https://www.eba.europa.eu/about-us/procurement, under \"Documents\". COMMENT SOUMETTRE UNE MANIFESTATION D'INTERET Les manifestations d'interet doivent être envoyées par courriel à tenders@eba.europa.eu. L'avis d'appel à manifestations d'interet et ses annexes sont aussi disponibles à https://www.eba.europa.eu/about-us/procurement, dans \"Documents\"."
-    ],
-    "title": [
-     "Donation of decommissioned ICT assets II (iPhone 8)"
-    ],
-    "esST_checksum": [
-     "2BAA63AB8EDFE03C0AC4BC14F74A1BA38AAE4A5EABCE944783D130D895A32580"
-    ],
-    "cftId": [
-     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-    ],
-    "esST_FileName": [
-     "file.txt"
-    ],
-    "REFERENCE": [
-     "1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-    ],
-    "cftTendersMayBeSubmitted": [],
-    "cftTimezone": [
-     "Europe/Paris"
-    ],
-    "cftEstimatedTotalProcedureValue": [],
-    "cftContractNoticeLink": [
-     "[\"824835-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
-    ],
-    "cftRepublish": [
-     "true"
-    ],
-    "cftSubmissionMethodCode": [
-     "PAPER_COPY"
-    ],
-    "cftProcurementType": [
-     "31095498"
-    ],
-    "caName": [
-     "Donation of decommissioned ICT assets II (iPhone 8)"
-    ],
-    "cftPlannedDate": [],
-    "cftPublishedPinReference": [],
-    "esDA_FirstIngestDate": [
-     "2026-11-27T05:02:00.450+0100"
-    ],
-    "esDA_IngestDate": [
-     "2026-11-27T05:02:00.450+0100"
-    ],
-    "cftInterinstitutional": [],
-    "cftQuestionsAnswersAllowed": [
-     "true"
-    ],
-    "url": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-    ],
-    "lots": [
-     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{\"tendererRequirementTypeCode\":\"epo-procurement-document\",\"tendererRequirementTypeCodeListName\":\"selection-criteria-source\"}},\"tenderValidityPeriod\":{},\"languages\":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],\"callForTendersDocumentReference\":{\"documentType\":\"non-restricted-document\",\"attachmentExternalReferenceURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1\",\"documentStatusCode\":\"official\",\"documentStatusCodelistName\":\"document-status\",\"languageID\":\"ENG\",\"id\":\"default-text\"},\"postAwardProcess\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"contractExecutionRequirement\":[{},{}],\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"79000000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":12},\"procurementTypeCode\":\"services\",\"name\":\"Donation of decommissioned ICT assets II (iPhone 8)\",\"description\":\"TYPE OF NOTICE \\nThis call for expressions of interest for donation falls outside the scope of public procurement rules. The procedure will, however, comply with the general procurement principles of transparency, proportionality, equal treatment, non-discrimination and sound financial management. \\nDESCRIPTION OF THE SUBJECT MATTER of the call for expressions of interest \\nThe aim of this call for expressions of interest is to compile a list of pre-selected candidates, according to the criteria set out in the call for expressions of interests, for the donation of ICT equipment no longer used by the EBA. A donation agreement will be signed with the selected candidate(s). See template in Annex 3 to the Call for expressions of interests. The equipment consists of 109 iPhones.  The iPhones are fully functional and have been wiped, i.e. they have been reset to factory settings. The iPhone model is the iPhone 8 Plus. They were all purchased in 2020. \\nHOW TO SUBMIT AN EXPRESSION OF INTEREST \\nThe expressions of interest must be sent by email to tenders@eba.europa.eu. The call for expressions of interests notice and annexes are also available in https://www.eba.europa.eu/about-us/procurement, under \\\"Documents\\\". COMMENT SOUMETTRE UNE MANIFESTATION D'INTERET Les manifestations d'interet doivent être envoyées par courriel à tenders@eba.europa.eu. L'avis d'appel à manifestations d'interet et ses annexes sont aussi disponibles à https://www.eba.europa.eu/about-us/procurement, dans \\\"Documents\\\".\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"32250000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{},\"submissionMethodCodeListName\":\"esubmission\",\"auctionTerms\":{},\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"submissionMethodCode\":\"not-allowed\",\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"LOT-0001\"}]}"
-    ],
-    "cftEXARegistrationDeadline": [],
-    "indicativeLaunch": [],
-    "geographicalZone": [],
-    "cftLeadContractingAuthorityCode": [
-     "[{\"name\":\"European Banking Authority\",\"link\":\"https://www.eba.europa.eu/\",\"isLeadAuthority\":true}]"
-    ],
-    "cftBuyerProfileUrl": [],
-    "cftPublicationDateEForm": [
-     "2026-11-27T00:00:00"
-    ],
-    "cftEstimatedOverallContractCurrency": []
-   },
-   "enrichedMetadata": {},
-   "children": [],
-   "highlightedFragments": [],
-   "citation": "Donation of decommissioned ICT assets II (iPhone 8). Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1989283f-9492-42fc-9b09-a0ddb0818cf8-CN"
-  },
-  {
-   "apiVersion": "2.159",
-   "reference": "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN",
-   "contentType": "text/plain",
-   "language": "en",
-   "databaseLabel": "SEDIA",
-   "database": "SEDIA",
-   "summary": "Aviation training services for the European Union Aviation Safety Agency - EASA",
+   "summary": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
    "weight": 0,
    "groupById": "2",
-   "content": "Aviation training services for the European Union Aviation Safety Agency - EASA",
+   "content": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks",
    "accessRestriction": false,
-   "checksum": "D65DD3320ECE91EE6190B52B69C97259B3791FB2D81131B5FB704781FDADB4DD",
+   "checksum": "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7",
    "metadata": {
     "es_SortDate": [
      "2026-11-27T00:00:00.000+0000"
     ],
     "cftPartyLegalEntityId": [
-     "47352376"
+     "47352548"
     ],
     "cftMaxNumberOfLots": [
      "0"
@@ -1150,7 +980,7 @@
      "{}"
     ],
     "callIdentifier": [
-     "EASA/2027/OP/0001-PIN"
+     "EC-JRC/PTT/2026/OP/6801-PIN"
     ],
     "cftSubmissionsAllowed": [
      "false"
@@ -1161,7 +991,7 @@
     "frameworkProgramme": [],
     "cftPublicationDisplayStatus": [],
     "identifier": [
-     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
     ],
     "es_ContentType": [
      "text/plain"
@@ -1181,18 +1011,18 @@
      "2"
     ],
     "esST_URL": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
     ],
     "esDA_QueueDate": [
-     "2026-11-27T05:01:54.126+0100"
+     "2026-11-27T05:01:49.152+0100"
     ],
     "programmeDivisionProspect": [],
     "mainCpv": [
-     "80531200",
-     "80531000"
+     "71242000",
+     "71248000"
     ],
     "mainCpvCode": [
-     "{\"mainCode\":\"80531200\"}"
+     "{\"mainCode\":\"71248000\"}"
     ],
     "startDate": [
      "2026-11-27T00:00:00.000+0000"
@@ -1208,32 +1038,32 @@
     ],
     "conditionOfParticipation": [],
     "description": [
-     "The aim of this call for tender is to maintain, update, and expand the expertise of the Agency’s staff across a wide range of aviation technical areas. To this end EASA intends to conclude multiple framework contracts for the provision of aviation training services.\nIn support of its core mandate to ensure the highest levels of aviation safety, the Agency seeks to procure high quality training services that support its operational and strategic objectives."
+     "JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure."
     ],
     "title": [
-     "Aviation training services for the European Union Aviation Safety Agency - EASA"
+     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
     ],
     "esST_checksum": [
-     "D65DD3320ECE91EE6190B52B69C97259B3791FB2D81131B5FB704781FDADB4DD"
+     "0273FD160E45A21D118E3070908C520EACFC34FD2B61B94CBE588E1287A8C9A7"
     ],
     "cftId": [
-     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
     ],
     "esST_FileName": [
      "file.txt"
     ],
     "REFERENCE": [
-     "eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+     "29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
     ],
     "cftTendersMayBeSubmitted": [],
     "cftTimezone": [
-     "Europe/Berlin"
+     "Europe/Amsterdam"
     ],
     "cftEstimatedTotalProcedureValue": [
-     "800000   EUR"
+     "500000   EUR"
     ],
     "cftContractNoticeLink": [
-     "[\"826152-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+     "[\"824963-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
     ],
     "cftRepublish": [
      "true"
@@ -1245,36 +1075,36 @@
      "31095498"
     ],
     "cftEstimatedOverallContractAmount": [
-     "800000"
+     "500000"
     ],
     "caName": [
-     "Aviation training services for the European Union Aviation Safety Agency - EASA"
+     "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks"
     ],
     "cftPlannedDate": [
-     "18/01/2027"
+     "16/12/2026"
     ],
     "cftPublishedPinReference": [],
     "esDA_FirstIngestDate": [
-     "2026-11-27T05:01:54.134+0100"
+     "2026-11-27T05:01:49.186+0100"
     ],
     "esDA_IngestDate": [
-     "2026-11-27T05:01:54.134+0100"
+     "2026-11-27T05:01:49.186+0100"
     ],
     "cftInterinstitutional": [],
     "cftQuestionsAnswersAllowed": [
      "true"
     ],
     "url": [
-     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
     ],
     "lots": [
-     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"80531200\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":400000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"Aviation training on Airworthiness (Initial & Continuing) and related Audit, Risk and Safety Matters\",\"description\":\"Provision of technical expertise in initial and continuing airworthiness, covering aircraft design, certification, and life-cycle suitability for safe flight. Includes organisational approval principles for design, production, and maintenance, as well as emerging technologies and industry trends. Also covers aviation risk, safety and security management systems, with associated processes, tools, and performance management methods relevant to airworthiness.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"80531000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"fa-wo-rc\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"PAR-0001\"},{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"80531200\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":400000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"Aviation training on Air Operations, Aircrew, Aerodromes and related Audit, Risk and Safety Matters\",\"description\":\"Provision of technical expertise in air operations, aircrew, aerodromes, and related procedures and practices, supporting the continuous development of operational knowledge. Includes aviation risk, safety and security management systems, with associated processes, tools, and performance management methods. Excludes pilot type rating-specific courses.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"80531000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"fa-wo-rc\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"PAR-0002\"}]}"
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{}},\"tenderValidityPeriod\":{},\"callForTendersDocumentReference\":{},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"postAwardProcess\":{},\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/2\",\"governmentAgreementConstraintIndicator\":true,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"auctionTerms\":{},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"}],\"openTenderEvent\":{},\"tenderSubmissionDeadlinePeriod\":{},\"additionalInformationRequestPeriod\":{},\"participationRequestReceptionPeriod\":{}},\"procurementProject\":{\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"71248000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":500000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":48},\"procurementTypeCode\":\"services\",\"name\":\"NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks\",\"description\":\"JRC Petten seeks for part-time technical assistance in support of Infra by a Project Support Officer who shall be mainly dealing with, but not limited to, the small and medium-sized projects.  The scope includes support during the full project lifecycle: needs definition, scoping, technical specification review , technical specifications development (if agreed) , procurement support, execution supervision, commissioning, handover and administrative closure.\",\"contractExtension\":{\"renewal\":{\"period\":{}}},\"smeSuitableIndicator\":false,\"additionalCommodityClassifications\":[{\"itemClassificationCode\":\"71242000\",\"itemClassificationCodeListName\":\"cpv\"}]},\"procurementProjectLotID\":\"PAR-0001\",\"benefittingZones\":[]}]}"
     ],
     "cftEXARegistrationDeadline": [],
     "indicativeLaunch": [],
     "geographicalZone": [],
     "cftLeadContractingAuthorityCode": [
-     "[{\"name\":\"European Union Aviation Safety Agency\",\"link\":\"https://www.easa.europa.eu\",\"isLeadAuthority\":true}]"
+     "[{\"name\":\"European Commission, DG JRC - Joint Research Centre\",\"link\":\"https://ec.europa.eu/jrc/\",\"isLeadAuthority\":true}]"
     ],
     "cftBuyerProfileUrl": [],
     "cftPublicationDateEForm": [
@@ -1287,7 +1117,190 @@
    "enrichedMetadata": {},
    "children": [],
    "highlightedFragments": [],
-   "citation": "Aviation training services for the European Union Aviation Safety Agency - EASA. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eaefe3a5-b0d4-4b86-aafc-c607e1d00d48-PIN"
+   "citation": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/29c2dee1-2f9b-4727-a4c4-1ec114769a2f-PIN"
+  },
+  {
+   "apiVersion": "2.159",
+   "reference": "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN",
+   "contentType": "text/plain",
+   "language": "en",
+   "databaseLabel": "SEDIA",
+   "database": "SEDIA",
+   "summary": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
+   "weight": 0,
+   "groupById": "1",
+   "content": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia",
+   "accessRestriction": false,
+   "checksum": "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191",
+   "metadata": {
+    "es_SortDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "cftPartyLegalEntityId": [
+     "47352348"
+    ],
+    "cftMaxNumberOfLots": [
+     "0"
+    ],
+    "contractType": [
+     "31095499"
+    ],
+    "awardMethod": [],
+    "cftContractingSystems": [],
+    "twoStageDeadlineDate": [],
+    "language": [
+     "en"
+    ],
+    "type": [
+     "0"
+    ],
+    "cftDocuments": [
+     "{\"cftDocuments\":[{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779acee\",\"sortKey\":\"00007\",\"documentType\":\"Draft contract\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Draft contract - Example 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Draft contract1354226-1_SK.docx\",\"documentFileName\":\"Draft contract1354226-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779d472\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Draft contract\"}],\"documentID\":\"080166e537799e19\",\"attachmentID\":\"090166e53779acee\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Draft contract\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537796b22\",\"sortKey\":\"00001\",\"documentType\":\"Invitation letter\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 1 Invitation letter 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Invitation letter1354221-1_SK.docx\",\"documentFileName\":\"Invitation letter1354221-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779b4df\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Invitation to tender\"}],\"documentID\":\"080166e537796b15\",\"attachmentID\":\"090166e537796b22\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Admin Specif - 1 Invitation letter 26 46\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779939b\",\"sortKey\":\"00006\",\"documentType\":\"Technical specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Technical Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Technique specification1354225-1_SK.docx\",\"documentFileName\":\"Technique specification1354225-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779c8f1\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Technical specifications\"}],\"documentID\":\"080166e537798b1e\",\"attachmentID\":\"090166e53779939b\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Technical Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797a90\",\"sortKey\":\"00003\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Admin Specif - 3 Specifications 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377b14c0\",\"attachmentID\":\"090166e5377b108c\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Specifications\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e53779a15a\",\"sortKey\":\"00005\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"TENDER FORM 26 46_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"translations\":[{\"translationFileName\":\"Tender forms 1354224-1_SK.docx\",\"documentFileName\":\"Tender forms 1354224-1_SK_V1_SK.docx\",\"publicationFormat\":\"NATIVE\",\"translationAttachmentID\":\"090166e53779cb44\",\"translationLanguageCode\":\"SK\",\"translationTitle\":\"Tender form\"}],\"documentID\":\"080166e537799a0a\",\"attachmentID\":\"090166e53779a15a\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"TENDER FORM\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537798e77\",\"sortKey\":\"00004\",\"documentType\":\"Tender specifications - adm. part\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Annex V Financial Identification Form_V1.7z\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e537798e39\",\"attachmentID\":\"090166e537798e77\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Annex V - Financial Identification Form\"},{\"considerChangedUntilDate\":\"2026-12-11T00:00:00\",\"documentPublicationID\":\"090166e537797990\",\"sortKey\":\"00002\",\"documentType\":\"Tender specifications\",\"changedNotificationText\":\"New \",\"obsolete\":false,\"hermesDocumentReferences\":[{\"documentFileName\":\"Conditions1354222-1_SK_V1.docx\",\"publicationFormat\":\"NATIVE\",\"isCurrentVersion\":\"Y\",\"documentID\":\"080166e5377af3bf\",\"attachmentID\":\"090166e5377b0c44\",\"versionNR\":\"1\",\"publicationDate\":\"2026-11-27T00:00:00\"}],\"applicableProcurementProjectLots\":[{\"procurementProjectLotID\":\"LOT-0001\"}],\"documentChangeCode\":\"NEW\",\"languageCode\":\"EN\",\"documentTitle\":\"Conditions\"}]}"
+    ],
+    "callIdentifier": [
+     "EP-INLO/LUX/2026/OP/0034"
+    ],
+    "cftSubmissionsAllowed": [
+     "true"
+    ],
+    "DATASOURCE": [
+     "SEDIA"
+    ],
+    "frameworkProgramme": [],
+    "cftPublicationDisplayStatus": [],
+    "identifier": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "es_ContentType": [
+     "text/plain"
+    ],
+    "geographicalZones": [],
+    "programmePeriod": [
+     "2014 - 2020",
+     "2021 - 2027"
+    ],
+    "cftSubscriptionsAllowed": [
+     "true"
+    ],
+    "deadlineDate": [
+     "2027-01-28T23:59:59.000+0000"
+    ],
+    "cftCorrigendaList": [],
+    "closingDate": [
+     "2027-01-28T23:59:59Z"
+    ],
+    "es_Combine": [
+     "1"
+    ],
+    "esST_URL": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "esDA_QueueDate": [
+     "2026-11-27T09:15:53.378+0100"
+    ],
+    "programmeDivisionProspect": [],
+    "mainCpv": [
+     "09310000"
+    ],
+    "mainCpvCode": [
+     "{\"mainCode\":\"09310000\"}"
+    ],
+    "startDate": [
+     "2026-11-27T00:00:00.000+0000"
+    ],
+    "status": [
+     "31094502"
+    ],
+    "procedureType": [
+     "47396220"
+    ],
+    "updateDate": [
+     "2027-01-29T10:00:00.000+0000"
+    ],
+    "sortStatus": [
+     "1"
+    ],
+    "conditionOfParticipation": [],
+    "description": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "title": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "esST_checksum": [
+     "DE675E5BC7946CE3C4D07C386C9768F2B5937C0952C435B8A027BB73655C5191"
+    ],
+    "cftId": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "esST_FileName": [
+     "file.txt"
+    ],
+    "REFERENCE": [
+     "4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "cftTendersMayBeSubmitted": [],
+    "cftTimezone": [
+     "Europe/Luxembourg"
+    ],
+    "cftEstimatedTotalProcedureValue": [
+     "150000   EUR"
+    ],
+    "cftContractNoticeLink": [
+     "[\"826319-2026\",\"231/2026\",\"2026-11-27T00:00:00\"]"
+    ],
+    "cftRepublish": [
+     "true"
+    ],
+    "cftSubmissionMethodCode": [
+     "PAPER_COPY"
+    ],
+    "cftProcurementType": [
+     "31095499"
+    ],
+    "cftEstimatedOverallContractAmount": [
+     "150000"
+    ],
+    "caName": [
+     "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia"
+    ],
+    "cftPlannedDate": [],
+    "cftPublishedPinReference": [],
+    "esDA_FirstIngestDate": [
+     "2026-11-27T05:02:00.758+0100"
+    ],
+    "esDA_IngestDate": [
+     "2026-11-27T09:15:53.386+0100"
+    ],
+    "cftInterinstitutional": [],
+    "cftQuestionsAnswersAllowed": [
+     "true"
+    ],
+    "url": [
+     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
+    ],
+    "lots": [
+     "{\"procurementProjectLots\":[{\"tenderingTerms\":{\"tendererQualificationRequest\":{\"specificTendererRequirement\":{\"tendererRequirementTypeCode\":\"epo-procurement-document\",\"tendererRequirementTypeCodeListName\":\"selection-criteria-source\"}},\"tenderValidityPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":\"6\"},\"languages\":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],\"callForTendersDocumentReference\":{\"documentType\":\"non-restricted-document\",\"attachmentExternalReferenceURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"documentStatusCode\":\"official\",\"documentStatusCodelistName\":\"document-status\",\"languageID\":\"ENG\",\"id\":\"default-text\"},\"postAwardProcess\":{\"electronicOrderUsageIndicator\":\"true\",\"electronicPaymentUsageIndicator\":\"true\"},\"fundingProgramCode\":\"eu-funds\",\"tenderRecipientParty\":{},\"contractExecutionRequirement\":[{},{},{}],\"fundingProgramCodelistName\":\"eu-funded\",\"awardingTerms\":{\"awardingCriterion\":{\"subordinateAwardingCriterion\":[{\"awardingCriterionTypeCodeListName\":\"award-criterion-type\",\"descriptionLanguageID\":\"ENG\",\"description\":\"Please consult the procurement documents.\",\"awardCriterionParameter\":[{\"parameterNumeric\":\"100\",\"parameterCodeListName\":\"number-weight\",\"parameterCode\":\"per-exa\"}],\"awardingCriterionTypeCode\":\"price\"}]}},\"appealTerms\":{\"appealReceiverPartyID\":\"ORG-0002\"}},\"programmes\":[],\"procurementProject\":{\"procurementProjectID\":\"EP-INLO/LUX/2026/OP/0034\",\"procurementTypeCodeListName\":\"contract-nature\",\"mainCommodityClassification\":{\"itemClassificationCode\":\"09310000\",\"itemClassificationCodeListName\":\"cpv\"},\"requestedTenderTotal\":{\"estimatedOverallContractAmountCurrencyId\":\"EUR\",\"estimatedOverallContractAmount\":150000},\"plannedPeriod\":{\"durationMeasureUnitCode\":\"MONTH\",\"durationMeasure\":24},\"procurementTypeCode\":\"supplies\",\"name\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"description\":\"Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia\",\"contractExtension\":{\"renewal\":{\"period\":{\"descriptionLanguageID\":\"ENG\",\"description\":\"The contract is concluded for an initial period of 12 (twelve)     months, renewable 1 (one) time(s). Please consult the draft contract in the procurement documents.\"}}},\"smeSuitableIndicator\":false},\"tenderingProcess\":{\"accessToolsURI\":\"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4\",\"governmentAgreementConstraintIndicator\":false,\"eformsExtension\":{\"accessToolName\":\"Funding and Tenders Portal\"},\"submissionMethodCodeListName\":\"esubmission\",\"auctionTerms\":{\"auctionConstraintIndicator\":\"false\"},\"contractingSystems\":[{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"framework-agreement\"},{\"contractingSystemTypeCode\":\"none\",\"contractingSystemTypeCodeListName\":\"dps-usage\"}],\"openTenderEvent\":{\"occurrenceDate\":\"2027-01-29+01:00\",\"occurrenceTime\":\"10:00:00+01:00\"},\"tenderSubmissionDeadlinePeriod\":{\"endDate\":\"2027-01-28+01:00\",\"endTime\":\"23:59:59+01:00\"},\"submissionMethodCode\":\"not-allowed\",\"additionalInformationRequestPeriod\":{\"endDate\":\"2027-01-15+01:00\",\"endTime\":\"2027-01-15+01:00\"},\"participationRequestReceptionPeriod\":{}},\"benefittingZones\":[],\"procurementProjectLotID\":\"LOT-0001\"}]}"
+    ],
+    "cftEXARegistrationDeadline": [],
+    "indicativeLaunch": [],
+    "geographicalZone": [],
+    "cftLeadContractingAuthorityCode": [
+     "[{\"name\":\"European Parliament, SG - Directorate-General for Infrastructure and Logistics\",\"link\":\"http://www.europarl.europa.eu\",\"isLeadAuthority\":true}]"
+    ],
+    "cftBuyerProfileUrl": [],
+    "cftPublicationDateEForm": [
+     "2026-11-27T00:00:00"
+    ],
+    "cftEstimatedOverallContractCurrency": [
+     "EUR"
+    ]
+   },
+   "enrichedMetadata": {},
+   "children": [],
+   "highlightedFragments": [],
+   "citation": "Electric power supply for the premises of the European Union institutions in Bratislava, Slovakia. Available at: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4148cfbb-5985-4fa0-b52b-5f9d2c0fc638-CN"
   }
  ]
 }
