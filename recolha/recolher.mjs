@@ -184,8 +184,64 @@ async function ue() {
   return lista.length;
 }
 
+const UE_G1 = ['EDA', 'DEFIS', 'SATCEN', 'EUSPA'];
+const UE_G2 = ['EEAS', 'FPI', 'FRONTEX', 'EMSA', 'ENISA', 'ECCC', 'EUROPOL', 'LISA'];
+const UE_G3 = ['JRC', 'HOME', 'ECHO', 'HERA', 'HR', 'SAFE', 'CNECT', 'EASA', 'CEPOL', 'CONSILIUM'];
+const UE_TERMOS = /\b(defen[cs]e|military|armed forces|security|surveillance|drones?|uas|uav|rpas|unmanned|cbrn|cyber\w*|satellite|space|ammunition|weapon\w*|munition\w*|border|maritime awareness|crisis management|csdp|cfsp)\b/i;
+async function ueConcursos() {
+  const tipos = [['0'], ['4'], ['3']];
+  let results = [], tipoUsado = null;
+  for (const t of tipos) {
+    const q = JSON.stringify({ bool: { must: [{ terms: { type: t } }, { terms: { status: ['31094501', '31094502'] } }] } });
+    let p = 1, total = 1, res = [];
+    do {
+      const fd = new FormData();
+      fd.append('query', new Blob([q], { type: 'application/json' }), 'blob');
+      fd.append('languages', new Blob(['["en"]'], { type: 'application/json' }), 'blob');
+      fd.append('sort', new Blob(['{"field":"startDate","order":"DESC"}'], { type: 'application/json' }), 'blob');
+      const r = await fetch('https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=***&pageSize=100&pageNumber=' + p, { method: 'POST', body: fd });
+      if (!r.ok) throw new Error('UE concursos ' + r.status);
+      const j = await r.json();
+      res = res.concat(j.results || []);
+      total = Math.ceil((j.totalResults || 0) / 100);
+      p++;
+    } while (p <= total && p <= 40);
+    if (res.length) { results = res; tipoUsado = t[0]; break; }
+  }
+  const md = x => x.metadata || {};
+  const chaveEnt = Object.keys(results.reduce((a, x) => Object.assign(a, md(x)), {})).find(k => /contracting|authority|organi[sz]ation|buyer/i.test(k)) || null;
+  const ent = x => {
+    const v = [].concat((chaveEnt && md(x)[chaveEnt]) || []).join(' ');
+    const m = v.match(/^\s*([A-Z0-9][A-Z0-9 -]*?)\s+-\s/);
+    if (m) return m[1].replace(/^EU-/, '').trim();
+    const all = [...UE_G1, ...UE_G2, ...UE_G3].find(c => new RegExp('\\b' + c + '\\b').test(v));
+    return all || v.slice(0, 60);
+  };
+  const g = (x, k) => [].concat(md(x)[k] || [])[0];
+  const lista = [];
+  for (const x of results) {
+    const e = ent(x), titulo = String(g(x, 'title') || x.title || x.summary || '').replace(/\s+/g, ' ').trim();
+    const txt = titulo + ' ' + String(g(x, 'description') || g(x, 'descriptionByte') || x.content || '').replace(/<[^>]+>/g, ' ');
+    const grupo = UE_G1.includes(e) ? 1 : UE_G2.includes(e) ? 2 : UE_G3.includes(e) ? 3 : 0;
+    if (!grupo || (grupo === 3 && !UE_TERMOS.test(txt))) continue;
+    const prazos = [].concat(md(x).deadlineDate || md(x).submissionDeadline || []).map(d => String(d).slice(0, 10)).sort();
+    const id = g(x, 'identifier') || g(x, 'reference') || x.reference;
+    lista.push({ id, fonte: 'ue', programa: 'Concurso', entidade: e, grupo, titulo,
+      abertura: g(x, 'startDate') ? String(g(x, 'startDate')).slice(0, 10) : null,
+      prazo: prazos.length ? prazos[prazos.length - 1] + 'T23:59:00' : null,
+      procedimento: g(x, 'procedureType') || g(x, 'typeOfProcedure') || '',
+      link: x.url || g(x, 'url') || 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/' + encodeURIComponent(id || '') });
+  }
+  fs.mkdirSync(path.join(saida, 'sonda'), { recursive: true });
+  fs.writeFileSync(path.join(saida, 'sonda', 'ue-concursos-amostra.json'), JSON.stringify({ gerado: agora, tipoUsado, total: results.length, chaveEnt,
+    entidades: results.reduce((a, x) => { const e = ent(x); a[e] = (a[e] || 0) + 1; return a; }, {}),
+    exemplos: results.slice(0, 3) }, null, 1));
+  grava('ue-concursos.json', { gerado: agora, lista });
+  return lista.length + ' (de ' + results.length + ' concursos abertos)';
+}
+
 let erros = 0;
-for (const [nome, f] of [['Diário da República', dr], ['NSPA', nspa], ['NATO', nato], ['UE', ue]]) {
+for (const [nome, f] of [['Diário da República', dr], ['NSPA', nspa], ['NATO', nato], ['UE', ue], ['UE concursos', ueConcursos]]) {
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
