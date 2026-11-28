@@ -180,8 +180,10 @@ async function ue() {
     p++;
   } while (p <= total && p <= 30);
   const lista = core.ueBuild(results.filter(x => ((x.metadata || {}).frameworkProgramme || [])[0] === '44181033'));
-  grava('ue.json', { gerado: agora, lista });
-  return lista.length;
+  let conc = [];
+  try { conc = JSON.parse(fs.readFileSync(path.join(saida, 'ue-concursos.json'), 'utf8')).lista || []; } catch (e) {}
+  grava('ue.json', { gerado: agora, lista: lista.concat(conc) });
+  return lista.length + ' + ' + conc.length + ' concursos';
 }
 
 const UE_ENT = [
@@ -193,7 +195,8 @@ const UE_ENT = [
   ['EASA', 3, /^EASA$/, /\bEASA\b/], ['CONSILIUM', 3, /^(COUNCIL|CONSILIUM)$/, /General Secretariat of the Council/]
 ];
 const UE_ADMIN = /\b(cleaning|stationery|office supplies|travel (agency|services)|travel|catering|canteen|restaurant|vending|electricity|electric power|energy cards|fuel|removal services|insurance|furniture|legal advice|translation|interpret\w*|fit-out|front desk|guarding|internet services|copywriting|proofreading|certification audits?|recruitment|courier|donation|nursery|crèche|signage)\b|eletricidade|nettoyage|limpieza|vending|mobilier/i;
-const UE_CPV_ADMIN = /^(09|15|18|22|30192|39|45|55|60|63|64|66|70|79(?!71)|80|85|90|92|98)/;
+const UE_CPV_ADMIN = /^(09|15|18|22|30192|39|45|55|60|63|64|66|70|79|80|85|90|92|98)/;
+const UE_FORTE = /\b(defen[cs]e|military|armed forces|ammunition|arms|weapon\w*|munition\w*|drones?|uas|uav|rpas|unmanned|cbrn|surveillance (aircraft|systems?|services)|aerial surveillance|maritime surveillance|satellite\w*|galileo|gnss|govsatcom|secure connectivity|cyber\w*|intrusion|cctv|access control|security (equipment|installations|systems)|biometric\w*|critical infrastructure|csdp|cfsp|crisis)\b/i;
 const UE_TERMOS = /\b(defen[cs]e|military|armed forces|security|surveillance|drones?|uas|uav|rpas|unmanned|cbrn|cyber\w*|satellite|space|ammunition|weapon\w*|munition\w*|border|maritime awareness|crisis management|csdp|cfsp)\b/i;
 async function ueConcursos() {
   const tipos = [['0'], ['4'], ['3']];
@@ -219,21 +222,25 @@ async function ueConcursos() {
   const g = (x, k) => [].concat(md(x)[k] || [])[0];
   const caName = x => String(g(x, 'caName') || '').trim();
   const ident = n => UE_ENT.find(([, , cod]) => cod.test(n.toUpperCase().replace(/\s+/g, ''))) || UE_ENT.find(([, , , nome]) => nome.test(n)) || null;
+  const hojeUE = new Date().toISOString().slice(0, 10), limiteUE = new Date(Date.now() - 548 * 864e5).toISOString().slice(0, 10);
   const lista = [], vistos = new Set();
   for (const x of results) {
     const n = caName(x), e = ident(n);
     if (!e) continue;
     const titulo = String(g(x, 'title') || x.summary || '').replace(/\s+/g, ' ').trim();
     const desc = String(g(x, 'description') || '').replace(/\s+/g, ' ').trim();
-    if (e[1] === 3 && !UE_TERMOS.test(titulo + ' ' + desc)) continue;
-    if (e[1] < 3 && (UE_ADMIN.test(titulo) || UE_CPV_ADMIN.test(String(g(x, 'mainCpv') || ''))) && !UE_TERMOS.test(titulo)) continue;
+    if (e[1] === 3 && !UE_TERMOS.test(titulo)) continue;
+    if ((UE_ADMIN.test(titulo) || UE_CPV_ADMIN.test(String(g(x, 'mainCpv') || ''))) && !UE_FORTE.test(titulo)) continue;
+    const dl = g(x, 'deadlineDate') || g(x, 'closingDate'), ini = g(x, 'startDate');
+    if (dl && String(dl).slice(0, 10) < hojeUE) continue;
+    if (!dl && ini && String(ini).slice(0, 10) < limiteUE) continue;
     const id = g(x, 'identifier') || x.reference;
     if (!id || vistos.has(id)) continue; vistos.add(id);
     const prazo = g(x, 'deadlineDate') || g(x, 'closingDate');
     lista.push({ id, fonte: 'ue', programa: 'Concurso', entidade: e[0], entidadeNome: n, grupo: e[1], titulo, ref: g(x, 'callIdentifier') || '',
       objetivo: desc.slice(0, 600), cpv: g(x, 'mainCpv') || '', procedimento: g(x, 'procedureType') || '',
       abertura: g(x, 'startDate') ? String(g(x, 'startDate')).slice(0, 10) : null,
-      prazo: prazo ? String(prazo).slice(0, 16) : null, estado: g(x, 'status') === '31094501' ? 'previsto' : 'aberto',
+      prazo: prazo ? String(prazo).slice(0, 16) + ':00Z' : null, semPrazo: !prazo, estado: g(x, 'status') === '31094501' ? 'previsto' : 'aberto',
       link: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/' + id,
       plataforma: g(x, 'url') || '' });
   }
@@ -247,7 +254,7 @@ async function ueConcursos() {
 }
 
 let erros = 0;
-for (const [nome, f] of [['Diário da República', dr], ['NSPA', nspa], ['NATO', nato], ['UE', ue], ['UE concursos', ueConcursos]]) {
+for (const [nome, f] of [['Diário da República', dr], ['NSPA', nspa], ['NATO', nato], ['UE concursos', ueConcursos], ['UE', ue]]) {
   try { console.log(`${nome}: ${await f()} oportunidades`); }
   catch (e) { erros++; console.error(`${nome}: erro (${e.message}); mantém-se a recolha anterior`); }
 }
