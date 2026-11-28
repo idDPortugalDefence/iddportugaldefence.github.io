@@ -230,6 +230,7 @@ async function ueConcursos() {
     const titulo = String(g(x, 'title') || x.summary || '').replace(/\s+/g, ' ').trim();
     const desc = String(g(x, 'description') || '').replace(/\s+/g, ' ').trim();
     if (e[1] === 3 && !UE_TERMOS.test(titulo)) continue;
+    if (/call for experts|(list|pool) of (external |individual |remunerated )*experts|remunerated experts/i.test(titulo)) continue;
     if ((UE_ADMIN.test(titulo) || UE_CPV_ADMIN.test(String(g(x, 'mainCpv') || ''))) && !UE_FORTE.test(titulo)) continue;
     const dl = g(x, 'deadlineDate') || g(x, 'closingDate'), ini = g(x, 'startDate');
     if (dl && String(dl).slice(0, 10) < hojeUE) continue;
@@ -240,7 +241,7 @@ async function ueConcursos() {
     lista.push({ id, fonte: 'ue', programa: 'Concurso', entidade: e[0], entidadeNome: n, grupo: e[1], titulo, ref: g(x, 'callIdentifier') || '',
       objetivo: desc.slice(0, 600), cpv: g(x, 'mainCpv') || '', procedimento: g(x, 'procedureType') || '',
       abertura: g(x, 'startDate') ? String(g(x, 'startDate')).slice(0, 10) : null,
-      prazo: prazo ? String(prazo).slice(0, 16) + ':00Z' : null, semPrazo: !prazo, estado: g(x, 'status') === '31094501' ? 'previsto' : 'aberto',
+      prazo: prazo ? String(prazo).slice(0, 16) + ':00Z' : null, semPrazo: !prazo, dps: /\bDPS\b|dynamic purchasing/i.test(titulo) || [].concat(md(x).cftContractingSystems || []).includes('DYNAMIC_PURCHASING_SYSTEM'), estado: g(x, 'status') === '31094501' ? 'previsto' : 'aberto',
       link: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/' + id,
       plataforma: g(x, 'url') || '' });
   }
